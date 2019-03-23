@@ -1,0 +1,1 @@
+This folder is for our reviews and thoughts about some related research papers, and also problems and solutions in our process of learning the background knowledge as well as trying to use related technologies.
