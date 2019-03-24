@@ -1,0 +1,22 @@
+Exploration of Support Vector Machine
+Support Vector Machine can be used in classification as well as regression. 
+In the project, classification will be applied to the security data set KDD99.
+SVM's discriminant function determines its hyperplane, which separates data samples into different categories.
+To clearly partition the samples, the hyperplane tends to be as far as possible from the samples, which means the distances between the hyperplane and the nearest samples should be maximized. 
+The margin is defined by the distance.
+And the support vectors refer to those nearest data points mentioned above.
+SVM has primal and dual problem, which relate to the details of implementation. 
+SVM has hard margin as well as soft margin cases.
+Hard margin case is the separable case.
+Soft margin case, which is non-separable case, however, involves some outliers campared to hard margin case, and that can be solved by introducing the penalty factor and slack variables.
+Finally, non-linear SVM will use kernel tricks to separate the data points.
+Kernel tricks can tackle problems with more dimensions without calculate values in a complex way.
+
+About sklearn.svm:
+In this project, I will use svm in scikit-learn.
+'https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm' presents the API, and 'https://scikit-learn.org/stable/modules/svm.html' tells some further detailed information.
+Here are some of the functions that probably be used.
+The API of 'svm.LinearSVC' is the classification in linear version.
+'fit' and 'predict' are used to train the model and predict values.
+Support vectors can be got from member 'support_vectors_'.
+'SVC' and 'LinearSVC' both can be used in multi-class classification, but they follow different strategies.
