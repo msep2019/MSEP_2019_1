@@ -1,0 +1,29 @@
+Literature Review on big data and security
+
+Paper Citation:
+A. A. Cárdenas, P. K. Manadhata and S. P. Rajan, "Big Data Analytics for Security," in IEEE Security & Privacy, vol. 11, no. 6, pp. 74-76, Nov.-Dec. 2013.
+
+Summary:
+The authors discuss the usage of big data in security field in the background of dramatically increasing data and cloud architectures.
+They talk about the factors in economic feasibility for keeping a large amount of data, efficiency, and also warehouse expenses to prove the deficiency of traditional technologies.
+They then talk about advantages of big data, such as using a single framework to deal with different kinds of data, as well as their effects on long-term threat detection.
+Finally they reflect on the challenges of big data, including privacy problems, data authenticity, and visual analytics.
+
+Strength:
+The paper differentiates traditional technologies and big data technologies, which gives us a clear idea of why we should apply big data technologies in security issues.
+The paper talks about the advantages as well as challenges of big data, which is objective and worth reading.
+
+
+Paper Citation:
+T. T. Teoh, Y. Zhang, Y. Y. Nguwi, Y. Elovici and W. L. Ng, "Analyst intuition inspired high velocity big data analysis using PCA ranked fuzzy k-means clustering with multi-layer perceptron (MLP) to obviate cyber security risk," 2017 13th International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery (ICNC-FSKD), Guilin, 2017, pp. 1790-1793.
+
+Summary:
+The authors explore cyber Malware attack data set and machine learning algorithms in detecting cyber-attacks. 
+Their data processing can be applied to different data formats from different platforms.
+They use Fuzzy k-Means to cluster data samples into three classes: attack, unsure and no attack, where Euclidean distance is involved.
+Then they label some data so that they can train the classifier, where MLP Neural Network is used and weights are considered.
+
+Strength:
+The paper discusses cyber-attack, k-Means and big data analytics.
+It means to reduce cyber-attack risks.
+It puts some of the emphasis on data set processing, but it still worth reading.
