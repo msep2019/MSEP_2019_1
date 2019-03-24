@@ -1,0 +1,18 @@
+Literature Review on KDD99
+
+Paper Citation:
+Gunes Kayacık, A. Nur Zincir-Heywood and Malcolm I. Heywood, "Selecting Features for Intrusion Detection: A Feature Relevance Analysis on KDD 99," Third Annual Conference on Privacy, Security and Trust, The Fairmont Algonquin, St. Andrews, New Brunswick, Canada, 2005.
+
+Summary:
+The authors work on how great contributions different features of the labeled data set KDD 99 in TCP dump format can make to intrusion detection.
+They use the methodology of calculating the information gain to measure a particular feature's impact on the predict based on the entropy.
+They described the data set in detail, including the four attack categories of dos, r2l, u2l and probe, as well as the four feature categories of basic, content, time-based and host-based traffic features.
+Then introduce and apply their calculating process on the concise training '10% KDD' dataset which includes 22 attack types.
+With expected information and entropy calculated, information gain is their difference value.
+They apply binary discrimination in the process and classes are involved individually.
+They find out that smurf, neptune and normal have the highest information gains, and they list the relevant features of some classes. They also find that amount of data exchange is a key feature.
+
+Strength:
+The paper introduces KDD 99 data set in a clear and understandable way, which is helpful to us beginners.
+The paper analyzes the importance of features in the data set, and aim to achieve better results with machine learning algorithms.
+This paper is very worth reading.
