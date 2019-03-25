@@ -21,3 +21,22 @@ Probe
 Classification of Intrusion Detection and Intrusion Detection Systems
 1) Host-based IDS (HIDS)
 2) Network-based IDS (NIDS)
+
+Methods and Systems for Network Anomaly Detection
+
+A. Statistical methods and systems
+B. Classification-based methods and systems
+C. Clustering and Outlier-based methods and systems
+D. Soft computing methods and systems
+    1) Genetic algorithm approaches
+    2) Artificial Neural Network approaches
+    3) Fuzzy set theoretic approaches
+    4) Rough Set approaches
+    5) Ant Colony and Artificial Immune System approaches
+E. Knowledge-based methods and systems
+    1) Rule-based and Expert system approaches
+    2) Ontology and logic-based approaches
+F. Combination learner methods and systems
+    1) Ensemble-based methods and systems
+    2) Fusion-based methods and system
+    3) Hybrid methods and system
