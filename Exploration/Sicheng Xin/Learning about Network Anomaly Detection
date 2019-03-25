@@ -1,1 +1,23 @@
 Learning about Network Anomaly Detection
+
+Paper Citation:
+M. H. Bhuyan, D. K. Bhattacharyya and J. K. Kalita, 
+"Network Anomaly Detection: Methods, Systems and Tools," in IEEE Communications Surveys & Tutorials, 
+vol. 16, no. 1, pp. 303-336, First Quarter 2014.
+
+Different Classes of Attacks
+Virus 
+Worm 
+Trojan 
+Denial of service(DoS)
+NetWork Attack
+Physcial Attack
+Password Attack
+Information Gathering Attack
+User to Root(U2R) attack
+Remote to Local attack
+Probe
+
+Classification of Intrusion Detection and Intrusion Detection Systems
+1) Host-based IDS (HIDS)
+2) Network-based IDS (NIDS)
