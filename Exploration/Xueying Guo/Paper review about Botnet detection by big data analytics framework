@@ -1,0 +1,12 @@
+Topic: Big Data Analytics framework for Peer-to-Peer Botnet detection using Random Forests
+
+Summary:
+This paper purposes quasi-real-time system for intrusion detection based on open source tools like Hadoop, Hive and Mahout. 
+
+Some definitions:
+Botnet: a network of private computers infected with malicious software and controlled as a group without the owners' knowledge, e.g., to send spam messages.
+
+Mahout: machine learning library built on top of Hadoop. The distributed implementation of Mahout plays a significant role in big data analysis. 
+Mahout’s native library of random forest’s implementation is used for training and classification purpose. 
+
+Random forest: it is appropriate to process high-dimensional data and ignores irrelevant descriptors.
