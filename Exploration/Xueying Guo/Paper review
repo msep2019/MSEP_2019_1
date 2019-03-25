@@ -1,0 +1,14 @@
+Topic: Toward Scalable Internet Traffic Measurement and Analysis with Hadoop 
+Summary:
+This article presents a traffic monitoring system based on Hadoop. This system is able to perform IP, TCP, HTTP, and NetFlow analysis of the internet traffic. The work flow is that the traffic collector will collect IP and NetFlow data and save into HDFS in libpcap format, and each map task will read its assigned HDFS blocks. It will analyze network-layer (IP package statistic), transport-layer and application layer. 
+
+In experiment, the authors use 2 local test beds, one is for 30-node cluster and another one is 200-node cluster. The authors test the scalability by testing how the job completion time and throughput change when they are adding Hadoop worker nodes on it. 
+
+Some definitions:
+Hadoop: an open-source distributed computing framework.
+MapRuduce: as a programming model.
+HDFS: Hadoop Distributed File System as distributed filesystem of Hadoop.
+
+Reference: Yeonhee Lee and Youngseok Lee. 2012. Toward scalable internet traffic measurement and analysis with Hadoop. SIGCOMM Comput. Commun. Rev.43, 1 (January 2012), 5-13. DOI=http://dx.doi.org/10.1145/2427036.2427038
+
+Other comment: This paper is related to Hadoop and how to measure scalability
