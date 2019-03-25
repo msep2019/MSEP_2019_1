@@ -7,6 +7,7 @@ Hadoop Installation
 3. There are some official jar examples for testing if Hadoop can successfully work.
 4. After formatting nodes, remember to rebuild the folders and files.
 5. Remember to add path in '/etc/profile'.
+6. HDFS is used.
 
 Hadoop in Eclipse
 1. Remember to check the SHA-512 of Eclipse.
@@ -19,3 +20,5 @@ Hadoop in Eclipse
 Spark in Eclipse
 1. Use scala-ide for Eclipse.
 2. The project type is Scala Project.
+
+Spark is faster than Hadoop, but we will dig deeply into both of them for research.
