@@ -1,0 +1,7 @@
+Hadoop and Spark are two popular platforms.
+By using these two new Big Data technologies we are able to store large quantities of data by flexible parallel processing.
+These clusters will assist our research by offering convinent Big Data storage and make it possible to train thousands of test data.
+Specifically, Hadoop is consisted of two primary parts: HDFS and MapReduce. The former is the storage and the latter defines programming framework.
+On the other hand, Spark shares similiar usages. However, Spark uses memory computations which provides faster speed for data process, comparing Hadoop.
+
+Notes: How different in scalability and reliability performance between Hadoop and Spark is still unknown, but our research will try to find solutions.
