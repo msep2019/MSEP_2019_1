@@ -1,0 +1,21 @@
+JDK installation
+1. When changing '/etc/profile' to set environment variables, 'gedit' could be used, which is graphic, compared to 'vim'.
+
+Hadoop Installation
+1. Remember to verify the integrity of the file downloaded.
+2. I followed the tutorial on 'https://Hadoop.apache.org/docs/r2.9.2/Hadoop-project-dist/Hadoop-common/SingleCluster.html'.
+3. There are some official jar examples for testing if Hadoop can successfully work.
+4. After formatting nodes, remember to rebuild the folders and files.
+5. Remember to add path in '/etc/profile'.
+
+Hadoop in Eclipse
+1. Remember to check the SHA-512 of Eclipse.
+2. Use Hadoop plug-in for Eclipse.
+3. 'sbin/start-dfs.sh' is used to start namenode and datanode.
+4. 'jps' command can check if namenode and datanode are successfully started.
+5. If namenode and datanode have not started, then there will be the problem of 'failed on connection exception'.
+6. 'sbin/stop-dfs.sh' should be used to close the connection.
+
+Spark in Eclipse
+1. Use scala-ide for Eclipse.
+2. The project type is Scala Project.
