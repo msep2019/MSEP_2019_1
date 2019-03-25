@@ -13,9 +13,9 @@ Finally, non-linear SVM will use kernel tricks to separate the data points.
 Kernel tricks can tackle problems with more dimensions without calculate values in a complex way.
 
 About sklearn.svm:
-In this project, I will use svm in scikit-learn.
+Scikit-learn implements SVM, but it is not distributed.
 'https://scikit-learn.org/stable/modules/classes.html#module-sklearn.svm' presents the API, and 'https://scikit-learn.org/stable/modules/svm.html' tells some further detailed information.
-Here are some of the functions that probably be used.
+Here are some of the functions that are usually used.
 The API of 'svm.LinearSVC' is the classification in linear version.
 'fit' and 'predict' are used to train the model and predict values.
 Support vectors can be got from member 'support_vectors_'.
