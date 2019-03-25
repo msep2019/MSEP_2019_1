@@ -1,0 +1,20 @@
+Literature Review on related works
+
+Paper Citation:
+Y. Du, J. Liu, F. Liu and L. Chen, "A Real-Time Anomalies Detection System Based on Streaming Technology," 2014 Sixth International Conference on Intelligent Human-Machine Systems and Cybernetics, Hangzhou, 2014, pp. 275-279.
+
+Summary:
+The authors propose a anomalies detection system based on Apache Storm in the context of big data and cyber security.
+They use flow data as their data set.
+They choose Storm over MapReduce, because they think that MapReduce cannot realize real-time big data processing progress well.
+Their system includes data collection as well as data processing.
+There are four modules in their data processing, which are Monitor, TopN, Storage and Query Model.
+TopN model involves Suspects, compared with Storage model, which involves real anomalies.
+In their anomalies detection, they use 'k-NN', and in their TopN model, they use 'Frequent algorithm', which is about N counter values.
+They evaluate their accurateness, performance and scalability.
+In the case of scalability evaluation, they change cluster nodes numbers so that they can experiment on the capacity.
+
+Strength:
+This paper works on defecting anomalies and locating the source in cyber and big data context.
+It also talks about how the authors evaluate their system, and the evaluation also includes scalability.
+It's very worth reading.
