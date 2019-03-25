@@ -4,4 +4,4 @@ These clusters will assist our research by offering convinent Big Data storage a
 Specifically, Hadoop is consisted of two primary parts: HDFS and MapReduce. The former is the storage and the latter defines programming framework.
 On the other hand, Spark shares similiar usages. However, Spark uses memory computations which provides faster speed for data process, comparing Hadoop.
 
-Notes: How different in scalability and reliability performance between Hadoop and Spark is still unknown, but our research will try to find solutions.
+Notes: How different in scalability and reliability between Hadoop and Spark is still unknown, but our research will try to find solutions.
