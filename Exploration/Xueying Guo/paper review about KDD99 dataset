@@ -1,0 +1,10 @@
+Reference: Gupta & Kulariya, 2016. A Framework for Fast and Efficient Cyber Security Network Intrusion Detection Using Apache Spark. Procedia Computer Science, 93, pp.824–831.
+
+DARPA KDD’99 dataset contains approximately 4GB network traffic data in the form of tcpdump.
+This dataset was processed by using about 5 million network connections at DARPA.
+Each network record has 41 features and it is also labled as either normal or attack type.
+There are total 22 types of attack are mentioned in this dataset, and these attacks have been clasified into 4 groups:
+1) Denial of Service ( DoS), 
+2) Port Scanning attack (Probe), 
+3) unauthorized access to remote machine(R2L) 
+4) unauthorized access to root super user privileges (U2R attack)
