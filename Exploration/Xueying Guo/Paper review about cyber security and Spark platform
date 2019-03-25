@@ -1,0 +1,21 @@
+Topic: A Framework for Fast and Efficient Cyber Security Network Intrusion Detection using Apache Spark
+
+Summary:
+This paper purposes a framework for intrusion detection based on Spark framework and 5 classification-based algorithms for detection plus 2 selection algorithms will be run on it for evaluating the performance. Also, KDD99 dataset is used for validating the performance of this framework. In order to measure the performance of purposed framework, the authors also use different metrics like accuracy, sensitivity, specificity, training time and prediction time.
+
+Used algorithms:
+Classification based detection: 
+Logistic regression;
+Support vector machines; it’s based on creating a maximum-margin hyper plane, used for complex dataset. 
+Random forest
+Gradient Boosted Decision trees; used with large datasets to make high prediction power
+Naive Bayes; easy to build and works better with large dataset.
+
+For selection: 
+correlation-based feature selection;
+Chi-squared feature selection;
+
+2 datasets: KDD99 and NSL-KDD, while NSL-KDD is an improved version of KDD99
+
+Some definitions:
+Spark: a big data processing tool for processing the large scale of network traffic data; an open source cluster computing platform designed for big data processing. Spark is able to run Hadoop clusters and can process any Hadoop data sources.
