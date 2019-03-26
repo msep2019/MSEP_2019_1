@@ -5,3 +5,4 @@ Z. Chen, H. Zhang, W. G. Hatcher, J. Nguyen and W. Yu, "A streaming-based networ
 doi: 10.1109/SERA.2016.7516125
 
 Summary: This paper uses Big Data technologies to develop integrated system that can handle streaming and high-performance data analysis.
+Hadoop is used as clusters to perform network monitoring and intrution detection. Authors used MapReduce approach into Spark in the core analysis model. 
