@@ -1,0 +1,35 @@
+S1. I followed the tutorial that supervisor shared and install VirtualBox and launch Eclipse. 
+
+S2. Check environment setting by below command:
+  hadoop version	// to get Hadoop version, which is Hadoop 2.6.0-cdh 5.5.0
+  javac -version	// to get the version of java, which is 1.7.0_67
+  export HADOOP_CLASSPATH=$(hadoop classpath)	// config classpath
+  echo $HADOOP_CLASSPATH	// validate classpath has been set correctly
+
+S3. create directory in hadoop filesystem
+  hadoop fs -mkdir /WordCount // Create a dictionary on HDFS
+  hadoop fs -mkdir /WordCount/Input // Create a dictionary inside WordCount for input
+
+S4. Use browser for validation: localhost:50070 -> Utilities -> Browse the filesystem, then the new directory ‘WordCount’ is displayed here.
+
+S5. Upload input file to that directory by command: 
+  	hadoop fs -put <INPUT_FILE> <HDFS_INPUT_DIRECTORY>
+    INPUT_FILE = ‘/home/cloudera/Desktop/WordCount/input_data/input.txt’
+    HDFS_INPUT_DIRECTORY = /WordCount/Input
+
+S6. New project in Eclipse and coding, export .jar after finish 
+
+S7. Run job by command: (be careful of the space count)
+      hadoop jar <JAR> <CLASS_NAME> <INPUT_DIRECTORY> <OUTPUT_DIRECTORY>
+   => hadoop jar '/home/cloudera/Desktop/WordCount/WordCount.jar' WordCount /WordCount/Input /WordCount/Output
+   
+  Output:
+  19/03/27 16:17:41 INFO mapreduce.Job:  map 100% reduce 100%
+  19/03/27 16:17:41 INFO mapreduce.Job: Job job_1553659970250_0006 completed successfully
+
+S8. Check output by command: (or can login to 50070 to check)
+  hadoop dfs -cat /WordCount/Output/*
+  
+S9. (optional) If want to rerun the job, then we need to remove output floder from hadoop filesystem by command:
+    hadoop fs -rmdir /WordCount/Output
+    
