@@ -1,0 +1,30 @@
+The process of running WordCount Program on Hadoop and Spark in Eclipse in Ubuntu & Problems & Solutions & Logics Understanding
+
+When running WordCount on Hadoop in Eclipse using 'hadoop2x-eclipse-plugin':
+1. The HDFS structure can be seen clearly in 'DFS Locations', and 'Refresh' is useful to check data and result.
+2. Input files should be uploaded to 'hdfs://' before.
+3. The output folder should not exist, or error 'Output directory 'hdfs://xxx' already exists' will emerge.
+4. The output folder is automatically built, and the counting result is in the file 'part-00000'.
+5. The understanding of logic of WordCount in Java class: 
+    1) Create one class that extends Mapper, which does the 'map' work in MapReduce. 
+        In this case, it records the words.
+    2) Create one class that extends Reducer, which does the 'reduce' work in MapReduce. 
+        In this case, it calculates the sum, which is the count of the words.
+    3) Set the configuration, including setting the aforementioned mapper class, reducer class and so on.
+    4) Set input and output path (can be configured in 'Arguments' in 'Run Configurations').
+
+When running WordCount on Spark in Eclipse using 'Scala IDE':
+1. Remember to add Spark and Hadoop related jar files (a lot in number) in 'Java Build Path -> Library -> Add External Jars' to the Spark project if using version 'Pre-build with user-provided Apache Hadoop' of Spark.
+2. The spark-env.sh should be appended with Hadoop classpath so that it can relate with HDFS.
+3. Run the Scala class as 'Scala Application', where there is 'def main'.
+4. For error 'java.lang.NoClassDefFoundError', it means some jars are lacked.
+5. For error 'A master URL must be set in your configuration', 'setMaster' function can be added to solve the problem.
+6. The output folder should not exist, or error 'Output directory file:/home/data/output already exists' will emerge. 
+7. The output folder is automatically built, and the counting result is in the file 'part-00000'.
+8. The understanding of logic of WordCount in Scala class: 
+    1) Define main (as main function);
+    2) Create SparkConf (set the name of app and master);
+    3) Create SparkContext (based on SparkConf);
+    4) Get input file content in SparkContext;
+    5) Use MapReduce in Hadoop;
+    6) Save the results as files.
