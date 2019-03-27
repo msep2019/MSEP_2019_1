@@ -1,0 +1,13 @@
+0. run command in terminal: spark-shell
+
+1. Run command: 
+val textFile = sc.textFile("file:///home/cloudera/Desktop/WordCount_Spark/input.txt")
+
+2. Run command:
+val wordCount = textFile.flatMap(line => line.split(" ")).map(word => (word, 1)).reduceByKey((a, b) => a + b)
+
+3. Run Command:
+wordCount.collect()
+
+Output: 
+res5: Array[(String, Int)] = Array((Spark,3), (Test,1), (Chocolate,1), (Water,1), (Sherry,1), (Cake,1), (Bottle,1), (Joanne,2), (Rainbow,1), (Ice,1), (Data,1), (Gerry,1), (Ryan,1))
