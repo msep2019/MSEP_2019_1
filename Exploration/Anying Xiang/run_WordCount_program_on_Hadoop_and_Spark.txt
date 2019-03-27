@@ -1,4 +1,4 @@
-The process of running WordCount Program on Hadoop and Spark in Eclipse in Ubuntu & Problems & Solutions & Logics Understanding
+About running WordCount Program on Hadoop and Spark in Eclipse in Ubuntu & Problems & Solutions & Logics Understanding
 
 When running WordCount on Hadoop in Eclipse using 'hadoop2x-eclipse-plugin':
 1. The HDFS structure can be seen clearly in 'DFS Locations', and 'Refresh' is useful to check data and result.
