@@ -1,0 +1,21 @@
+Understanding about Map Reduce
+
+1. Map Reduce is for calculation of a huge amount of data, especially through a distributed computing way.
+
+2. Map Reduce includes two steps:
+    1) Map: 
+        a) As what it is called, the operation is about mapping, for example, it filtes data.
+        b) Input data is split, and multiple map tasks work in a parallel way.
+        c) Map takes key-values as its input data, and the processed key-values will be written to the disk, and then be processed by a particular Reduce worker (assigned by 'master' compared to 'worker').
+        d) Mapper class to be extended.
+    2) Reduce: 
+        a) It summarizes the output data of Map tasks (as its input data) and produces desired results.
+        b) Reduce will sort the input data in the first place, and then call reduce function for every unique key.
+        c) Each Reduce corresponds to a output file (e.g.: part-00000, part-00001, ...).
+        d) Reducer class to be extended.
+
+3. 'master' is responsible for assigning map or reduce to various workers.
+
+4. Data is processed as key-values.
+
+5. Implementation of Writable is for serializing the objects.
