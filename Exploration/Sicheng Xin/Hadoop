@@ -15,4 +15,4 @@ Hadoop can be run in three modes：
     2. Pseudo-distributed mode
     3. Fully-distributed mode
     
-Our tests will base on these three modes.
+Our tests will be based on these three modes.
