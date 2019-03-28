@@ -1,1 +1,18 @@
+In order to research the scalability and reliability of a Big Data Cyber Security Analytics (BDCA) System, 
+We will use different big data frameworks. Hadoop is one of our experimental subjects.
 
+As a reference, we use the Hadoop Tutorial (CS246: Mining Massive Data Sets) from Stanford University to set up and configure our experimental environment. 
+
+Download and install VirtualBox on your machine: http://virtualbox.org/wiki/Downloads
+Download the Cloudera Quickstart VM at https://downloads.cloudera.com/demo_vm/virtualbox/cloudera-quickstart-vm-5.13.0-0-virtualbox.zip
+
+Install the Cloudera Quickstart VM on VirtualBox
+
+Instead of the Virtual Box, I am trying to set up the Cloudera Quickstart VM on different virtual machines like VMware Fusion.
+
+Hadoop can be run in three modes：
+    1. Standalone (or local) mode
+    2. Pseudo-distributed mode
+    3. Fully-distributed mode
+    
+Our tests will base on these three modes.
