@@ -2,4 +2,16 @@ Some key steps of running wordcount program in Hadoop:
   1. Setting up "Virtual Box" virtual environment and import Cloudera VM file.
   2. Creating program folders on Eclipse and coding "WordCount" program on Eclipse: 
   3. Downloading "Complete Works of William Shakespeare" datasets by using cURL command (also remove the BOM)
-  4. 
+  4. Configuring, running and exporting the program.
+  5. Running WordCount job on command and finally viewing the job logs.
+
+
+Issues encounterd:
+1. Errors in coding:
+    difference in version of Hadoop 1.0 and 2.0 between "import org.apache.hadoop.mapreduce.Mapper" and "import org.apache.hadoop.mapred.Mapper" caused errors
+2. Warnings after coding
+   "util.NativeCodeLoader: Unable to load native-hadoop library for your platform" after execution the program on Eclipse
+3. Failure in loading "pg100" files: 
+    after entering "hadoop fs -put workspace/WordCount/pg100.txt". terminal displays error "No such file or directory",
+    however, there is a txt file named "pg100" under WordCount directory.
+  
