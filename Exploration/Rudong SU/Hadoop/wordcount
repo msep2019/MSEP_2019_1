@@ -1,3 +1,4 @@
+
 Key steps of running wordcount program in Hadoop:
   1. Setting up "Virtual Box" virtual environment and importing Cloudera VM file.
   2. Creating program folders on Eclipse and coding "WordCount" program on Eclipse: 
@@ -6,12 +7,95 @@ Key steps of running wordcount program in Hadoop:
   5. Running WordCount job on command and finally viewing the job logs.
 
 
-Issues encounterd:
+Results:
+% Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 1975k  100 1975k    0     0   458k      0  0:00:04  0:00:04 --:--:--  504k
+
+19/03/27 20:07:38 INFO input.FileInputFormat: Total input paths to process : 1
+19/03/27 20:07:39 INFO mapreduce.JobSubmitter: number of splits:1
+19/03/27 20:07:39 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_1553730175814_0001
+19/03/27 20:07:41 INFO impl.YarnClientImpl: Submitted application application_1553730175814_0001
+19/03/27 20:07:41 INFO mapreduce.Job: The url to track the job: http://quickstart.cloudera:8088/proxy/application_1553730175814_0001/
+19/03/27 20:07:41 INFO mapreduce.Job: Running job: job_1553730175814_0001
+19/03/27 20:08:07 INFO mapreduce.Job: Job job_1553730175814_0001 running in uber mode : false
+19/03/27 20:08:07 INFO mapreduce.Job:  map 0% reduce 0%
+19/03/27 20:08:25 INFO mapreduce.Job:  map 100% reduce 0%
+19/03/27 20:08:38 INFO mapreduce.Job:  map 100% reduce 100%
+19/03/27 20:08:39 INFO mapreduce.Job: Job job_1553730175814_0001 completed successfully
+19/03/27 20:08:39 INFO mapreduce.Job: Counters: 49
+	File System Counters
+		FILE: Number of bytes read=3847453
+		FILE: Number of bytes written=7918123
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+		HDFS: Number of bytes read=2023514
+		HDFS: Number of bytes written=3679324
+		HDFS: Number of read operations=6
+		HDFS: Number of large read operations=0
+		HDFS: Number of write operations=2
+	Job Counters 
+		Launched map tasks=1
+		Launched reduce tasks=1
+		Data-local map tasks=1
+		Total time spent by all maps in occupied slots (ms)=14293
+		Total time spent by all reduces in occupied slots (ms)=11398
+		Total time spent by all map tasks (ms)=14293
+		Total time spent by all reduce tasks (ms)=11398
+		Total vcore-seconds taken by all map tasks=14293
+		Total vcore-seconds taken by all reduce tasks=11398
+		Total megabyte-seconds taken by all map tasks=14636032
+		Total megabyte-seconds taken by all reduce tasks=11671552
+	Map-Reduce Framework
+		Map input records=15359
+		Map output records=36981
+		Map output bytes=3774353
+		Map output materialized bytes=3847453
+		Input split bytes=120
+		Combine input records=36981
+		Combine output records=35798
+		Reduce input groups=35798
+		Reduce shuffle bytes=3847453
+		Reduce input records=35798
+		Reduce output records=35798
+		Spilled Records=71596
+		Shuffled Maps =1
+		Failed Shuffles=0
+		Merged Map outputs=1
+		GC time elapsed (ms)=299
+		CPU time spent (ms)=5510
+		Physical memory (bytes) snapshot=341684224
+		Virtual memory (bytes) snapshot=3008532480
+		Total committed heap usage (bytes)=226365440
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=2023394
+	File Output Format Counters 
+		Bytes Written=3679324
+
+
+
+Issues encounterd and solved:
 1. Errors in coding:
-    difference in version of Hadoop 1.0 and 2.0 between "import org.apache.hadoop.mapreduce.Mapper" and "import org.apache.hadoop.mapred.Mapper" caused errors
+    difference in Hadoop version 1.0 and 2.0 between "import org.apache.hadoop.mapreduce.Mapper" and "import org.apache.hadoop.mapred.Mapper" caused errors
+    Solved by changing mapred to mapreduce    
 2. Warnings after coding
-   "util.NativeCodeLoader: Unable to load native-hadoop library for your platform" after execution the program on Eclipse
+   "util.NativeCodeLoader: Unable to load native-hadoop library for your platform" after execution the program on Eclipse    
+    Have not solved but results in no further warnings    
 3. Failure in loading "pg100" files: 
     after entering "hadoop fs -put workspace/WordCount/pg100.txt". terminal displays error "No such file or directory",
-    however, there is a txt file named "pg100" under WordCount directory.
+    however, there is a txt file named "pg100" under WordCount directory.   
+    Solved after checking directories for "pg100.txt" carefully.
   
+  
+Conclusion:
+  The Mapper class processes and splits all lines of input text file using a regular expression, and finally outputs intermediate data to reducer.
+  The Reducer class receives key values and an iterable collection of objects (from Mapper) and output key-value pair to HDFS.
+
