@@ -1,0 +1,4 @@
+Some key steps of running wordcount program in Hadoop:
+  1. Setting up "Virtual Box" virtual environment and import Cloudera VM file.
+  2. Creating program folders on Eclipse and coding "WordCount" program on Eclipse: 
+        
