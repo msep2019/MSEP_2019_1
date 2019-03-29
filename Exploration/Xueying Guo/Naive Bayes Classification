@@ -1,0 +1,9 @@
+
+1. Bayes classification based on this equation: P(A|B)=P(B|A)P(A) / P(B)
+    P(A|B): Probability (conditional probability) of occurrence of event A  given the event B is true
+    P(A) and P(B): Probabilities of the occurrence of event A and B respectively
+    P(B|A): Probability of the occurrence of event B  given the event A is true
+    
+2. Posterior=(Likelihood).(Proposition prior probability) / (Evidence prior probability)
+
+3. It is a probabilistic classifier.
