@@ -1,0 +1,4 @@
+Key steps of writing wordcount in Spark:
+  1. Writing the application
+  2. Compiling and Packaging the Scala application
+  3. Running
