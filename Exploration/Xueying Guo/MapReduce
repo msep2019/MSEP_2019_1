@@ -1,0 +1,5 @@
+MapReduce:
+
+1. MapReduce algorithm consists of 2 parts: Map and Reduce
+2. Map for processing input data 
+3. Reduce for processing the data comes from mapper
