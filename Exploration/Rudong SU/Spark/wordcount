@@ -1,4 +1,7 @@
 Key steps of writing wordcount in Spark:
-  1. Writing the application
-  2. Compiling and Packaging the Scala application
-  3. Running
+  1. Setting up the enrironment and creating Spark project on Scala IDE
+  2. Configuring the Spark project on Scala IDE
+  3. Adding Maven dependency by googling "apache Spark maven dependency"  and choosing proper version of Maven
+
+issues encountered: 
+  1. failure to launch scala IDE on Cloudera: Unsupported GTK+ version
