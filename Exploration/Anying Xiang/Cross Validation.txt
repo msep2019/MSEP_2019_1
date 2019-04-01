@@ -1,0 +1,8 @@
+Explore Cross Validation
+
+1. Cross Validation is used to improve the accuracy of Machine Learning Models.
+2. Cross Validation only uses training data set, because in reality, test data set is unknown, 
+but it regards a part of the training data set as test data set to be tested by itself before finishing training the model, 
+which may present the problems in the current model, 
+and as a result, developer can work out the wrong parameters in the model and improves performance.
+3. K-fold Cross Validation: Divide the training set into K parts, and then it can iteratively have K different pairs of training and testing data sets.
