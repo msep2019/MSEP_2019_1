@@ -1,0 +1,6 @@
+a change from 'WordCount' :
+
+while (st.hasMoreTokens) {
+  word.set(st.nextToken().substring(0,1)) ;
+  context.write(word, one) ;
+}
