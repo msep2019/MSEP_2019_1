@@ -1,0 +1,39 @@
+-> Cross Validation:
+    correct: 87791
+    total count: 98668
+    tp: 31459
+    fn: 1
+    tn: 56332
+    fp: 10876
+    POS = 31460
+    NEG = 67208
+    Accuracy = 0.8897616248429076
+    FPR = 0.16182597309844066
+    Precision = 0.7430967284752569
+    TPR = 0.9999682136045772
+    F-Measure = 0.8526051900535268
+    TNR = 0.8381740269015594
+    FNR = 3.178639542278372E-5
+    Detection Rate: 0.8897616248429076
+
+-> 20% Training data as Testing data without CV:
+    correct: 82680
+    total count: 99343
+    tp: 26224
+    fn: 7
+    tn: 56456
+    fp: 16656
+    POS = 26231
+    NEG = 73112
+    Accuracy = 0.8322680007650263
+    FPR = 0.22781485939380677
+    Precision = 0.6115671641791045
+    TPR = 0.9997331401776524
+    F-Measure = 0.7588951107638437
+    TNR = 0.7721851406061933
+    FNR = 2.668598223476426E-4
+    Detection Rate: 0.8322680007650263
+
+-> Input Split example: 
+2019-04-07 12:39:30 INFO  HadoopRDD:54 - Input split: hdfs://localhost:9000/kdd/train/KDDTrain.txt:37207602+37207602
+2019-04-07 12:39:30 INFO  HadoopRDD:54 - Input split: hdfs://localhost:9000/kdd/train/KDDTrain.txt:0+37207602
