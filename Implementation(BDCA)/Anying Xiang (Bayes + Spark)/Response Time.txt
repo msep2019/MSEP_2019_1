@@ -1,0 +1,14 @@
+2019-04-07 10:52:47 INFO  DAGScheduler:54 - ShuffleMapStage 1 (countByValue at StringIndexer.scala:140) finished in 18.840 s
+2019-04-07 10:52:48 INFO  DAGScheduler:54 - ResultStage 2 (countByValue at StringIndexer.scala:140) finished in 0.588 s
+2019-04-07 10:53:00 INFO  DAGScheduler:54 - ShuffleMapStage 3 (countByValue at StringIndexer.scala:140) finished in 8.310 s
+2019-04-07 10:53:00 INFO  DAGScheduler:54 - ResultStage 4 (countByValue at StringIndexer.scala:140) finished in 0.183 s
+2019-04-07 10:53:02 INFO  DAGScheduler:54 - ResultStage 5 (show at BayesonSpark.scala:92) finished in 0.344 s
+2019-04-07 10:53:04 INFO  DAGScheduler:54 - ResultStage 6 (show at BayesonSpark.scala:118) finished in 0.726 s
+2019-04-07 10:53:24 INFO  DAGScheduler:54 - ResultStage 7 (head at NaiveBayes.scala:156) finished in 17.604 s
+2019-04-07 10:53:41 INFO  DAGScheduler:54 - ShuffleMapStage 8 (map at NaiveBayes.scala:164) finished in 16.595 s
+2019-04-07 10:53:41 INFO  DAGScheduler:54 - ResultStage 9 (collect at NaiveBayes.scala:176) finished in 0.077 s
+2019-04-07 10:53:50 INFO  DAGScheduler:54 - ResultStage 10 (show at BayesonSpark.scala:135) finished in 7.687 s
+2019-04-07 10:54:06 INFO  DAGScheduler:54 - ResultStage 11 (collect at BayesonSpark.scala:137) finished in 15.965 s
+2019-04-07 10:54:28 INFO  DAGScheduler:54 - ResultStage 12 (collect at BayesonSpark.scala:138) finished in 21.074 s
+2019-04-07 10:54:50 INFO  DAGScheduler:54 - ShuffleMapStage 13 (count at BayesonSpark.scala:139) finished in 20.507 s
+2019-04-07 10:54:50 INFO  DAGScheduler:54 - ResultStage 14 (count at BayesonSpark.scala:139) finished in 0.095 s
