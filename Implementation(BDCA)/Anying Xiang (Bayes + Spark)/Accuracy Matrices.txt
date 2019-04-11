@@ -37,3 +37,42 @@
 -> Input Split example: 
 2019-04-07 12:39:30 INFO  HadoopRDD:54 - Input split: hdfs://localhost:9000/kdd/train/KDDTrain.txt:37207602+37207602
 2019-04-07 12:39:30 INFO  HadoopRDD:54 - Input split: hdfs://localhost:9000/kdd/train/KDDTrain.txt:0+37207602
+
+DARPA CV:
+correct: 358612
+total count: 544246
+accuracy rate: 0.6589152699330817
+tp: 203529
+fn: 111371
+tn: 155083
+fp: 74263
+POS = 314900
+NEG = 229346
+Accuracy = 0.6589152699330817
+FPR = 0.32380333644362663
+Precision = 0.7326668874553622
+TPR = 0.6463289933312163
+F-Measure = 0.6867951651110525
+TNR = 0.6761966635563734
+FNR = 0.3536710066687837
+Detection Rate: 0.6589152699330817
+
+CIDIDS:
+Removed broadcast_11_piece0 on jzd:34229 in memory (size: 3.8 KB, free: 977.6 MB)
+correct: 1044232
+total count: 1098355
+accuracy rate: 0.9507235820841167
+tp: 185489
+fn: 0
+tn: 858743
+fp: 54123
+POS = 185489
+NEG = 912866
+Accuracy = 0.9507235820841167
+FPR = 0.059289096099537066
+Precision = 0.7741223311019482
+TPR = 1.0
+F-Measure = 0.8726820214490203
+TNR = 0.940710903900463
+FNR = 0.0
+Detection Rate: 0.9507235820841167
