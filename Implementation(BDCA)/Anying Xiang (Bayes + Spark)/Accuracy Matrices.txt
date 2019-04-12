@@ -1,3 +1,4 @@
+KDD 99:
 -> Cross Validation:
     correct: 87791
     total count: 98668
@@ -76,3 +77,23 @@ F-Measure = 0.8726820214490203
 TNR = 0.940710903900463
 FNR = 0.0
 Detection Rate: 0.9507235820841167
+
+CICIDS2017:
+Removed broadcast_15_piece0 on jzd:39191 in memory (size: 3.8 KB, free: 977.6 MB)
+correct: 62195
+total count: 89825
+accuracy rate: 0.692401892568884
+tp: 12354
+fn: 3
+tn: 49841
+fp: 27627
+POS = 12357
+NEG = 77468
+Accuracy = 0.692401892568884
+FPR = 0.35662467083182736
+Precision = 0.308996773467397
+TPR = 0.9997572226268512
+F-Measure = 0.47208529175742286
+TNR = 0.6433753291681726
+FNR = 2.4277737314881698E-4
+Detection Rate: 0.692401892568884
