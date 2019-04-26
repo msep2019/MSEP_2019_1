@@ -1,0 +1,2 @@
+How to run Spark Jar in yarn mode (distributed mode):
+./spark-submit --master yarn /home/ubuntu/Cloud/OpenStack/sep_test_spark_bayes_1_2.11-0.1.0-SNAPSHOT.jar /kdd/train/KDDTrain.txt /kdd/test/KDDTest.txt
