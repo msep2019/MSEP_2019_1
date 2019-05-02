@@ -1,2 +1,12 @@
 How to run Spark Jar in yarn mode (distributed mode):
-./spark-submit --master yarn /home/ubuntu/Cloud/OpenStack/sep_test_spark_bayes_1_2.11-0.1.0-SNAPSHOT.jar /kdd/train/KDDTrain.txt /kdd/test/KDDTest.txt
+./spark-submit --master yarn --deploy-mode cluster --num-executors 10 --executor-cores 1 /home/ubuntu/Cloud/OpenStack/nb_spark_output/sep_spark_bayes_v6.jar /ubuntu/dataset/KDDTrain.txt /ubuntu/dataset/KDDTest.txt 1 &> /home/ubuntu/Cloud/OpenStack/nb_spark_output/output_nb_spark_10_kdd.txt
+
+NOTE:
+'--num-executors' means how many executors will be requested by driver, in our case, which is the number of working nodes expected
+'--executor-cores' means how many cores per executor, in our case, we set it as 1
+PROCESS:
+1. start dfs
+2. start yarn
+3. start spark master and slaves
+DEBUG:
+cannot access the SPARK UI, so manually set the local log directory and check log files
