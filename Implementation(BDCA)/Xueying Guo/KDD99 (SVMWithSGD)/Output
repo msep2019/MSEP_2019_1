@@ -1,0 +1,11 @@
+Output result when run kdd99 by SVM algorithm -- without cross validation (binaryclassification)
+SVMWithSGD
+
+accurate predict count = 9479
+total count =9777
+true positive (tp) = 8285
+false positive (fp) = 14
+true negative (tn) = 1194
+false negative (fn) = 284
+accuracy = 0.9695203027513553
+Area under ROC = 0.9776339361273775
