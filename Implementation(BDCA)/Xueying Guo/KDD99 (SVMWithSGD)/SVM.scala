@@ -90,16 +90,32 @@ object SVM {
     
     val accuratecount = tn + tp
     val accuracy=accuratecount.toDouble/(tn+tp+fn+fp).toDouble
+    val precision = tp.toDouble/(tp+fp).toDouble
+    val POS = tp + fn
+    val NEG = tn + fp
+    val FPR = fp.toDouble/NEG.toDouble //false positive rate
+    val TPR = tp.toDouble/POS.toDouble //true positive rate
+    val TNR = tn.toDouble/NEG.toDouble //true negative rate
+    val FNR = fn.toDouble/POS.toDouble //false negative rate
+    val R = tp.toDouble/(tp+fn).toDouble // recall rate
+    val kmeasure = (2 * precision.toDouble * R.toDouble).toDouble/(precision+R).toDouble
     //scoreAndLabels.foreach(println)
     
-    println("accurate predict count = " + accuratecount )
+    println("accurate count = " + accuratecount )
     println("total count =" +testdata.count )
-    println("true positive = " + tp )
-    println("false positive = " + fp )
-    println("true negative = " + tn )
-    println("false negative = " + fn )
+    println("true positive (tp)= " + tp )
+    println("false positive (fp)= " + fp )
+    println("true negative (tn)= " + tn )
+    println("false negative (fn)= " + fn )
     println("accuracy = " + accuracy.toDouble )
-    
+    println("precision = " + precision.toDouble)
+    println("POS = " + POS)
+    println("NEG = " + NEG)
+    println("FPR = " + FPR.toDouble)
+    println("TPR = " + TPR.toDouble)
+    println("TNR = " + TNR.toDouble)
+    println("FNR = " + FNR.toDouble)
+    println("F-Measure = " + kmeasure.toDouble)
     println("----------------------------Complete----------------------")
 
     // Get evaluation metrics.
