@@ -1,0 +1,10 @@
+Using K-means for KDD99 dataset:
+  1.  Find the maximum and minimum of each dimension
+  2.  interation K-means algorithm
+  3.  test to show clustering results
+  
+  
+result: 
+  total Kmeans iteration: 17
+  Time used for training : 162278
+  Time used for testing: 7311
