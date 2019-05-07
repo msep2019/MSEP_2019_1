@@ -1,4 +1,4 @@
-Output result when run kdd99 by SVM algorithm -- without cross validation (binaryclassification)
+Output result when run part of kdd99 by SVM algorithm -- without cross validation (binaryclassification)
 SVMWithSGD
 
 accurate count = 9479
@@ -18,3 +18,22 @@ FNR = 0.03314272377173533
 F-Measure = 0.9823334123784682
 Area under ROC = 0.9776339361273775
 
+Output -- kdd99  - without crossvalidation
+
+accurate count = 199171
+SVMWithSGD
+total count =311029
+true positive (tp)= 140323
+false positive (fp)= 1745
+true negative (tn)= 58848
+false negative (fn)= 110113
+accuracy = 0.6403615096984525
+precision = 0.987717149534026
+POS = 250436
+NEG = 60593
+FPR = 0.028798706121169113
+TPR = 0.560314810969669
+TNR = 0.9712012938788309
+FNR = 0.4396851890303311
+F-Measure = 0.7150143692803131
+Area under ROC = 0.76575805242425
