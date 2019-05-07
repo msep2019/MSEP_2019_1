@@ -17,8 +17,10 @@ object SVM {
     val sc = new SparkContext(conf)
 
     println("------------------------Read File-------------------------")
-    val traindata = sc.textFile("/home/hadoop/Desktop/svm/20KDDTrain.txt")   
-    val testdata = sc.textFile("/home/hadoop/Desktop/svm/20KDDTest.txt")
+    //val traindata = sc.textFile("/home/hadoop/Desktop/svm/20KDDTrain.txt")   
+    //val testdata = sc.textFile("/home/hadoop/Desktop/svm/20KDDTest.txt")
+    val traindata = sc.textFile("hdfs://localhost:9000/user/hadoop/spark/kdd/20KDDTrain.txt")   
+    val testdata = sc.textFile("hdfs://localhost:9000/user/hadoop/spark/kdd/20KDDTest.txt")
 
     println("-------------------Read file Complete -> Set LabelPoint----------------------")
     val training = traindata.map { line =>
