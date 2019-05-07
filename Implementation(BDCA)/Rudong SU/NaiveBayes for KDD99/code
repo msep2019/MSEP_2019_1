@@ -1,0 +1,6 @@
+There are basically three steps involved:
+  1. convert CSV dataset file to sequence file so that Mahout can be applied
+  2. train sequence file with Naive Bayes provided by Mahout libraries
+  3. test to see the accuracy result
+  
+  
