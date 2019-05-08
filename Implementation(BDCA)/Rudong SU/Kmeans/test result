@@ -5,6 +5,6 @@ Using K-means for KDD99 dataset:
   
   
 result: 
-  total Kmeans iteration: 17
+  total clustering: 17
   Time used for training : 162278
   Time used for testing: 7311
