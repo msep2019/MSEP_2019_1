@@ -4,3 +4,8 @@ There are basically three steps involved:
   3. test to see the accuracy result
   
   
+
+results:
+  correct classifies: 60592
+  total sample count: 311028
+  correct ratio: 0.1948
