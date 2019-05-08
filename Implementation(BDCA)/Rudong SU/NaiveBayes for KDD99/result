@@ -5,7 +5,11 @@ There are basically three steps involved:
   
   
 
-results:
-  correct classifies: 60592
+training results:
+  features: 39
+  labels: 3300
+ 
+testing results: 
+ correct classifies: 60592
   total sample count: 311028
   correct ratio: 0.1948
