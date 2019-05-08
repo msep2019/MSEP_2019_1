@@ -10,6 +10,6 @@ training results:
   labels: 3300
  
 testing results: 
- correct classifies: 60592
-  total sample count: 311028
+ correctly classfied instances: 60592
+  total classfied instances: 311028
   correct ratio: 0.1948
