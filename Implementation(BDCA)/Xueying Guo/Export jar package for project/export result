@@ -1,3 +1,6 @@
+export command (under the project):
+/usr/local/sbt/sbt package
+
 Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256M; support was removed in 8.0
 [info] Set current project to Test SVM (in build file:/home/hadoop/svm/)
 [info] Updating {file:/home/hadoop/svm/}svm...
@@ -7,3 +10,7 @@ Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=256M; sup
 [info] Packaging /home/hadoop/svm/target/scala-2.12/test-svm_2.12-1.0.jar ...
 [info] Done packaging.
 [success] Total time: 59 s, completed 09/05/2019 11:51:25 PM
+
+
+Run Command to launch:
+/usr/local/spark/bin/spark-submit --class "SVM" /home/hadoop/svm/target/scala-2.12/test-svm_2.12-1.0.jar
