@@ -1,0 +1,12 @@
+-- Testing without :
+
+2019-05-10 06:23:26 INFO  Client:54 - 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: cluster-worker-7
+	 ApplicationMaster RPC port: 40352
+	 queue: default
+	 start time: 1557469255634
+	 final status: SUCCEEDED
+	 tracking URL: http://master:8088/proxy/application_1557464516038_0003/
+	 user: ubuntu
