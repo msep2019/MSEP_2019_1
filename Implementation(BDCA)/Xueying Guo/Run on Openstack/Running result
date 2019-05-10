@@ -135,3 +135,34 @@ Output =>
 	Detection Rate = 0.9867715287511556
 	F1 Score = 0.9548084434523257
 
+Running on 5 nodes
+2019-05-10 07:47:24 INFO  Client:54 - 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: cluster-worker-7
+	 ApplicationMaster RPC port: 43747
+	 queue: default
+	 start time: 1557474321032
+	 final status: SUCCEEDED
+	 tracking URL: http://master:8088/proxy/application_1557464516038_0009/
+	 user: ubuntu
+Output =>
+	Training Time = 88778 millisecond
+	prediction Time = 3 millisecond
+	accurate count = 289104
+	total count =311029
+	true positive (tp)= 231616
+	false positive (fp)= 3105
+	true negative (tn)= 57488
+	false negative (fn)= 18820
+	accuracy = 0.9295081809091756
+	precision = 0.9867715287511556
+	POS = 250436
+	NEG = 60593
+	FPR = 0.05124354298351295
+	TPR = 0.9248510597517928
+	TNR = 0.948756457016487
+	FNR = 0.07514894024820713
+	Detection Rate = 0.9867715287511556
+	F1 Score = 0.9548084434523257
+
