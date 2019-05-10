@@ -196,3 +196,66 @@ Result =>
 	FNR = 0.07514894024820713
 	Detection Rate = 0.9867715287511556
 	F1 Score = 0.9548084434523257
+
+Running on 7 nodes:
+2019-05-10 08:07:48 INFO  Client:54 - 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: cluster-worker-6
+	 ApplicationMaster RPC port: 43398
+	 queue: default
+	 start time: 1557475537144
+	 final status: SUCCEEDED
+	 tracking URL: http://master:8088/proxy/application_1557464516038_0011/
+	 user: ubuntu
+Result =>
+	Training Time = 89778 millisecond
+	prediction Time = 24 millisecond
+	accurate count = 289104
+	total count =311029
+	true positive (tp)= 231616
+	false positive (fp)= 3105
+	true negative (tn)= 57488
+	false negative (fn)= 18820
+	accuracy = 0.9295081809091756
+	precision = 0.9867715287511556
+	POS = 250436
+	NEG = 60593
+	FPR = 0.05124354298351295
+	TPR = 0.9248510597517928
+	TNR = 0.948756457016487
+	FNR = 0.07514894024820713
+	Detection Rate = 0.9867715287511556
+	F1 Score = 0.9548084434523257
+
+Running on 8 nodes:
+2019-05-10 08:12:53 INFO  Client:54 - 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: cluster-worker-5
+	 ApplicationMaster RPC port: 34643
+	 queue: default
+	 start time: 1557475843404
+	 final status: SUCCEEDED
+	 tracking URL: http://master:8088/proxy/application_1557464516038_0012/
+	 user: ubuntu
+Result:
+	Training Time = 89547 millisecond
+	prediction Time = 16 millisecond
+	accurate count = 289104
+	total count =311029
+	true positive (tp)= 231616
+	false positive (fp)= 3105
+	true negative (tn)= 57488
+	false negative (fn)= 18820
+	accuracy = 0.9295081809091756
+	precision = 0.9867715287511556
+	POS = 250436
+	NEG = 60593
+	FPR = 0.05124354298351295
+	TPR = 0.9248510597517928
+	TNR = 0.948756457016487
+	FNR = 0.07514894024820713
+	Detection Rate = 0.9867715287511556
+	F1 Score = 0.9548084434523257
+	Area under ROC = 0.9368037583841399
