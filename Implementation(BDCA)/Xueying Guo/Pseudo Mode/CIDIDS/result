@@ -1,0 +1,21 @@
+parts of CIDID - for Debuging only, the statistic will be more accurate when run on full dataset
+
+Training Time = 50183 millisecond
+prediction Time = 11 millisecond
+accurate count = 285
+total count =285
+true positive (tp)= 82
+false positive (fp)= 0
+true negative (tn)= 203
+false negative (fn)= 0
+accuracy = 1.0
+precision = 1.0
+POS = 82
+NEG = 203
+FPR = 0.0
+TPR = 1.0
+TNR = 1.0
+FNR = 0.0
+Detection Rate = 1.0
+F1 Score = 1.0
+Area under ROC = 1.0
