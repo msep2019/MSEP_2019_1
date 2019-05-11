@@ -1,0 +1,22 @@
+Part of Darpa Dataset - For debuging code only, the result will be more accurate when run the full dataset
+
+Training Time = 29476 millisecond
+prediction Time = 10 millisecond
+accurate count = 5516
+total count =5538
+true positive (tp)= 0
+false positive (fp)= 0
+true negative (tn)= 5516
+false negative (fn)= 22
+accuracy = 0.9960274467316721
+precision = NaN
+POS = 22
+NEG = 5516
+FPR = 0.0
+TPR = 0.0
+TNR = 1.0
+FNR = 1.0
+Detection Rate = NaN
+F1 Score = NaN
+Area under ROC = 0.5
+
