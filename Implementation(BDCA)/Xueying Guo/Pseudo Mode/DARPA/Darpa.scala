@@ -20,8 +20,8 @@ object SVM_CrossV {
     val sc = new SparkContext(conf)
 
     println("------------------------Read File-------------------------")
-    val traindata = sc.textFile("/home/hadoop/Desktop/svm/Darpa/DarpaTrain.txt")   
-    val testdata = sc.textFile("/home/hadoop/Desktop/svm/Darpa/DarpaTest.txt")
+    val traindata = sc.textFile("/home/hadoop/Desktop/svm/Darpa/20DarpaTrain.txt")   
+    val testdata = sc.textFile("/home/hadoop/Desktop/svm/Darpa/20DarpaTest.txt")
     //val traindata = sc.textFile("hdfs://localhost:9000/user/hadoop/spark/kdd/20KDDTrain.txt")   
     //val testdata = sc.textFile("hdfs://localhost:9000/user/hadoop/spark/kdd/20KDDTest.txt")
 
