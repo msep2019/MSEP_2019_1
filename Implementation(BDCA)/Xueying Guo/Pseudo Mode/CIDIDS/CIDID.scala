@@ -53,7 +53,7 @@ object SVM_CrossV {
                 if ( parts(9) == "EXTSERVER") 99999.toDouble
                 else parts(9).toDouble,
                 if ( parts(10) == "EXTSERVER") 99999.toDouble
-                else parts(10).toDouble,
+                else parts(10).toDouble
                 )
         )
        }
@@ -100,7 +100,7 @@ object SVM_CrossV {
                 if ( parts(9) == "EXTSERVER") 99999.toDouble
                 else parts(9).toDouble,
                 if ( parts(10) == "EXTSERVER") 99999.toDouble
-                else parts(10).toDouble,
+                else parts(10).toDouble
                 )
         )
        }
