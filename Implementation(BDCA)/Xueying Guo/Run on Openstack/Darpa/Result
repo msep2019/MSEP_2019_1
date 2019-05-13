@@ -1,0 +1,35 @@
+
+Running on 1 node:
+
+2019-05-13 07:16:25 INFO  Client:54 - 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: cluster-worker-3
+	 ApplicationMaster RPC port: 41511
+	 queue: default
+	 start time: 1557728605287
+	 final status: SUCCEEDED
+	 tracking URL: http://master:8088/proxy/application_1557464516038_0016/
+	 user: ubuntu
+   
+Result =>
+Training Time = 3148869 millisecond
+prediction Time = 9 millisecond
+accurate count = 861798
+total count =1522310
+true positive (tp)= 203001
+false positive (fp)= 0
+true negative (tn)= 658797
+false negative (fn)= 660512
+accuracy = 0.5661120271166845
+precision = 1.0
+POS = 863513
+NEG = 658797
+FPR = 0.0
+TPR = 0.23508736984851414
+TNR = 1.0
+FNR = 0.7649126301514858
+Detection Rate = 1.0
+F1 Score = 0.3806813600196528
+
+Running on 2 nodes:
