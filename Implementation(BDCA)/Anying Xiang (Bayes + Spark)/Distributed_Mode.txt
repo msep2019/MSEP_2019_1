@@ -10,3 +10,18 @@ PROCESS:
 3. start spark master and slaves
 DEBUG:
 cannot access the SPARK UI, so manually set the local log directory and check log files
+
+Outcome:
+2019-05-14 08:38:35 INFO  Client:54 - 
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: cluster8-worker8-1.novalocal
+	 ApplicationMaster RPC port: 34938
+	 queue: default
+	 start time: 1557821997910
+	 final status: SUCCEEDED
+	 tracking URL: http://master:8088/proxy/application_1557821649299_0001/
+	 user: ubuntu
+2019-05-14 08:38:35 INFO  ShutdownHookManager:54 - Shutdown hook called
+2019-05-14 08:38:35 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-bd20c464-e345-40b5-9651-911c92c62016
+2019-05-14 08:38:35 INFO  ShutdownHookManager:54 - Deleting directory /tmp/spark-1e5a1b5a-9de5-4312-aad7-4a9b9eb79c8e
