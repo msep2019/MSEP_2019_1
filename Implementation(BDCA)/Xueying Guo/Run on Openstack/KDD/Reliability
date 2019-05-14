@@ -1,0 +1,15 @@
+Use command:
+df -h
+dd if=/dev/zero of=tmp.6G bs=1G count=6 to kill nodes
+cat stdout | grep "cluster-worker-n"
+
+2019-05-14 11:00:09 INFO  YarnAllocator:54 - Completed container container_1557831247272_0002_01_000004 on host: cluster-worker-2 (state: COMPLETE, exit status: -100)
+2019-05-14 11:00:09 WARN  YarnAllocator:66 - Container marked as failed: container_1557831247272_0002_01_000004 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+prediction Time = 30 millisecond
+2019-05-14 11:00:09 WARN  YarnSchedulerBackend$YarnSchedulerEndpoint:66 - Requesting driver to remove executor 3 for reason Container marked as failed: container_1557831247272_0002_01_000004 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-14 11:00:09 ERROR YarnClusterScheduler:70 - Lost executor 3 on cluster-worker-2: Container marked as failed: container_1557831247272_0002_01_000004 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-14 11:00:09 INFO  DAGScheduler:54 - Executor lost: 3 (epoch 0)
+2019-05-14 11:00:09 INFO  BlockManagerMasterEndpoint:54 - Trying to remove executor 3 from BlockManagerMaster.
+2019-05-14 11:00:09 INFO  BlockManagerMasterEndpoint:54 - Removing block manager BlockManagerId(3, cluster-worker-2, 37198, None)
+2019-05-14 11:00:09 INFO  BlockManagerMaster:54 - Removed 3 successfully in removeExecutor
+
