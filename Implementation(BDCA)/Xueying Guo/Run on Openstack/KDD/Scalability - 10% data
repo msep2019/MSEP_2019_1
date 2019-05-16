@@ -1,0 +1,21 @@
+1 node ->
+Training Time = 60984 millisecond
+prediction Time = 12 millisecond
+total training count =49014
+total testing count =30831
+true positive (tp)= 22211
+false positive (fp)= 141
+true negative (tn)= 5875
+false negative (fn)= 2604
+accuracy = 0.9109662352826701
+precision = 0.9936918396564066
+POS = 24815
+NEG = 6016
+FPR = 0.0234375
+TPR = 0.8950634696755995
+TNR = 0.9765625
+FNR = 0.10493653032440056
+Detection Rate = 0.9936918396564066
+F1 Score = 0.9418025314308733
+Area under ROC = 0.9358129848377997
+
