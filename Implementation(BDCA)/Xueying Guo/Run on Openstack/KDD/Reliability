@@ -2,9 +2,9 @@ Use command:
 df -h
 dd if=/dev/zero of=tmp.6G bs=1G count=6 to kill nodes
 cat stdout | grep "cluster-worker-n"
+cat stdout | grep "YarnAllocator"
 
 4 -> 3 nodes
-kdd:
 2019-05-14 11:00:09 INFO  YarnAllocator:54 - Completed container container_1557831247272_0002_01_000004 on host: cluster-worker-2 (state: COMPLETE, exit status: -100)
 2019-05-14 11:00:09 WARN  YarnAllocator:66 - Container marked as failed: container_1557831247272_0002_01_000004 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
 prediction Time = 30 millisecond
@@ -16,3 +16,21 @@ prediction Time = 30 millisecond
 2019-05-14 11:00:09 INFO  BlockManagerMaster:54 - Removed 3 successfully in removeExecutor
 
 10 -> 9 nodes
+2019-05-16 06:58:13 INFO  DAGScheduler:54 - Executor lost: 3 (epoch 0)
+2019-05-16 06:58:13 INFO  DAGScheduler:54 - Shuffle files lost for executor: 3 (epoch 0)
+2019-05-16 06:58:13 INFO  YarnAllocator:54 - Completed container container_1557831247272_0006_01_000004 on host: cluster-worker-5 (state: COMPLETE, exit status: -100)
+2019-05-16 06:58:13 WARN  YarnAllocator:66 - Container marked as failed: container_1557831247272_0006_01_000004 on host: cluster-worker-5. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-16 06:58:13 WARN  YarnSchedulerBackend$YarnSchedulerEndpoint:66 - Requesting driver to remove executor 3 for reason Container marked as failed: container_1557831247272_0006_01_000004 on host: cluster-worker-5. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-16 06:58:13 ERROR YarnClusterScheduler:70 - Lost executor 3 on cluster-worker-5: Container marked as failed: container_1557831247272_0006_01_000004 on host: cluster-worker-5. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-16 06:58:13 INFO  BlockManagerMasterEndpoint:54 - Trying to remove executor 3 from BlockManagerMaster.
+2019-05-16 06:58:13 INFO  BlockManagerMaster:54 - Removal of executor 3 requested
+2019-05-16 06:58:13 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Asked to remove non-existent executor 3
+2019-05-16 06:58:13 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+2019-05-16 06:58:13 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
+
+10 nodes normal :
+	Training Time = 92930 millisecond
+	prediction Time = 19 millisecond
+10 -> 9 nodes :
+  Training Time = 121219 millisecond
+  prediction Time = 23 millisecond
