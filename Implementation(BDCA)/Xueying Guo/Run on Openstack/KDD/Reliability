@@ -15,3 +15,4 @@ prediction Time = 30 millisecond
 2019-05-14 11:00:09 INFO  BlockManagerMasterEndpoint:54 - Removing block manager BlockManagerId(3, cluster-worker-2, 37198, None)
 2019-05-14 11:00:09 INFO  BlockManagerMaster:54 - Removed 3 successfully in removeExecutor
 
+10 -> 9 nodes
