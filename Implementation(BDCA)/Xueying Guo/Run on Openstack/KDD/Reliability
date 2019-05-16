@@ -3,6 +3,7 @@ df -h
 dd if=/dev/zero of=tmp.6G bs=1G count=6 to kill nodes
 cat stdout | grep "cluster-worker-n"
 
+4 -> 3 nodes
 kdd:
 2019-05-14 11:00:09 INFO  YarnAllocator:54 - Completed container container_1557831247272_0002_01_000004 on host: cluster-worker-2 (state: COMPLETE, exit status: -100)
 2019-05-14 11:00:09 WARN  YarnAllocator:66 - Container marked as failed: container_1557831247272_0002_01_000004 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
