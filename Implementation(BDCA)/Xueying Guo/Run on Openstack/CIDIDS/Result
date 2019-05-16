@@ -30,3 +30,15 @@ Result=>
   Area under ROC = 0.9798606535532389
 
 Run on 2 nodes
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: cluster-worker-5
+	 ApplicationMaster RPC port: 36904
+	 queue: default
+	 start time: 1557981951336
+	 final status: SUCCEEDED
+	 tracking URL: http://master:8088/proxy/application_1557831247272_0004/
+	 user: ubuntu
+Result =>
+	Training Time = 6889627 millisecond
+	prediction Time = 11 millisecond
