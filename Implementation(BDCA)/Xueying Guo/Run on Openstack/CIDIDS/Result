@@ -112,5 +112,20 @@ Run on 7 nodes:
 Result =>
 	Training Time = 3615594 millisecond
 	prediction Time = 16 millisecond
+	
+Run on 8 nodes:
+	client token: N/A
+	diagnostics: N/A
+	ApplicationMaster host: cluster-worker-7
+	ApplicationMaster RPC port: 43499
+	queue: default
+	start time: 1558065589424
+	final status: SUCCEEDED
+	tracking URL: http://master:8088/proxy/application_1557831247272_0019/
+	user: ubuntu
+Result =>
+	Training Time = 3600303 millisecond
+	prediction Time = 6 millisecond
 
+Run on 9 nodes:
 
