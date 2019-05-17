@@ -42,4 +42,13 @@ Start
 2019-05-17 08:41:14 INFO  YarnAllocator:54 - Launching container container_1557831247272_0023_01_000009 on host cluster-worker-8 for executor with ID 8
 2019-05-17 08:41:14 INFO  YarnAllocator:54 - Launching container container_1557831247272_0023_01_000010 on host cluster-worker-5 for executor with ID 9
 2019-05-17 08:41:14 INFO  YarnAllocator:54 - Received 5 containers from YARN, launching executors on 5 of them.
+Kill:
+2019-05-17 08:46:11 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Disabling executor 5.
+2019-05-17 08:46:11 INFO  YarnAllocator:54 - Completed container container_1557831247272_0023_01_000006 on host: cluster-worker-2 (state: COMPLETE, exit status: -100)
+2019-05-17 08:46:11 WARN  YarnAllocator:66 - Container marked as failed: container_1557831247272_0023_01_000006 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-17 08:46:11 WARN  YarnSchedulerBackend$YarnSchedulerEndpoint:66 - Requesting driver to remove executor 5 for reason Container marked as failed: container_1557831247272_0023_01_000006 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-17 08:46:11 ERROR YarnClusterScheduler:70 - Lost executor 5 on cluster-worker-2: Container marked as failed: container_1557831247272_0023_01_000006 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-17 08:46:11 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Asked to remove non-existent executor 5
+2019-05-17 08:46:12 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+2019-05-17 08:46:12 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
 
