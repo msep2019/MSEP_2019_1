@@ -32,5 +32,9 @@ prediction Time = 30 millisecond
 	Training Time = 92930 millisecond
 	prediction Time = 19 millisecond
 10 -> 9 nodes :
-  Training Time = 121219 millisecond
-  prediction Time = 23 millisecond
+  	Training Time = 121219 millisecond
+  	prediction Time = 23 millisecond
+
+9 nodes: 
+ 	Training Time = 92412 millisecond
+	Prediction Time = 16 millisecond
