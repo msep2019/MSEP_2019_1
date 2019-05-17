@@ -14,6 +14,11 @@ prediction Time = 30 millisecond
 2019-05-14 11:00:09 INFO  BlockManagerMasterEndpoint:54 - Trying to remove executor 3 from BlockManagerMaster.
 2019-05-14 11:00:09 INFO  BlockManagerMasterEndpoint:54 - Removing block manager BlockManagerId(3, cluster-worker-2, 37198, None)
 2019-05-14 11:00:09 INFO  BlockManagerMaster:54 - Removed 3 successfully in removeExecutor
+2019-05-14 11:00:12 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+2019-05-14 11:00:12 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
+2019-05-14 11:00:12 INFO  BlockManagerInfo:54 - Added broadcast_2008_piece0 in memory on cluster-worker-4:40340 (size: 2.7 KB, free: 413.9 MB)
+2019-05-14 11:00:12 INFO  YarnAllocator:54 - Launching container container_1557831247272_0002_01_000009 on host cluster-worker-1 for executor with ID 5
+2019-05-14 11:00:12 INFO  YarnAllocator:54 - Received 1 containers from YARN, launching executors on 1 of them.
 
 10 -> 9 nodes
 2019-05-16 06:58:13 INFO  DAGScheduler:54 - Executor lost: 3 (epoch 0)
