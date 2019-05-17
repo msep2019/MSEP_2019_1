@@ -33,6 +33,16 @@ prediction Time = 30 millisecond
 2019-05-16 06:58:13 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
 2019-05-16 06:58:13 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
 
+Kill
+2019-05-17 09:40:07 INFO  YarnAllocator:54 - Completed container container_1557831247272_0025_01_000004 on host: cluster-worker-2 (state: COMPLETE, exit status: -100)
+2019-05-17 09:40:07 WARN  YarnAllocator:66 - Container marked as failed: container_1557831247272_0025_01_000004 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-17 09:40:07 INFO  YarnClusterScheduler:54 - Removed TaskSet 717.0, whose tasks have all completed, from pool 
+2019-05-17 09:40:07 WARN  YarnSchedulerBackend$YarnSchedulerEndpoint:66 - Requesting driver to remove executor 3 for reason Container marked as failed: container_1557831247272_0025_01_000004 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-17 09:40:07 ERROR YarnClusterScheduler:70 - Lost executor 3 on cluster-worker-2: Container marked as failed: container_1557831247272_0025_01_000004 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-17 09:40:10 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+2019-05-17 09:40:10 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
+
+
 10 nodes normal :
 	Training Time = 92930 millisecond
 	prediction Time = 19 millisecond
