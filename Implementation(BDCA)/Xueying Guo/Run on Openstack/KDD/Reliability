@@ -53,3 +53,7 @@ Kill
 9 nodes: 
  	Training Time = 92412 millisecond
 	Prediction Time = 16 millisecond
+
+Only 1 node:
+2019-05-18 05:11:49 WARN  TaskSetManager:66 - Lost task 0.0 in stage 1008.0 (TID 2015, cluster-worker-3, executor 1): java.io.IOException: No space left on device
+2019-05-18 05:11:53 INFO  DAGScheduler:54 - ShuffleMapStage 1008 (map at SVM.scala:70) failed in 5.126 s due to Job aborted due to stage failure: Task 0 in stage 1008.0 failed 4 times, most recent failure: Lost task 0.3 in stage 1008.0 (TID 2021, cluster-worker-3, executor 1): java.io.IOException: No space left on device
