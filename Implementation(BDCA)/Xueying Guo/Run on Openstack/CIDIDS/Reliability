@@ -25,3 +25,40 @@ Kill:
 2019-05-18 02:07:18 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.14:51924) with ID 5
 
 take around 3 seconds to launch another excutor
+
+10 -> 9 nodes:
+Start:
+2019-05-18 05:23:47 INFO  YarnAllocator:54 - Will request 10 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+2019-05-18 05:23:47 INFO  YarnAllocator:54 - Submitted 10 unlocalized container requests.
+2019-05-18 05:23:48 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000002 on host cluster-worker-7 for executor with ID 1
+2019-05-18 05:23:48 INFO  YarnAllocator:54 - Received 1 containers from YARN, launching executors on 1 of them.
+2019-05-18 05:23:48 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000003 on host cluster-worker-4 for executor with ID 2
+2019-05-18 05:23:48 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000004 on host cluster-worker-6 for executor with ID 3
+2019-05-18 05:23:48 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000005 on host cluster-worker-9 for executor with ID 4
+2019-05-18 05:23:48 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000006 on host cluster-worker-1 for executor with ID 5
+2019-05-18 05:23:48 INFO  YarnAllocator:54 - Received 4 containers from YARN, launching executors on 4 of them.
+2019-05-18 05:23:49 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000007 on host cluster-worker-2 for executor with ID 6
+2019-05-18 05:23:49 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000008 on host cluster-worker-10 for executor with ID 7
+2019-05-18 05:23:49 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000009 on host cluster-worker-5 for executor with ID 8
+2019-05-18 05:23:49 INFO  YarnAllocator:54 - Launching container container_1558090985829_0019_01_000010 on host cluster-worker-8 for executor with ID 9
+2019-05-18 05:23:49 INFO  YarnAllocator:54 - Received 4 containers from YARN, launching executors on 4 of them.
+2019-05-18 05:23:59 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.10:58812) with ID 3
+2019-05-18 05:23:59 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.4:44068) with ID 5
+2019-05-18 05:23:59 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.8:57364) with ID 4
+2019-05-18 05:24:00 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.14:54902) with ID 2
+2019-05-18 05:24:01 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.20:47154) with ID 1
+2019-05-18 05:24:01 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.5:50062) with ID 8
+2019-05-18 05:24:02 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.9:35098) with ID 9
+2019-05-18 05:24:02 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.16:48416) with ID 7
+2019-05-18 05:24:02 INFO  YarnClusterSchedulerBackend:54 - SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.8
+2019-05-18 05:24:02 INFO  YarnClusterScheduler:54 - YarnClusterScheduler.postStartHook done
+2019-05-18 05:24:04 INFO  YarnClusterScheduler:54 - Adding task set 0.0 with 1 tasks
+2019-05-18 05:24:05 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.15:38276) with ID 6
+
+Kill:
+2019-05-18 05:27:09 INFO  YarnAllocator:54 - Completed container container_1558090985829_0019_01_000007 on host: cluster-worker-2 (state: COMPLETE, exit status: -100)
+2019-05-18 05:27:09 WARN  YarnAllocator:66 - Container marked as failed: container_1558090985829_0019_01_000007 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-18 05:27:09 WARN  YarnSchedulerBackend$YarnSchedulerEndpoint:66 - Requesting driver to remove executor 6 for reason Container marked as failed: container_1558090985829_0019_01_000007 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-18 05:27:09 ERROR YarnClusterScheduler:70 - Lost executor 6 on cluster-worker-2: Container marked as failed: container_1558090985829_0019_01_000007 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-18 05:27:12 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+2019-05-18 05:27:12 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
