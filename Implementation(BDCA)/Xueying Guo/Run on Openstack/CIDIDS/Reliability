@@ -1,0 +1,27 @@
+From 4->3 nodes
+
+Start:
+2019-05-18 02:02:55 INFO  YarnAllocator:54 - Will request 4 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+2019-05-18 02:02:55 INFO  YarnAllocator:54 - Submitted 4 unlocalized container requests.
+2019-05-18 02:02:55 INFO  YarnAllocator:54 - Launching container container_1558090985829_0005_01_000002 on host cluster-worker-7 for executor with ID 1
+2019-05-18 02:02:55 INFO  YarnAllocator:54 - Received 1 containers from YARN, launching executors on 1 of them.
+2019-05-18 02:02:55 INFO  YarnAllocator:54 - Launching container container_1558090985829_0005_01_000003 on host cluster-worker-2 for executor with ID 2
+2019-05-18 02:02:55 INFO  YarnAllocator:54 - Received 1 containers from YARN, launching executors on 1 of them.
+2019-05-18 02:02:56 INFO  YarnAllocator:54 - Launching container container_1558090985829_0005_01_000004 on host cluster-worker-9 for executor with ID 3
+2019-05-18 02:02:56 INFO  YarnAllocator:54 - Launching container container_1558090985829_0005_01_000005 on host cluster-worker-10 for executor with ID 4
+
+Kill:
+2019-05-18 02:07:08 INFO  YarnAllocator:54 - Completed container container_1558090985829_0005_01_000003 on host: cluster-worker-2 (state: COMPLETE, exit status: -100)
+2019-05-18 02:07:08 WARN  YarnAllocator:66 - Container marked as failed: container_1558090985829_0005_01_000003 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-18 02:07:08 WARN  YarnSchedulerBackend$YarnSchedulerEndpoint:66 - Requesting driver to remove executor 2 for reason Container marked as failed: container_1558090985829_0005_01_000003 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-18 02:07:08 ERROR YarnClusterScheduler:70 - Lost executor 2 on cluster-worker-2: Container marked as failed: container_1558090985829_0005_01_000003 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
+2019-05-18 02:07:08 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Asked to remove non-existent executor 2
+2019-05-18 02:07:11 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
+2019-05-18 02:07:11 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
+2019-05-18 02:07:12 INFO  YarnAllocator:54 - Launching container container_1558090985829_0005_01_000009 on host cluster-worker-4 for executor with ID 5
+2019-05-18 02:07:12 INFO  YarnAllocator:54 - Received 1 containers from YARN, launching executors on 1 of them.
+2019-05-18 02:07:13 INFO  YarnClusterScheduler:54 - Removed TaskSet 40.0, whose tasks have all completed, from pool 
+2019-05-18 02:07:13 INFO  YarnClusterScheduler:54 - Adding task set 41.0 with 3 tasks
+2019-05-18 02:07:18 INFO  YarnSchedulerBackend$YarnDriverEndpoint:54 - Registered executor NettyRpcEndpointRef(spark-client://Executor) (192.168.70.14:51924) with ID 5
+
+take around 3 seconds to launch another excutor
