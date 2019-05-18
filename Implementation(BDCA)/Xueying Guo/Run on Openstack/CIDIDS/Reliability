@@ -62,3 +62,8 @@ Kill:
 2019-05-18 05:27:09 ERROR YarnClusterScheduler:70 - Lost executor 6 on cluster-worker-2: Container marked as failed: container_1558090985829_0019_01_000007 on host: cluster-worker-2. Exit status: -100. Diagnostics: Container released on a *lost* node
 2019-05-18 05:27:12 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
 2019-05-18 05:27:12 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
+
+Only 1 node:
+2019-05-18 06:42:49 WARN  TaskSetManager:66 - Lost task 2.0 in stage 25.0 (TID 73, cluster-worker-1, executor 1): java.io.IOException: Failed to create local dir in /home/ubuntu/Cloud/OpenStack/hadoop-2.9.2/tmp/nm-local-dir/usercache/ubuntu/appcache/application_1558090985829_0020/blockmgr-ca4962fd-9a9d-43f2-939f-ef14e7d5b0e3/18.
+2019-05-18 06:42:59 INFO  Client:54 - Application report for application_1558090985829_0020 (state: RUNNING)
+Launch another new request
