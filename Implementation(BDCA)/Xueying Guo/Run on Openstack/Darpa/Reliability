@@ -52,3 +52,7 @@ Kill:
 2019-05-17 08:46:12 INFO  YarnAllocator:54 - Will request 1 executor container(s), each with 1 core(s) and 1408 MB memory (including 384 MB of overhead)
 2019-05-17 08:46:12 INFO  YarnAllocator:54 - Submitted 1 unlocalized container requests.
 
+1->0 node:
+2019-05-18 07:10:31 WARN  TaskSetManager:66 - Lost task 0.0 in stage 60.0 (TID 119, cluster-worker-8, executor 1): java.io.IOException: Failed to create local dir in /home/ubuntu/Cloud/OpenStack/hadoop-2.9.2/tmp/nm-local-dir/usercache/ubuntu/appcache/application_1558163105618_0001/blockmgr-66cde3fb-3b47-4ae4-b131-5ad6f992511d/30.
+2019-05-18 07:10:32 INFO  DAGScheduler:54 - ResultStage 60 (treeAggregate at GradientDescent.scala:239) failed in 0.264 s due to Job aborted due to stage failure: Task 0 in stage 60.0 failed 4 times, most recent failure: Lost task 0.3 in stage 60.0 (TID 125, cluster-worker-8, executor 1): java.io.IOException: Failed to create local dir in /home/ubuntu/Cloud/OpenStack/hadoop-2.9.2/tmp/nm-local-dir/usercache/ubuntu/appcache/application_1558163105618_0001/blockmgr-66cde3fb-3b47-4ae4-b131-5ad6f992511d/30.
+
