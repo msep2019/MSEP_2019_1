@@ -1,0 +1,26 @@
+
+Accuracy:
+accurate count = 305653
+total train count = 918416
+total test count = 393406
+true positive (tp)= 0
+false positive (fp)= 27433
+true negative (tn)= 305653
+false negative (fn)= 60320
+accuracy = 0.7769403618653503
+precision = 0.0
+POS = 60320
+NEG = 333086
+FPR = 0.08236011120251227
+TPR = 0.0
+TNR = 0.9176398887974877
+FNR = 1.0
+Detection Rate = 0.0
+F1 Score = 0.0
+Area under ROC = 0.45881994439874385
+
+
+
+Run on 10 nodes
+Training Time = 131519 millisecond
+prediction Time = 21 millisecond
