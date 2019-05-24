@@ -19,7 +19,25 @@ Detection Rate = 0.0
 F1 Score = 0.0
 Area under ROC = 0.45881994439874385
 
+Run on 5 nodes:
+Training Time = 4017317 millisecond
+prediction Time = 14 millisecond
 
+Run on 6 nodes:
+Training Time = 134634 millisecond
+prediction Time = 23 millisecond
+
+Run on 7 nodes:
+Training Time = 130259 millisecond
+prediction Time = 12 millisecond
+
+Run on 8 nodes:
+Training Time = 136139 millisecond
+prediction Time = 20 millisecond
+
+Run on 9 nodes:
+Training Time = 133160 millisecond
+prediction Time = 17 millisecond
 
 Run on 10 nodes
 Training Time = 131519 millisecond
