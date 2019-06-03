@@ -1,0 +1,32 @@
+Start Run package
+Finished run 2 nodes, runtime1 = 128187 ms
+Finished run 4 nodes, runtime2 = 90244 ms
+Finished run 6 nodes, runtime3 = 91123 ms
+Finished run 8 nodes, runtime4 = 95050 ms
+Finished run 10 nodes, runtime5 = 96306 ms
+calculating scalability...
+the original scalability is -2947.8 and the original formular is y=-2947.8x+117869 
+tested scalability is worse than the standard, need to update
+
+Setting spark.shuffle.memoryFraction: There are 2 possible value except for the default value
+Set spark.shuffle.memoryFraction = 0.4
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 100798 ms
+Finished run 4 nodes, runtime2 = 95311 ms
+Finished run 6 nodes, runtime3 = 135255 ms
+Finished run 8 nodes, runtime4 = 92950 ms
+Finished run 10 nodes, runtime5 = 88444 ms
+scalability can not be improved by setting spark.shuffle.memoryFraction as 0.4, since the original scalability is -2947.8 while the new one is -1353.75. 
+Set spark.shuffle.memoryFraction = 0.8
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 128470 ms
+Finished run 4 nodes, runtime2 = 126013 ms
+Finished run 6 nodes, runtime3 = 94886 ms
+Finished run 8 nodes, runtime4 = 98406 ms
+Finished run 10 nodes, runtime5 = 90393 ms
+scalability is improved successfully by setting spark.shuffle.memoryFraction as 0.8, from original -2947.8 to new -5188.35.
+the increased formular is y=-5188.35x+138764 
+
+Already try all possible value of setting spark.shuffle.memoryFraction
+
+Successfully to improve scalability by setting parameter(s).
