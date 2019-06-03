@@ -1,0 +1,66 @@
+Start Run package
+Finished run 2 nodes, runtime1 = 128717 ms
+Finished run 4 nodes, runtime2 = 121916 ms
+Finished run 6 nodes, runtime3 = 90041 ms
+Finished run 8 nodes, runtime4 = 88658 ms
+Finished run 10 nodes, runtime5 = 99084 ms
+calculating scalability...
+the original scalability is -4626.05 and the original formular is y=-4626.05x+133439 
+
+Setting spark.shuffle.sort.bypassMergeThreshold: There are 2 possible value except for the default value
+Set spark.shuffle.sort.bypassMergeThreshold = 400
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 120120 ms
+Finished run 4 nodes, runtime2 = 87568 ms
+Finished run 6 nodes, runtime3 = 88773 ms
+Finished run 8 nodes, runtime4 = 90320 ms
+Finished run 10 nodes, runtime5 = 94644 ms
+scalability can not be improved by setting spark.shuffle.sort.bypassMergeThreshold as 400, since the original scalability is -4626.05 while the new one is -2410. 
+Set spark.shuffle.sort.bypassMergeThreshold = 600
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 116451 ms
+Finished run 4 nodes, runtime2 = 87913 ms
+Finished run 6 nodes, runtime3 = 127706 ms
+Finished run 8 nodes, runtime4 = 90872 ms
+Finished run 10 nodes, runtime5 = 90351 ms
+scalability can not be improved by setting spark.shuffle.sort.bypassMergeThreshold as 600, since the original scalability is -4626.05 while the new one is -2462.35. 
+
+Already try all possible value of setting spark.shuffle.sort.bypassMergeThreshold
+
+Setting spark.shuffle.compress: There are 1 possible value except for the default value
+Set spark.shuffle.compress = false
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 121647 ms
+Finished run 4 nodes, runtime2 = 91884 ms
+Finished run 6 nodes, runtime3 = 91871 ms
+Finished run 8 nodes, runtime4 = 93464 ms
+Finished run 10 nodes, runtime5 = 96007 ms
+scalability can not be improved by setting spark.shuffle.compress as false, since the original scalability is -4626.05 while the new one is -2485. 
+
+Already try all possible value of setting spark.shuffle.compress
+
+Setting spark.shuffle.file.buffer: There are 1 possible value except for the default value
+Set spark.shuffle.file.buffer = 64k
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 95024 ms
+Finished run 4 nodes, runtime2 = 98473 ms
+Finished run 6 nodes, runtime3 = 91776 ms
+Finished run 8 nodes, runtime4 = 92966 ms
+Finished run 10 nodes, runtime5 = 94795 ms
+scalability can not be improved by setting spark.shuffle.file.buffer as 64k, since the original scalability is -4626.05 while the new one is -298.25. 
+
+Already try all possible value of setting spark.shuffle.file.buffer
+
+Setting spark.reducer.maxSizeInFlight: There are 1 possible value except for the default value
+Set spark.reducer.maxSizeInFlight = 96m
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 117960 ms
+Finished run 4 nodes, runtime2 = 126192 ms
+Finished run 6 nodes, runtime3 = 95854 ms
+Finished run 8 nodes, runtime4 = 92724 ms
+Finished run 10 nodes, runtime5 = 94525 ms
+scalability can not be improved by setting spark.reducer.maxSizeInFlight as 96m, since the original scalability is -4626.05 while the new one is -4016.9. 
+
+Already try all possible value of setting spark.reducer.maxSizeInFlight
+
+scalability cannot be improved by current parameter, please change the parameter.
