@@ -1,0 +1,11 @@
+#this is a param file for possible improve configuraions
+
+spark.shuffle.memoryFraction:0.2/0.4/0.8
+spark.shuffle.sort.bypassMergeThreshold:200/400/600
+spark.shuffle.compress:true/false
+spark.shuffle.file.buffer:32k/64k
+spark.reducer.maxSizeInFlight:48m/96m
+spark.memory.fraction:0.6/0.2/0.4/0.8
+spark.memory.storageFraction:0.5/0.6/0.7
+spark.serializer.objectStreamReset:100/-1
+spark.rdd.compress:false/true

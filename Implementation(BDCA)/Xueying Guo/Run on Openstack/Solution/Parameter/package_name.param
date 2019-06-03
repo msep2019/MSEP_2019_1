@@ -1,0 +1,7 @@
+#this is a param file for package information
+
+kdd:/home/ubuntu/svm_test/kdd/kdd_fulldata.jar:/home/ubuntu/svm_test/kdd/log
+darpa:/home/ubuntu/svm_test/Darpa/Darpa.jar:/home/ubuntu/svm_test/Darpa/log
+cidds:/home/ubuntu/svm_test/CIDIDS/CIDIDS.jar:/home/ubuntu/svm_test/log
+cicids:/home/ubuntu/svm_test/CICIDS2017/CICIDS.jar:/home/ubuntu/svm_test/CICIDS2017/log
+
