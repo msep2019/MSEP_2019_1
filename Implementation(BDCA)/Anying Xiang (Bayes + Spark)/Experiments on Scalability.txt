@@ -1,0 +1,18 @@
+Spark:
+1. Data Related Factors:
+  Number of features
+  Number of instances
+  Feature types: Discrete features / Continuous features
+
+2. Configuration Related Factors:
+  Driver Memory : 1024M / 1600M
+  Executor Memory : 1024M / 1250M
+  spark.shuffle.memoryFraction : \ / 0.4
+  spark.shuffle.sort.bypassMergeThreshold : 200 / 400
+  spark.shuffle.compress : true / false
+  spark.shuffle.file.buffer : 32k / 64k
+  spark.reducer.maxSizeInFlight : 48m / 96m
+  spark.memory.fraction : 0.6 / 0.8
+  spark.memory.storageFraction : 0.5 / 0.7
+  spark.serializer.objectStreamReset : 100 / 1
+  spark.rdd.compress : false / true
