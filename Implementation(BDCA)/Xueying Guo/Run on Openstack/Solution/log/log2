@@ -1,0 +1,38 @@
+Start Run package
+Finished run 2 nodes, runtime1 = 126997 ms
+Finished run 4 nodes, runtime2 = 127715 ms
+Finished run 6 nodes, runtime3 = 96456 ms
+Finished run 8 nodes, runtime4 = 94098 ms
+Finished run 10 nodes, runtime5 = 94047 ms
+calculating scalability...
+the original scalability is -4976.15 and the original formular is y=-4976.15x+137720 
+
+Setting spark.memory.fraction: There are 3 possible value except for the default value
+Set spark.memory.fraction = 0.2
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 1300991 ms
+Finished run 4 nodes, runtime2 = 1293952 ms
+Finished run 6 nodes, runtime3 = 1247627 ms
+Finished run 8 nodes, runtime4 = 103946 ms
+Finished run 10 nodes, runtime5 = 90296 ms
+scalability is improved successfully by setting spark.memory.fraction as 0.2, from original -4976.15 to new -180570.
+the increased formular is y=-180570x+1890782 
+Set spark.memory.fraction = 0.4
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 131342 ms
+Finished run 4 nodes, runtime2 = 130693 ms
+Finished run 6 nodes, runtime3 = 103216 ms
+Finished run 8 nodes, runtime4 = 91326 ms
+Finished run 10 nodes, runtime5 = 93668 ms
+scalability is improved successfully by setting spark.memory.fraction as 0.4, from original -4976.15 to new -5735.75.
+the increased formular is y=-5735.75x+144464 
+Set spark.memory.fraction = 0.8
+Run and test scalability..
+Finished run 2 nodes, runtime1 = 117984 ms
+Finished run 4 nodes, runtime2 = 102353 ms
+Finished run 6 nodes, runtime3 = 124849 ms
+Finished run 8 nodes, runtime4 = 126226 ms
+Finished run 10 nodes, runtime5 = 127889 ms
+scalability can not be improved by setting spark.memory.fraction as 0.8, since the original scalability is -4976.15 while the new one is 2184.3. 
+
+Already try all possible value of setting spark.memory.fraction
