@@ -1,5 +1,4 @@
-
-
+discovry solutions:
 -----------------------------------------------------------------------------------------------------------
 Running on 1 master node and 1 worker node:
   training time: 517s
@@ -9,17 +8,23 @@ Running on 1 master node and 1 worker node:
        1. RPC Handler Count in hdfs-site.xml (rule: 20 * log2(Cluster Size) ) 
             <property>
               <name>dfs.namenode.handler.count</name>
-              <value>160</value>
+              <value>20</value>
             </property>
             
             
               training time: 507.1
               testing time: 23.48
               
-       2. 
+       2. Service RPC Handler Count  (rule: 50% of RPC Handler count)
+        
+         <property>
+            <name>dfs.namenode.service.handler.count</name>
+            <value>10</value>
+          </property>
        
        
-       
+             training time: 506.1
+             testing time:  24.82
        
        
        
