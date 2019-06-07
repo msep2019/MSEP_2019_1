@@ -1,0 +1,31 @@
+
+
+-----------------------------------------------------------------------------------------------------------
+Running on 1 master node and 1 worker node:
+  training time: 517s
+  testing time: 25.5
+        
+    Modify:
+       1. RPC Handler Count in hdfs-site.xml (rule: 20 * log2(Cluster Size) ) 
+            <property>
+              <name>dfs.namenode.handler.count</name>
+              <value>160</value>
+            </property>
+            
+            
+              training time: 507.1
+              testing time: 23.48
+              
+       2. 
+       
+       
+       
+       
+       
+       
+
+-----------------------------------------------------------------------------------------------------------
+running on 1 master node with 4 worker modes:
+  training time: 458s
+  testing time: 20.5
+      
