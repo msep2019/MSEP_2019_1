@@ -1,5 +1,5 @@
 discovry solutions:
-data compression or combiner?
+use data compression or combiner?
 -----------------------------------------------------------------------------------------------------------
 Running on 1 master node and 1 worker node:
   training time: 517s
@@ -12,9 +12,11 @@ Running on 1 master node and 1 worker node:
               <value>20</value>
             </property>
                        
-              training time: 507.1
-              testing time: 23.48
-              
+            1 node:  training time: 507.1 testing time: 23.48
+            2 nodes:  training time: 512.6 testing time: 25.44
+            3 nodes:  training time: 507.1 testing time: 23.48
+            4 nodes:  training time: 507.1 testing time: 23.48
+
        2. Service RPC Handler Count  (rule: 50% of RPC Handler count)
         
           <property>
@@ -22,22 +24,31 @@ Running on 1 master node and 1 worker node:
             <value>10</value>
           </property>
         
-             training time: 506.1
-             testing time:  24.82
+             1 node: training time: 506.1  testing time:  24.82
+             2 nodes: 
        
        3. Mapred.task.io.sort.factor and Mapred.task.io.sort.mb (default: 307)
               1) change to 40 and 400 respectively.
                   561.8
                   26.47
+                  
        4. mapreduce.task.io.file.buffer.size
               1) set to 65536
-              508.7
-              24.17
-              
-       ****run 1, 2 and 3 simantenously
-              509.0
-              24.9
-              
+ 
+                1 node:  training time: 508.7  testing time: 24.17
+                2 nodes:  training time: 507.0  testing time: 24.49
+
+
+**********************run 1, 2 and 3 simantenously
+          1 worker   509.0  24.9
+          2 workers  513.8  24.4
+          
+          
+          
+-----------------------------------------------------------------------------------------------------------
+running on 1 master node with 2 worker modes:
+  training time: 506.9
+  testing time:  24.4
 -----------------------------------------------------------------------------------------------------------
 running on 1 master node with 4 worker modes:
   training time: 458s
