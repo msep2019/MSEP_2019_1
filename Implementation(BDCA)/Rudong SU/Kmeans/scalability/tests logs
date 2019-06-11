@@ -14,8 +14,8 @@ Running on 1 master node and 1 worker node:
                        
             1 node:  training time: 507.1 testing time: 23.48
             2 nodes:  training time: 512.6 testing time: 25.44
-            3 nodes:  training time: 507.1 testing time: 23.48
-            4 nodes:  training time: 507.1 testing time: 23.48
+            3 nodes:  training time: 428.1 testing time: 20.64
+            4 nodes:  training time: 430.9 testing time: 20.42
 
        2. Service RPC Handler Count  (rule: 50% of RPC Handler count)
         
@@ -37,11 +37,15 @@ Running on 1 master node and 1 worker node:
  
                 1 node:  training time: 508.7  testing time: 24.17
                 2 nodes:  training time: 507.0  testing time: 24.49
+                3 nodes:  training time: 428.3 testing time: 20.43
+                4 nodes:  433.6  20.48
 
 
 **********************run 1, 2 and 3 simantenously
           1 worker   509.0  24.9
           2 workers  513.8  24.4
+          3 workers  427.9  19.36
+          4 workers  435.2  20.47
           
           
           
@@ -50,7 +54,11 @@ running on 1 master node with 2 worker modes:
   training time: 506.9
   testing time:  24.4
 -----------------------------------------------------------------------------------------------------------
+running on 1 master node with 3 worker modes:
+  training time: 433.8
+  testing time:  20.6
+-----------------------------------------------------------------------------------------------------------
 running on 1 master node with 4 worker modes:
-  training time: 458s
-  testing time: 20.5
+  training time: 458s 427.1
+  testing time: 20.5 20.85
       
