@@ -7,6 +7,7 @@ Running on 1 master node and 1 worker node:
         
     Modify:
        1. RPC Handler Count in hdfs-site.xml (rule: 20 * log2(Cluster Size) ) 
+            1) set 20
             <property>
               <name>dfs.namenode.handler.count</name>
               <value>20</value>
@@ -16,7 +17,9 @@ Running on 1 master node and 1 worker node:
             2 nodes:  training time: 512.6 testing time: 25.44
             3 nodes:  training time: 428.1 testing time: 20.64
             4 nodes:  training time: 430.9 testing time: 20.42
-
+            
+            2) set to 40
+            
        2. Service RPC Handler Count  (rule: 50% of RPC Handler count)
         
           <property>
@@ -40,14 +43,29 @@ Running on 1 master node and 1 worker node:
                 3 nodes:  training time: 428.3 testing time: 20.43
                 4 nodes:  433.6  20.48
 
+      5. replication in hdfs-site.xml
+              1)set from 1 to 2
+                 4 nodes:   440.8   20.44
+
+
 
 **********************run 1, 2 and 3 simantenously
           1 worker   509.0  24.9
           2 workers  513.8  24.4
           3 workers  427.9  19.36
           4 workers  435.2  20.47
+   
+**********************run 1.2, 2 and 5.1  simantenously
+          1 worker   
+          2 workers  
+          3 workers     
+          4 workers    431.2  20.43    
           
-          
+**********************run all 1.2, 2 , 3,  5.1 and 4.1 simantenously
+          1 worker   
+          2 workers  
+          3 workers     
+          4 workers    480.7    22.55
           
 -----------------------------------------------------------------------------------------------------------
 running on 1 master node with 2 worker modes:
@@ -59,6 +77,6 @@ running on 1 master node with 3 worker modes:
   testing time:  20.6
 -----------------------------------------------------------------------------------------------------------
 running on 1 master node with 4 worker modes:
-  training time: 458s 427.1
-  testing time: 20.5 20.85
+  training time: 458s 429.1
+  testing time: 20.5 19.4
       
