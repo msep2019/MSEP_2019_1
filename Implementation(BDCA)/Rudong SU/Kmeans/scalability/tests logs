@@ -46,7 +46,8 @@ Running on 1 master node and 1 worker node:
       5. replication in hdfs-site.xml
               1)set from 1 to 2
                  4 nodes:   440.8   20.44
-
+               2) set from 1 to 3
+                4 nodes: 
 
 
 **********************run 1, 2 and 3 simantenously
@@ -64,9 +65,16 @@ Running on 1 master node and 1 worker node:
 **********************run all 1.2, 2 , 3,  5.1 and 4.1 simantenously
           1 worker   
           2 workers  
-          3 workers     
+          3 workers     481.3   21.42
           4 workers    480.7    22.55
           
+               
+**********************run all 1.2, 2 , 3,  5.2 and 4.1 simantenously
+          1 worker   
+          2 workers  
+          3 workers    477.9  22.48 
+          4 workers   479.6   22.46     
+
 -----------------------------------------------------------------------------------------------------------
 running on 1 master node with 2 worker modes:
   training time: 506.9
