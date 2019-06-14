@@ -22,14 +22,15 @@ Running on 1 master node and 1 worker node:
             
        2. Service RPC Handler Count  (rule: 50% of RPC Handler count)
         
-          <property>
+           1) <property>
             <name>dfs.namenode.service.handler.count</name>
             <value>10</value>
           </property>
-        
+          
              1 node: training time: 506.1  testing time:  24.82
              2 nodes: 
-       
+             3 nodes: 423.1    19.38
+           
        3. Mapred.task.io.sort.factor and Mapred.task.io.sort.mb (default: 307)
               1) change to 40 and 400 respectively.
                   561.8
@@ -66,15 +67,21 @@ Running on 1 master node and 1 worker node:
    
 **********************run 1.2, 2 and 5.1  simantenously
           1 worker   
-          2 workers  
+          2 workers    515.4  23.43
           3 workers    430.6  19.43
           4 workers    431.2  20.43    
           
              
 **********************run 1.2, 2 and 5.2  simantenously
           1 worker   
-          2 workers  
+          2 workers    511.4  24.45
           3 workers    428.5 20.42
+          4 workers        
+          
+ **********************run 1.2, 2 and 5.3  simantenously
+          1 worker   
+          2 workers    510.7  24.51
+          3 workers   
           4 workers        
           
 **********************run all 1.2, 2 , 3,  5.1 and 4.1 simantenously
