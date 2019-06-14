@@ -1,5 +1,5 @@
 discovry solutions:
-use data compression or combiner?
+use data compression or combiner? 
 -----------------------------------------------------------------------------------------------------------
 Running on 1 master node and 1 worker node:
   training time: 517s
@@ -45,9 +45,17 @@ Running on 1 master node and 1 worker node:
 
       5. replication in hdfs-site.xml
               1)set from 1 to 2
-                 4 nodes:   440.8   20.44
-               2) set from 1 to 3
-                4 nodes: 
+                  3 nodes: 433.2   20.42
+                  4 nodes:   440.8   20.44
+                 
+              2) set from 1 to 3
+               
+                  3 nodes: 403.8  20.44 
+                
+              3) set from 1 to 4
+                  
+                   3 nodes    428.5  20.43  
+
 
 
 **********************run 1, 2 and 3 simantenously
@@ -59,8 +67,15 @@ Running on 1 master node and 1 worker node:
 **********************run 1.2, 2 and 5.1  simantenously
           1 worker   
           2 workers  
-          3 workers     
+          3 workers    430.6  19.43
           4 workers    431.2  20.43    
+          
+             
+**********************run 1.2, 2 and 5.2  simantenously
+          1 worker   
+          2 workers  
+          3 workers    428.5 20.42
+          4 workers        
           
 **********************run all 1.2, 2 , 3,  5.1 and 4.1 simantenously
           1 worker   
@@ -74,6 +89,8 @@ Running on 1 master node and 1 worker node:
           2 workers  
           3 workers    477.9  22.48 
           4 workers   479.6   22.46     
+
+
 
 -----------------------------------------------------------------------------------------------------------
 running on 1 master node with 2 worker modes:
