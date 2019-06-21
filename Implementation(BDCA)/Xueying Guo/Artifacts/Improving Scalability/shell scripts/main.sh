@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#usage: ./test.sh <dataset_type>
-#example: ./test.sh kdd
+#usage: ./main.sh <dataset_type>
+#example: ./main.sh kdd
 
 #Parameter setting
 
