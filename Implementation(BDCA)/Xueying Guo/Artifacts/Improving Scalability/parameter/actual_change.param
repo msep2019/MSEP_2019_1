@@ -1,0 +1,3 @@
+spark.memory.storageFraction
+spark.serializer.objectStreamReset
+spark.rdd.compress
