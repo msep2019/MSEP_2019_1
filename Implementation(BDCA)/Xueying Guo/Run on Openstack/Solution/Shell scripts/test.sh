@@ -1,9 +1,9 @@
 #!/bin/sh
 
-#Parameter setting
-
 #usage: ./test.sh <dataset_type>
 #example: ./test.sh kdd
+
+#Parameter setting
 
 PARAM_PATH="/home/hadoop/Desktop/scripts/param"
 . $PARAM_PATH/env.param
@@ -28,6 +28,7 @@ exec 2>>${LOG_FILE}
 
 flag=0
 standard=-3000
+threshold=0.8
 
 PACKAGE=$1
 
@@ -65,16 +66,18 @@ if [ $? != 0 ]; then
 fi
 
 #original=0.3
-original=`cat ${LOG_TMP_PATH}/scalability.txt | grep "k" | cut -d "=" -f2`
-formular=`cat ${LOG_TMP_PATH}/scalability.txt | grep "formular" | cut -d ":" -f2`
+#original=`cat ${LOG_TMP_PATH}/scalability.txt | grep "k" | cut -d "=" -f2`
+#formular=`cat ${LOG_TMP_PATH}/scalability.txt | grep "formular" | cut -d ":" -f2`
+original=`cat ${LOG_TMP_PATH}/scalability.txt | grep "scalability" | cut -d "=" -f2`
 
-echo "the original scalability is ${original} and the original formular is ${formular} "
+#echo "the original scalability is ${original} and the original formular is ${formular} "
+echo "the original scalability is ${original} "
 
- if [ $(echo "${original} > ${standard}"|bc) -eq 1 ]; then
+ if [ $(echo "${original} < ${threshold}"|bc) -eq 1 ]; then
   echo "tested scalability is worse than the standard, need to update"
- else
-  echo "tested scalability is good, do not need to update"
-  exit 0
+# else
+#  echo "tested scalability is good, do not need to update"
+#  exit 0
  fi
 
 echo ""
@@ -140,12 +143,13 @@ ttl_loop=10
    fi
 
    #new_scalability=5
-   new_scalability=`cat ${LOG_TMP_PATH}/scalability.txt | grep "k" | cut -d "=" -f2`
-   new_formular=`cat ${LOG_TMP_PATH}/scalability.txt | grep "formular" | cut -d ":" -f2`
+   #new_scalability=`cat ${LOG_TMP_PATH}/scalability.txt | grep "k" | cut -d "=" -f2`
+   #new_formular=`cat ${LOG_TMP_PATH}/scalability.txt | grep "formular" | cut -d ":" -f2`
+new_scalability=`cat ${LOG_TMP_PATH}/scalability.txt | grep "scalability" | cut -d "=" -f2`
 
-   if [ $(echo "${new_scalability} < ${original}"|bc) -eq 1 ]; then
+   if [ $(echo "${new_scalability} > ${original}"|bc) -eq 1 ]; then
     echo "scalability is improved successfully by setting ${LINE} as ${VALUE}, from original ${original} to new ${new_scalability}."
-    echo "the increased formular is ${new_formular} "
+    #echo "the increased formular is ${new_formular} "
     flag=1
    else
     echo "scalability can not be improved by setting ${LINE} as ${VALUE}, since the original scalability is ${original} while the new one is ${new_scalability}. "
