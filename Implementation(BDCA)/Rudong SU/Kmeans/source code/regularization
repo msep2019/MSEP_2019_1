@@ -1,9 +1,7 @@
-package regularization;
 
 import java.io.IOException;
 import java.text.DecimalFormat;
 
-//import frame.tuple_FeatureSelection;
 import frame.tuple;
 
 import org.apache.hadoop.io.IntWritable;
