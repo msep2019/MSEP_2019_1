@@ -1,0 +1,70 @@
+
+import java.io.IOException;
+import java.text.DecimalFormat;
+
+import frame.tuple;
+
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+public class Regularization {
+
+	public static final int DIMENSION = 38;
+	public static final int K = 23;
+
+	//   Find the maximum and minimum value
+	// inkey:  File line number invalue： Line content
+	// outkey：  Dimension number outvalue：\t Maximum \ tmin
+	public static class FindMapper extends
+			Mapper<Object, Text, IntWritable, Text> {
+
+		private static double[] minNum = new double[DIMENSION];
+		private static double[] maxNum = new double[DIMENSION];
+		private static DecimalFormat df = new DecimalFormat("#####0.00000");
+
+		@Override
+		public void setup(Context context) throws IOException,
+				InterruptedException {
+			int i;
+			for (i = 0; i < DIMENSION; i++) {
+				minNum[i] = Double.MAX_VALUE;
+				maxNum[i] = Double.MIN_VALUE;
+			}
+		}
+
+		public void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String str = value.toString();
+			tuple r = new tuple (str);
+			int i;
+			for (i = 0; i < DIMENSION; i++) {
+				if (r.dim[i] > maxNum[i]) {
+					maxNum[i] = r.dim[i];
+				}
+				if (r.dim[i] < minNum[i]) {
+					minNum[i] = r.dim[i];
+				}
+			}
+		}
+
+		protected void cleanup(Context context) throws IOException,
+				InterruptedException {
+			int i;
+			String s;
+			for (i = 0; i < DIMENSION; i++) {
+				s = df.format(minNum[i]) + "\t" + df.format(maxNum[i]);
+				context.write(new IntWritable(i), new Text(s));
+			}
+		}
+	}
+
+	public static class FindReducer extends
+			Reducer<IntWritable, Text, IntWritable, Text> {
+		protected void reduce(IntWritable key, Iterable<Text> values,
+				Context context) throws IOException, InterruptedException {
+			super.reduce(key, values, context);
+		}
+	}
+}

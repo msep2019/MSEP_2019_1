@@ -8,44 +8,35 @@ import org.apache.spark.mllib.util.MLUtils
 import org.apache.spark.mllib.evaluation.MulticlassMetrics
 import java.io.PrintWriter;
 
-object  CICIDS {
+object SVM {
      def main(args: Array[String]): Unit = {
     //val conf = new SparkConf().setAppName("SVMWithSGDExample").setMaster("local")
     //val conf = new SparkConf().setAppName("TestSVM").setMaster("local")
     //val conf = new SparkConf().setAppName("TestSVM").setMaster("local")
-    val conf = new SparkConf().setAppName("TestSVMCICIDS")
+    val conf = new SparkConf().setAppName("TestSVM")
     val sc = new SparkContext(conf)
 
     println("------------------------Read File-------------------------")
     //val traindata = sc.textFile("/home/hadoop/Desktop/svm/20KDDTrain.txt")   
     //val testdata = sc.textFile("/home/hadoop/Desktop/svm/20KDDTest.txt")
-    //val traindata = sc.textFile("/user/ubuntu/spark/kdd/KDDTrain.txt")   
-    //val testdata = sc.textFile("/user/ubuntu/spark/kdd/KDDTest.txt")
-    val data = sc.textFile("/user/ubuntu/spark/CICIDS2017/trainCICIDS2017.txt")
-
-    val splits = data.randomSplit(Array(0.7,0.3),seed = 11L)
-    val traindata = splits(0).cache
-    val testdata = splits(1)
+    val traindata = sc.textFile("/user/ubuntu/spark/kdd/KDDTrain.txt")   
+    val testdata = sc.textFile("/user/ubuntu/spark/kdd/KDDTest.txt")
 
     println("-------------------Read file Complete -> Set LabelPoint----------------------")
     val training = traindata.map { line =>
       val parts = line.split(',')
+      //val parts2 = line.split(',').filter(_)
         LabeledPoint(
-            parts(82).toDouble,
-            Vectors.dense(parts(0).toDouble,parts(1).toDouble,parts(2).toDouble,parts(3).toDouble,parts(4).toDouble,parts(5).toDouble,parts(6).toDouble,parts(7).toDouble,parts(8).toDouble,parts(9).toDouble,parts(10).toDouble,parts(11).toDouble,parts(12).toDouble,parts(13).toDouble,parts(14).toDouble,parts(15).toDouble,parts(16).toDouble,parts(17).toDouble,
-                if ( parts(18) == "NaN") 99999990.toDouble
-                else if (parts(18) == "Infinity") 999999990.toDouble
-                else parts(18).toDouble,
-                if ( parts(19) == "Infinity") 999999990.toDouble
-                else if ( parts(19) == "NaN") 99999990.toDouble
-                else parts(19).toDouble,
-                parts(20).toDouble,parts(21).toDouble,parts(22).toDouble,parts(23).toDouble,parts(24).toDouble,parts(25).toDouble,parts(26).toDouble,parts(27).toDouble,parts(28).toDouble,parts(29).toDouble,parts(30).toDouble,parts(31).toDouble,parts(32).toDouble,parts(33).toDouble,parts(34).toDouble,parts(35).toDouble,parts(36).toDouble,parts(37).toDouble,parts(38).toDouble,parts(39).toDouble,parts(40).toDouble,parts(41).toDouble,parts(42).toDouble,parts(43).toDouble,parts(44).toDouble,parts(45).toDouble,parts(46).toDouble,parts(47).toDouble,parts(48).toDouble,parts(49).toDouble,parts(50).toDouble,parts(51).toDouble,parts(52).toDouble,parts(53).toDouble,parts(54).toDouble,parts(55).toDouble,parts(56).toDouble,parts(57).toDouble,parts(58).toDouble,parts(59).toDouble,parts(60).toDouble,parts(61).toDouble,parts(62).toDouble,parts(63).toDouble,parts(64).toDouble,parts(65).toDouble,parts(66).toDouble,parts(67).toDouble,parts(68).toDouble,parts(69).toDouble,parts(70).toDouble,parts(71).toDouble,parts(72).toDouble,parts(73).toDouble,parts(74).toDouble,parts(75).toDouble,parts(76).toDouble,parts(77).toDouble,parts(78).toDouble,parts(79).toDouble,parts(80).toDouble,parts(81).toDouble)
+            if (parts(41)=="normal.") 0.toDouble
+            else 1.toDouble,
+Vectors.dense(parts(0).toDouble,parts(1).toDouble,parts(2).toDouble,parts(3).toDouble,parts(4).toDouble,parts(5).toDouble,parts(6).toDouble,parts(7).toDouble,parts(8).toDouble,parts(9).toDouble,parts(10).toDouble,parts(11).toDouble,parts(12).toDouble,parts(13).toDouble,parts(14).toDouble,parts(15).toDouble,parts(16).toDouble,parts(17).toDouble,parts(18).toDouble,parts(19).toDouble,parts(20).toDouble,parts(21).toDouble,parts(22).toDouble,parts(23).toDouble,parts(24).toDouble,parts(25).toDouble,parts(26).toDouble,parts(27).toDouble,parts(28).toDouble,parts(29).toDouble,parts(30).toDouble,parts(31).toDouble,parts(32).toDouble,parts(33).toDouble,parts(34).toDouble,parts(35).toDouble,parts(36).toDouble,parts(37).toDouble,parts(38).toDouble,parts(39).toDouble,parts(40).toDouble)
+            //Vectors.dense(parts.map(_.toDouble))
         )
        }.cache()
 
     // Run training algorithm to build the model
     println("--------------------SetLable Complete -> TrainModel----------------------")
-    val numIterations = 1000
+    val numIterations = 5000
     
     val trainstarttime = System.currentTimeMillis()
     
@@ -61,15 +52,9 @@ object  CICIDS {
     val testing = testdata.map { line =>
       val parts = line.split(',')
         LabeledPoint(
-            parts(82).toDouble,
-            Vectors.dense(parts(0).toDouble,parts(1).toDouble,parts(2).toDouble,parts(3).toDouble,parts(4).toDouble,parts(5).toDouble,parts(6).toDouble,parts(7).toDouble,parts(8).toDouble,parts(9).toDouble,parts(10).toDouble,parts(11).toDouble,parts(12).toDouble,parts(13).toDouble,parts(14).toDouble,parts(15).toDouble,parts(16).toDouble,parts(17).toDouble,
-                if ( parts(18) == "NaN") 99999990.toDouble
-                else if (parts(18) == "Infinity") 999999990.toDouble
-                else parts(18).toDouble,
-                if ( parts(19) == "Infinity") 999999990.toDouble
-                else if ( parts(19) == "NaN") 99999990.toDouble
-                else parts(19).toDouble,
-                parts(20).toDouble,parts(21).toDouble,parts(22).toDouble,parts(23).toDouble,parts(24).toDouble,parts(25).toDouble,parts(26).toDouble,parts(27).toDouble,parts(28).toDouble,parts(29).toDouble,parts(30).toDouble,parts(31).toDouble,parts(32).toDouble,parts(33).toDouble,parts(34).toDouble,parts(35).toDouble,parts(36).toDouble,parts(37).toDouble,parts(38).toDouble,parts(39).toDouble,parts(40).toDouble,parts(41).toDouble,parts(42).toDouble,parts(43).toDouble,parts(44).toDouble,parts(45).toDouble,parts(46).toDouble,parts(47).toDouble,parts(48).toDouble,parts(49).toDouble,parts(50).toDouble,parts(51).toDouble,parts(52).toDouble,parts(53).toDouble,parts(54).toDouble,parts(55).toDouble,parts(56).toDouble,parts(57).toDouble,parts(58).toDouble,parts(59).toDouble,parts(60).toDouble,parts(61).toDouble,parts(62).toDouble,parts(63).toDouble,parts(64).toDouble,parts(65).toDouble,parts(66).toDouble,parts(67).toDouble,parts(68).toDouble,parts(69).toDouble,parts(70).toDouble,parts(71).toDouble,parts(72).toDouble,parts(73).toDouble,parts(74).toDouble,parts(75).toDouble,parts(76).toDouble,parts(77).toDouble,parts(78).toDouble,parts(79).toDouble,parts(80).toDouble,parts(81).toDouble)
+            if (parts(41)=="normal.") 0.toDouble
+            else 1.toDouble, 
+            Vectors.dense(parts(0).toDouble,parts(1).toDouble,parts(2).toDouble,parts(3).toDouble,parts(4).toDouble,parts(5).toDouble,parts(6).toDouble,parts(7).toDouble,parts(8).toDouble,parts(9).toDouble,parts(10).toDouble,parts(11).toDouble,parts(12).toDouble,parts(13).toDouble,parts(14).toDouble,parts(15).toDouble,parts(16).toDouble,parts(17).toDouble,parts(18).toDouble,parts(19).toDouble,parts(20).toDouble,parts(21).toDouble,parts(22).toDouble,parts(23).toDouble,parts(24).toDouble,parts(25).toDouble,parts(26).toDouble,parts(27).toDouble,parts(28).toDouble,parts(29).toDouble,parts(30).toDouble,parts(31).toDouble,parts(32).toDouble,parts(33).toDouble,parts(34).toDouble,parts(35).toDouble,parts(36).toDouble,parts(37).toDouble,parts(38).toDouble,parts(39).toDouble,parts(40).toDouble)
         )
        }
 
@@ -136,8 +121,7 @@ object  CICIDS {
     //scoreAndLabels.foreach(println)
     
     println("accurate count = " + accuratecount )
-    println("total train count = " +traindata.count )
-    println("total test count = " +testdata.count )
+    println("total count =" +testdata.count )
     println("true positive (tp)= " + tp )
     println("false positive (fp)= " + fp )
     println("true negative (tn)= " + tn )

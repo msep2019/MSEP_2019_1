@@ -1,0 +1,301 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import frame.*;
+import regularization.Regularization.FindMapper;
+import regularization.Regularization.FindReducer;
+import getFirstCenters.GetFirstCenters.FirstMapper;
+import getFirstCenters.GetFirstCenters.FirstReducer;
+import org.apache.hadoop.io.NullWritable;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FSDataInputStream;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.apache.hadoop.io.WritableComparator;
+
+public class Kmeans {
+	//  The number of clusters
+	private static final int K = 5;
+	//  Sample vector dimensions
+	public static final int DIMENSION = 38;
+	//  The maximum number of iterations
+	private static final int MAXITERATIONS = 20;
+	//  Threshold to stop iteration
+	private static final double THRESHOLD = 0.01;
+	//  Cluster dname
+	public static final String[] clusterName = { "DOS", "NORMAL", "PROBE",
+			"R2L", "U2R" };
+		
+	
+
+	public static boolean stopIteration(Configuration conf) throws IOException {
+		int count = 0;
+		String pathInitCenters = conf.get("PathInitCenters");
+		String pathOut = conf.get("PathOut");
+		int iteration = Integer.parseInt(conf.get("Iteration"));
+		Path path1;
+		if (iteration == 1) {
+			//  The file path of the last clustering center
+			path1 = new Path(pathInitCenters + "/part-r-00000");
+		} else {
+			path1 = new Path(pathOut + "/clustering/depth_" + (iteration - 1)
+					+ "/part-r-00000");
+		}
+		FileSystem fs = path1.getFileSystem(conf);
+		FSDataInputStream in1 = fs.open(path1);
+		InputStreamReader isr1 = new InputStreamReader(in1);
+		BufferedReader br1 = new BufferedReader(isr1);
+		//  The current file path of this cluster center
+		Path path2 = new Path(pathOut + "/clustering/depth_" + iteration
+				+ "/part-r-00000");
+		FSDataInputStream in2 = fs.open(path2);
+		InputStreamReader isr2 = new InputStreamReader(in2);
+		BufferedReader br2 = new BufferedReader(isr2);
+
+		String line1, line2;
+		double error = 0;
+		while ((line1 = br1.readLine()) != null
+				&& (line2 = br2.readLine()) != null) {
+			count++;
+			tuple r1 = tuple.tuple2(line1);
+			tuple r2 = tuple.tuple2(line2);
+			//  Calculate the distance between each pair of center
+			// points
+			error += tuple.GetEuclidDist(r1, r2);
+		}
+
+		br1.close();
+		br2.close();
+		isr1.close();
+		isr2.close();
+		in1.close();
+		in2.close();
+		System.out.println("distance to center:" + error);
+		//  If the distance is less than the threshold,
+		// or the clustering algorithm is empty, stop the iteration
+		if (error < THRESHOLD || count != K)
+			return true;
+		return false;
+	}
+
+	public static class KmeansMapper extends Mapper<Object, Text, Text, Text> {
+
+		//  Last cluster center
+		private static tuple[] centers = new tuple[DIMENSION];
+		//  The maximum and minimum values ​​of each
+		// dimension are used to normalize the vectors
+		private static double[] minNum = new double[DIMENSION];
+		private static double[] maxNum = new double[DIMENSION];
+
+		@Override
+		public void setup(Context context) throws IOException,
+				InterruptedException {
+			//  Read the maximum and minimum of each dimension
+			int i;
+			Configuration conf = context.getConfiguration();
+			String PathMinMax = conf.get("PathMinMax");
+			Path path = new Path(PathMinMax + "/part-r-00000");
+			FileSystem fs = path.getFileSystem(conf);
+			FSDataInputStream in = fs.open(path);
+			InputStreamReader isr = new InputStreamReader(in);
+			BufferedReader br = new BufferedReader(isr);
+			String line;
+			while ((line = br.readLine()) != null) {
+				String[] st = line.split("\\s+");
+				try {
+					i = Integer.parseInt(st[0]);
+					minNum[i] = Double.parseDouble(st[1]);
+					maxNum[i] = Double.parseDouble(st[2]);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			br.close();
+			isr.close();
+			in.close();
+
+			//  Read the last cluster center
+			String pathInitCenters = conf.get("PathInitCenters");
+			String pathOut = conf.get("PathOut");
+			int iteration = Integer.parseInt(conf.get("Iteration"));
+			Path oldCenPath;
+			if (iteration == 1) {
+				oldCenPath = new Path(pathInitCenters + "/part-r-00000");
+			} else {
+				oldCenPath = new Path(pathOut + "/clustering/depth_"
+						+ (iteration - 1) + "/part-r-00000");
+			}
+			fs = oldCenPath.getFileSystem(conf);
+			in = fs.open(oldCenPath);
+			isr = new InputStreamReader(in);
+			br = new BufferedReader(isr);
+			i = 0;
+			while ((line = br.readLine()) != null) {
+				// System.out.println(line);
+				centers[i] = tuple.tuple2(line);
+				i++;
+			}
+			br.close();
+			isr.close();
+			in.close();
+		}
+
+		//  According to the distance function, samples will
+		// be clustered to the nearest category
+		// inkey:  File line number invalue：行内容 Line content
+		// outkey：  Clustering class name outvalue：行内容 Line content
+		public void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String str = value.toString();
+			tuple r = new tuple(str);
+			int result = 0;
+			int index;
+			double minDist = Double.MAX_VALUE;
+			 double maxCos = Double.MIN_VALUE;
+			for (index = 0; index < K; index++) {
+				// double dist = tuple.GetCosTheta(centers[index], r, minNum,maxNum);
+				double dist = tuple.GetStandardEuclidDist(centers[index], r,minNum, maxNum);
+				// double dist = Tuple.GetEuclidDist(centers[index], r);
+				if (dist < minDist) {
+					// if (dist > maxCos) {
+					minDist = dist;
+					result = index;
+				}
+			}
+			Text resultKey = new Text(clusterName[result]);
+			context.write(resultKey, value);
+		}
+	}
+
+	public static class KmeansReducer extends Reducer<Text, Text, Text, Text> {
+		public static tuple center = new tuple();
+
+		//  As a result, the mean of all samples in
+		// each cluster is used as the new cluster center
+		// inkey:  invalue： Line content
+		// outkey：  outvalue： New center coordinates
+		public void reduce(Text key, Iterable<Text> values, Context context)
+				throws IOException, InterruptedException {
+			int count = 0;
+			for (Text r : values) {
+				center.Add(new tuple(r.toString()));
+				count++;
+			}
+			center.Divide(count);
+			Text centerValue = new Text(center.Tostring());
+			context.write(key, centerValue);
+		}
+	}
+
+	//  Sort only, do nothing else, give the clustering
+	// result for each sample
+	public static class LastReducer extends Reducer<Text, Text, Text, Text> {
+		protected void reduce(Text key, Iterable<Text> values, Context context)
+				throws IOException, InterruptedException {
+			super.reduce(key, values, context);
+		}
+	}
+	
+	//--------------------- Sort in descending order --------------------------------------------
+	
+	public static class DescendingIntComparator extends WritableComparator {
+        
+        public DescendingIntComparator() {
+            super(IntWritable.class, true);
+        }
+ 
+        @SuppressWarnings("rawtypes")
+        @Override
+        public int compare(WritableComparable w1, WritableComparable w2) {
+            IntWritable key1 = (IntWritable) w1;
+            IntWritable key2 = (IntWritable) w2;          
+            return -1 * key1.compareTo(key2);
+        }
+    }
+	
+	
+	//-------------------------------------------------------------------------------------------
+
+	@SuppressWarnings("deprecation")
+	public static void main(String[] args) throws Exception {
+		
+		int iteration;				
+		Configuration conf = new Configuration();
+		
+		conf.set("PathOut", args[1]);                //void set (string name, string value): set value of the name property
+		conf.set("PathMinMax", args[2]);
+		conf.set("PathInitCenters", args[3]);
+		
+		long startTimeTrain = System.currentTimeMillis();
+		
+		 Job job = new Job(conf, "get_first_centers");
+		 job.setJarByClass(Kmeans.class);
+		 job.setMapperClass(FirstMapper.class);
+		 job.setReducerClass(FirstReducer.class);
+		 job.setOutputKeyClass(Text.class);
+		 job.setOutputValueClass(Text.class);
+		 FileInputFormat.addInputPath(job, new Path(args[0]));
+		 FileOutputFormat.setOutputPath(job, new Path(args[3]));
+		 job.waitForCompletion(true);
+		 
+
+		//  Find the maximum and minimum of each dimension
+		job = new Job(conf, "find_min_max");
+		job.setJarByClass(Kmeans.class);
+		job.setMapperClass(FindMapper.class);
+		job.setReducerClass(FindReducer.class);
+		job.setOutputKeyClass(IntWritable.class);
+		job.setOutputValueClass(Text.class);
+		FileInputFormat.addInputPath(job, new Path(args[0]));
+		FileOutputFormat.setOutputPath(job, new Path(args[2]));
+		//FileOutputFormat.setOutputPath(job, new Path(args[3]));
+		job.waitForCompletion(true);
+
+		// Iteration  algorithm
+		iteration = 1;
+		do {
+			System.out.println("iteration: " + iteration);
+			conf.unset("Iteration");
+			conf.set("Iteration", Integer.toString(iteration));
+			job = new Job(conf, "kmeans" + iteration);
+			job.setJarByClass(Kmeans.class);
+			job.setMapperClass(KmeansMapper.class);
+			job.setReducerClass(KmeansReducer.class);
+			job.setOutputKeyClass(Text.class);
+			job.setOutputValueClass(Text.class);
+			FileInputFormat.addInputPath(job, new Path(args[0]));
+			FileOutputFormat.setOutputPath(job, new Path(args[1]
+					+ "/clustering/depth_" + iteration + "/"));
+			job.waitForCompletion(true);
+		} while (!stopIteration(conf) && iteration++ < MAXITERATIONS);
+		
+		long estimatedTimeTrain = System.currentTimeMillis() - startTimeTrain;
+		 System.out.println("********************************************************");
+		 System.out.println("total training time (KDD) = " + estimatedTimeTrain);
+
+		long startTimeTest = System.currentTimeMillis();
+		
+		//   clustering results
+		job = new Job(conf, "kmeans_final_map");
+		job.setJarByClass(Kmeans.class);
+		job.setMapperClass(KmeansMapper.class);
+		job.setReducerClass(LastReducer.class);
+		job.setOutputKeyClass(Text.class);
+		job.setOutputValueClass(Text.class);
+		FileInputFormat.addInputPath(job, new Path(args[4]));
+		FileOutputFormat.setOutputPath(job, new Path(args[1] + "/final"));
+		job.waitForCompletion(true);
+		
+		long estimatedTimeTest = System.currentTimeMillis() - startTimeTest;
+		 System.out.println("total testing time (KDD) = " + estimatedTimeTest);
+		 System.out.println("********************************************************");

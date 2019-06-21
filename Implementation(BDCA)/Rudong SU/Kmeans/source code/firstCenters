@@ -1,0 +1,87 @@
+import java.io.IOException;
+
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+
+import tuple;
+
+public class GetFirstCenters {
+
+	public static final int DIMENSION = 38;
+
+	public static final String[] clusterName = { "DOS", "NORMAL", "PROBE",
+			"R2L", "U2R" };
+
+	public static class FirstMapper extends Mapper<Object, Text, Text, Text> {
+		public void map(Object key, Text value, Context context)
+				throws IOException, InterruptedException {
+			String str = value.toString();
+			String[] field = str.split(",");
+			String cl = field[DIMENSION + 3];
+			String a = cl.replace(".", "");
+			int code;
+			switch (a) {
+			case "normal":
+				code = 1;
+				break;
+			case "ipsweep":
+			case "nmap":
+			case "portsweep":
+			case "satan":
+				code = 2;
+				break;
+			case "back":
+			case "land":
+			case "neptune":
+			case "pod":
+			case "smurf":
+			case "teardrop":
+				code = 0;
+				break;
+			case "buffer_overflow":
+			case "loadmodule":
+			case "perl":
+			case "rootkit":
+				code = 4;
+				break;
+			case "ftp_write":
+			case "guess_passwd":
+			case "imap":
+			case "multihop":
+			case "phf":
+			case "spy":
+			case "warezclient":
+			case "warezmaster":
+				code = 3;
+				break;
+			default:
+				code = 0;
+				break;
+			}
+			Text rsk = new Text(clusterName[code]);
+			context.write(rsk, value);
+		}
+	}
+
+	public static class FirstReducer extends Reducer<Text, Text, Text, Text> {
+		public static tuple center = new tuple();
+		//public static tuple_FeatureSelection center = new tuple_FeatureSelection();
+		
+		//public static tuple center = new tuple();
+
+		public void reduce(Text key, Iterable<Text> values, Context context)
+				throws IOException, InterruptedException {
+			int count = 0;
+			for (Text r : values) {
+				//center.Add(new tuple_FeatureSelection(r.toString()));
+				center.Add(new tuple(r.toString()));
+				count++;
+			}
+			System.out.println(count);
+			center.Divide(count);
+			Text centerValue = new Text(center.Tostring());
+			context.write(key, centerValue);
+		}
+	}
+}

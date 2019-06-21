@@ -1,0 +1,16 @@
+terminate node worker1:
+
+ to fullfill the RAM of this node thus the node is killed use command: 
+ 
+  dd if=/dev/zero of=/tmp/file bs=1G count=10 
+ 
+ 
+ Issue encountered:
+    1. bs = 30G count = 10
+      the cluster has no response : assigned too much memory to creat each time
+      
+    2. bs = 1M count = 1
+        processed but not useful because too small
+        
+    3. bs = 1G count = 1
+        the cluster has no response 

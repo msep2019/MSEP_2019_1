@@ -1,0 +1,14 @@
+This is source code and parameter to improve the scalability
+
+Scripts:
+cal_scalability.sh: calculate scalability
+main.sh: main script for the system
+run_gettime.sh: run package on OpenStack and extracting training time for later calculation
+run_gettime_conf.sh: run package after applying configurations on OpenStack and extracting training time for later calculation
+
+Parameters:
+actual_change.param: define which configuration you need to try
+all_conf.param: define all possible values of configurations
+env.param: define path of different martials (e.g. scripts path, log path)
+node.param: define node information: the ip address of each node
+package_name.param: define package name and location of different packages
