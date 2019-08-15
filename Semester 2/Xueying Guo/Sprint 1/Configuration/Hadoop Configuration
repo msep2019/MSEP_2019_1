@@ -1,0 +1,7 @@
+S1. 
+
+
+
+
+
+S2. Run Job by: hadoop jar /home/hadoop/Desktop/hadoop/WordCount.jar WordCount /user/hadoop/input /user/hadoop/output
