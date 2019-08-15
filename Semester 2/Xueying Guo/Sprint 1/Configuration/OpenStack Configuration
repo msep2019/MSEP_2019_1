@@ -1,0 +1,25 @@
+Config by command:
+
+S1. Run command to check the details of current cluster: 
+openstack server show <name>
+
+S2. list available flavor of clusters by: openstack flavor list
+
+S3. resize the flavor of cluster by command: nova resize <name> <id of size> --poll
+* <id of size> means different id number represents different size of flavor. and different flavors contain different size of RAM/Disk storage.
+* we need to enlarge the RAM from 2GB (m1.small) -> 4GB (m1.medium) this time, and the id of m1.medium is 3.
+
+S4. after run above command, the request will be submitted and need to confirm by: openstack server resize --confirm <ID>
+* <ID> can be known by running: openstack server list
+* can revert request before it is created by: openstack server resize --revert <ID>
+
+Config on page:
+S1. Click on instance on the left hand side
+
+S2. Find out the clusters and click the drop down list, then select 'resize cluster'
+
+S3. Choose the target flavor and confirm.
+
+S4. confirm request by clicking the drop down list.
+
+* Once the size is extended, it cannot be resize to a smaller size.
