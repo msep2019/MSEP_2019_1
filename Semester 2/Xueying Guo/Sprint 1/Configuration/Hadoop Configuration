@@ -1,7 +1,43 @@
-S1. 
+S1. Check environment setting by below command:
+  hadoop version	// to get Hadoop version, which is Hadoop 2.6.0-cdh 5.5.0
+  javac -version	// to get the version of java, which is 1.7.0_67
+  
+S2. After download hadoop, some files need to be configured for distributed mode:
+gedit ./etc/hadoop/core-site.xml
+gedit ./etc/hadoop/hdfs-site.xml
+mv ./etc/hadoop/mapred-site.xml.template ./etc/hadoop/mapred-site.xml
+gedit ./etc/hadoop/mapred-site.xml
 
+S3. Launch HDFS:
+./sbin/start-dfs.sh
+./sbin/start-yarn.sh
 
+* I got the error 'Retrying connect to server: 0.0.0.0/0.0.0.0:8032' at the beginning, then I found file mapred-site.xml have to change back to mapred-site.xml.template if yarn is not started, otherwise the job will be aborted before run.
 
+S4. input JPS can know which service is launched
 
+S5. create directory in hadoop filesystem
+  hadoop fs -mkdir /user/hadoop // Create a dictionary on HDFS
+  hadoop fs -mkdir /user/hadoop/input // Create a dictionary inside hadoop for input
 
-S2. Run Job by: hadoop jar /home/hadoop/Desktop/hadoop/WordCount.jar WordCount /user/hadoop/input /user/hadoop/output
+S6. Use browser for validation: localhost:50070 -> Utilities -> Browse the filesystem, then the new directory is displayed here.
+
+S7. Upload input file to that directory by command: 
+  	hadoop fs -put <INPUT_FILE> <HDFS_INPUT_DIRECTORY>
+    INPUT_FILE = ‘/home/hadoop/Desktop/hadoop/input.txt’
+    HDFS_INPUT_DIRECTORY = /user/hadoop/input
+
+S8. New project in Eclipse and coding, export .jar after finish 
+
+S9. Run job by command: (be careful of the space count)
+      hadoop jar <JAR> <CLASS_NAME> <INPUT_DIRECTORY> <OUTPUT_DIRECTORY>
+   => hadoop jar /home/hadoop/Desktop/hadoop/WordCount.jar WordCount /user/hadoop/input /user/hadoop/output
+
+S10. Check output by command: (or can login to 50070 to check)
+  hadoop dfs -cat /user/hadoop/output/*
+  
+* If want to rerun the job, then we need to remove output floder from hadoop filesystem by command:
+    hadoop fs -rm /user/hadoop/output/*
+    hadoop fs -rmdir /user/hadoop/output
+    
+
