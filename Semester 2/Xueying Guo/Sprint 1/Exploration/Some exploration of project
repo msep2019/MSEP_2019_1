@@ -1,0 +1,125 @@
+Synopsis:
+Samza is an open-source distributed framework for streaming processing, a scalable engine that allows users to process and analyze data in real time. It uses Kafka for messaging, and Hadoop Yarn to provide fault tolerance, processor isolation, security and resource management. Samza as an embedded library, it can be embedded in Java or Scala. Samza processes data in the form of streams. A stream is a collection of immutable messages. Each message in a stream is a key-value pair. Streams can be separated into multiple partitions and these partitions are orderable. In other words, when processing data, Samza processes data according to the order of receiving messages, which is a streaming unit in Samza. Samza supports stateful and stateless stream processing. Samza also supports at-least once processing. 
+
+Advantages:
+1. The flexible deployment options allow it to run anywhere (e.g. clouds, containerized environment, bare-metal machine). 
+2. An advantage of Samza is low-latency, the latency of Samza is sub-second.  
+3. The process and storage are executed in the same machine, so it will not lead to extra memory load when remaining the high-efficiency. 
+4. Fault-tolerant, Samza allows fast recovery from failures by its host-affinity and incremental checkpointing. 
+5. Samza supports massive scale of data volume.
+6. Since Samza supports stateful stream processing, so it offers scalable state-store for storing information in order to do de-duplication in certain cases.
+7. Since the delivery semantics of Samza is ‘at-least once’, which means that there will be no loss of message delivery. 
+
+Disadvantages:
+1. Although there will be no data-loss because of the ‘at-least once’ delivery semantics, it may also cause redundancy. 
+
+
+Installation details (with reference links):
+http://samza.apache.org/startup/quick-start/latest/samza.html
+http://samza.apache.org/learn/documentation/latest/core-concepts/core-concepts.html 
+
+
+
+Tools Exploration:
+
+Sqoop
+Summary: The name of Sqoop means ‘SQL-to-Hadoop’. Apache Sqoop is a command-line interface application used for transferring data between relational databases and Hadoop. Since a large amount of data has to be transferred from database to Hadoop when processing data, Sqoop is a tool to do this task. Sqoop can load structured data from databases, enterprise data warehouse then import data to HDFS easily. Sqoop supports incremental loads from SQL query in order to get the latest update since the last update. 
+How it works: Sqoop provides automatic scheduling of export and import tasks. For the BDCA system, the data volume of training and testing datasets will be very large, and it may take a long time for importing. By using Sqoop, it is more likely to reduce the time for importing data.
+
+Hive
+Summary: Hive is a data warehouse software project built on top of Apache Hadoop for data query and analysis. It can be used for data extraction, transformation, and loading (ETL). Hive provides a SQL-like language called HQL to query data stored in Hadoop. 
+How it works: Hive is suitable for processing large data volume, for a BDCA system, the data volume will be large, so it is necessary to use suitable tools to do data processing.
+
+Kafka
+Summary: Kafka is an open-source distributed stream-processing platform written in Scala and Java. It provides a unified, high-throughput, and low-latency manner to handle data feeds. Kafka works like a ‘basket’ to store multiple messages from producers. Consumers can get messages accordingly. 
+How it works: Kafka uses the concept of ‘consumer’ and ‘producer’, making the complex back-end system simple. 
+
+Zookeeper
+Summary: Zookeeper services for a distributed system to offer a hierarchical key-value store, which provides a distributed configuration service for large distributed systems. Zookeeper coordinates the different workers, nodes in a running distributed system. 
+How it works: Zookeeper can manage for distributed system. It can simplify the process of distribution coordination and run in a high-speed manner.  
+
+HBase
+Summary: HBase is a column-oriented, open-source non-relationship distributed database that runs on top of Hadoop Distributed File System (HDFS). HBase provides a fault-tolerant way to store spare dataset. It can process a large volume of data. 
+How it works: HBase can support large data volume processing, it can load data efficiently. 
+Datasets Exploration:
+
+1. 
+Name: A Phishing and Legitimate Dataset for Rapid Benchmarking
+Download link: http://www.fcsit.unimas.my/research/legit-phish-set
+Summary of datasets: This dataset contains a total of 30,000 samples of webpages, which includes 15,000 phishing samples. 
+Size: 64GB
+Publication date: 2018
+Attack type: phishing detection
+
+2. 
+Name: The BoT-IoT Dataset 
+Download link: https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB15-Datasets/bot_iot.php
+Summary of datasets: This dataset includes DDoS, DoS, OS and Service Scan, Keylogging and Data exfiltration attacks. 
+Size: 16.7GB 
+Format: csv
+Publication date: 2018
+Attack type: botnet detection, data exfiltration detection
+
+3.
+Name: Botnet dataset
+Download link: https://www.unb.ca/cic/datasets/botnet.html
+Summary of datasets: There are different types of botnet in this dataset, which includes Neris, Rbot, Virut, and so on. 
+Size: 4.9G Training + 2.0G Testing  
+Format: pcap
+Publication date: 2014
+Attack type: botnet detection, APT detection (C&C)
+
+4.
+Name: CTU-13 Dataset
+Download link: https://mcfp.weebly.com/the-ctu-13-dataset-a-labeled-dataset-with-botnet-normal-and-background-traffic.html 
+Summary of datasets: This dataset captures botnet traffic mixed with normal traffic and background traffic. 
+Size: >1.9 GB
+Format: pcap
+Publication date: 2014
+Attack type: botnet detection
+
+5.
+Name: Microsoft Malware Classification Challenge (BIG 2015)
+Download link: https://www.kaggle.com/c/malware-classification/data 
+Summary of datasets: This dataset contains a set of known malware files representing a mix of 9 different families. Each malware file has an Id, a 20 character hash value uniquely identifying the file, and a Class, an integer representing one of 9 family names. 
+Size: >35 GB
+Format: csv
+Publication date: 2018
+Attack type: malware detection
+
+6.
+Name: DNS Exfiltration Attack Dataset
+Download link: https://nozzle-data.sdn.unsw.edu.au/dns-exfiltration-dataset/ 
+https://nozzle-data.sdn.unsw.edu.au/dns-exfiltration-dataset/files/ 
+Summary of datasets: This dataset containing 1,400,000 exfiltration DNS queries. 
+Size: 1.2 GB
+Format: csv
+Publication date: 2019
+Attack type: data exfiltration detection (DNS exfiltration)
+
+7.
+Name: NSL-KDD
+Download link: https://www.unb.ca/cic/datasets/nsl.html 
+Summary of datasets: NSL-KDD99 is a refined version of original KDD99 dataset, which contains quality data. 
+Size: < 1 GB
+Format: txt
+Publication date: 2009
+Attack type: APT detection, malware detection
+
+8.
+Name: Android Malware Dataset (CICAndMal2017)
+Download link: https://www.unb.ca/cic/datasets/andmal2017.html 
+Summary of datasets: Detects 4 types of malware in Android phone, which includes adware, ransomware, scareware and SMS malware.
+Size: > 1 GB
+Format: csv
+Publication date: 2017
+Attack type: malware detection
+
+9.
+Name: Android Adware and General Malware Dataset
+Download link: https://www.unb.ca/cic/datasets/android-adware.html 
+Summary of datasets: This dataset can be used for detection of malware in Android.
+Size: > 9.1 GB
+Format: csv
+Publication date: 2017
+Attack type: malware detection
