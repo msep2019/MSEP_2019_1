@@ -1,0 +1,8 @@
+.pcap Format tooks time to be loaded and processed.
+training set: 9388270 records
+testing set: 5114514 records
+
+Since the data volume is too large, so I seperate them to small files (i.e. 4-5 mb per files, 10000 records per file) to run, over this size, the program will hang on and without response. 
+and each file took around 4 mins.
+
+it can be extracted to csv directly by wireshark, however, we need to extract more features so have to use scapy.
