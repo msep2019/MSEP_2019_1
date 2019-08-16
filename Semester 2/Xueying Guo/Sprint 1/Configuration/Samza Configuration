@@ -60,3 +60,15 @@ deploy/samza/bin/run-app.sh --config-factory=org.apache.samza.config.factories.P
 deploy/samza/bin/run-app.sh --config-factory=org.apache.samza.config.factories.PropertiesConfigFactory --config-path=file://$PWD/deploy/samza/config/wikipedia-parser.properties --operation=kill
 
 deploy/samza/bin/run-app.sh --config-factory=org.apache.samza.config.factories.PropertiesConfigFactory --config-path=file://$PWD/deploy/samza/config/wikipedia-stats.properties --operation=kill
+
+* Yarn will check the percentage of cluster usage, this can be configured to enlarge the percentage of usage.
+YARN capacity-scheduler.xml:
+<property>
+    <name>yarn.scheduler.capacity.maximum-am-resource-percent</name>
+    <value>0.4</value>
+    <description>
+      Maximum percent of resources in the cluster which can be used to run 
+      application masters i.e. controls number of concurrent running
+      applications.
+    </description>
+  </property>
