@@ -1,0 +1,19 @@
+In the paper 'Performance evaluation of cloud-based log file analysis with Apache Hadoop and Apache Spark' by Ilias Mavridis and Helen Karatza in 2017, they use the following metrics to evalute the performance besides response time:
+1. CPU: percentage of CPU utilization
+2. Memory: kiloBytes of memory
+3. Hard disk: reads (rtps) and writes (wtps) requests
+4. Network: kiloBytes received (rxkB) and transmitted (txkB)
+5. power consumption (prediction): a power consumption model based on the CPU, memory, disk and network statistics to predict the power consumption
+
+In the paper 'G. Velkoski, M. Simjanoska, S. Ristov and M. Gusev, "CPU utilization in a multitenant cloud," Eurocon 2013, Zagreb, 2013, pp. 242-249.', it focuses on the CPU utilization in the cloud.
+
+In the paper 'B. G. Batista, J. C. Estrella, M. J. Santana, R. H. C. Santana and S. Reiff-Marganiec, "Performance Evaluation in a Cloud with the Provisioning of Different Resources Configurations," 2014 IEEE World Congress on Services, Anchorage, AK, 2014, pp. 309-316.', the authors use the metric of requests number (Quantity of served requests per VM) and execution time.
+
+In the paper 'T. C. Chieu, A. Mohindra and A. A. Karve, "Scalability and Performance of Web Applications in a Compute Cloud," 2011 IEEE 8th International Conference on e-Business Engineering, Beijing, 2011, pp. 317-323.', the authors mention indicators like active connections number, requests number per second, response times per request for web applications.
+
+In the paper 'L. Gu and H. Li, "Memory or Time: Performance Evaluation for Iterative Operation on Hadoop and Spark," 2013 IEEE 10th International Conference on High Performance Computing and Communications & 2013 IEEE International Conference on Embedded and Ubiquitous Computing, Zhangjiajie, 2013, pp. 721-727.', the authors use execution time and memory usage per second.
+
+There are some related tools:
+1. For Spark on Yarn, aggregate memory and vcores allocation can be got from command line 'yarn application -status'.
+2. Intel PAL Tool: CPU, storage, network bandwidth utilization. (https://github.com/intel-hadoop/PAT)
+3. Java Mission Control (https://www.oracle.com/technetwork/java/javaseproducts/mission-control/java-mission-control-1998576.html)

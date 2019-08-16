@@ -1,0 +1,58 @@
+1. Botnet Detection
+-> BoT-IoT Dataset
+Website: https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB15-Datasets/bot_iot.php
+Size: csv: 16.7 GB
+Attack Types: DDoS, DoS, OS and Service Scan, Keylogging and Data exfiltration attacks
+-> Botnet dataset
+Website: https://www.unb.ca/cic/datasets/botnet.html
+Size: csv: Training dataset: 5.3 GB; Test dataset: 8.5 GB
+Attack Types: Botnet
+-> N-BaIoT
+Website: https://archive.ics.uci.edu/ml/datasets/detection_of_IoT_botnet_attacks_N_BaIoT
+Size: Number of Instances: 7062606
+
+2. Data Exfiltration Detection
+-> DNS Exfiltration Attack Dataset 
+Website: https://nozzle-data.sdn.unsw.edu.au/dns-exfiltration-dataset/
+Size & Attack Types: 1,400,000 exfiltration DNS queries
+-> Large-scale Analysis of Infrastructure-leaking DNS Servers - (Dataset)
+Website: https://zenodo.org/record/2649094#.XUWPw5gzZPY
+Size: dns_infoleak_rawdata.tar 6.3 GB
+-> BoT-IoT Dataset 
+Website: https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB15-Datasets/bot_iot.php
+Size: csv: 16.7 GB
+Attack Types: DDoS, DoS, OS and Service Scan, Keylogging and Data exfiltration attacks
+
+3. Malware Detection
+-> The UNSW-NB15 Dataset Description
+Website: https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB15-Datasets/
+Size: total number of records: 2,540,044
+Attack Types: Fuzzers, Analysis, Backdoors, DoS, Exploits, Generic, Reconnaissance, Shellcode and Worms
+-> CSE-CIC-IDS2018
+Website: https://www.unb.ca/cic/datasets/ids-2018.html
+Attack Types: Brute-force, Heartbleed, Botnet, DoS, DDoS, Web attacks, and infiltration of the network from inside
+-> BoT-IoT Dataset 
+Website: https://www.unsw.adfa.edu.au/unsw-canberra-cyber/cybersecurity/ADFA-NB15-Datasets/bot_iot.php
+Size: csv: 16.7 GB
+Attack Types: DDoS, DoS, OS and Service Scan, Keylogging and Data exfiltration attacks
+
+4. Advanced Persistent Threat (APT) detection
+-> Dataset of Advanced Persistent Threat (APT) alerts
+Website:https://repository.lboro.ac.uk/articles/Dataset_of_Advanced_Persistent_Threat_APT_alerts/7577750/1
+Size & Attack Types: 3676 APT alerts
+-> big data benchmark data set of AMPLab
+Website: https://amplab.cs.berkeley.edu/benchmark/
+Research in [6] has used the dataset to represent the log data in APT attacks.
+-> In [7], the authors have collected malware C&C server domains from http://www.malwaredomains.com, https://www.snort.org/, https://apt.securelist.com/ and so on.
+
+5. Phishing Detection
+-> ISCX-URL-2016
+Website: https://www.unb.ca/cic/datasets/url-2016.html
+Attack Types: Benign URLs, Spam URLs, Phishing URLs, Malware URLs, Defacement URLs.
+-> Phishtank
+Website: https://www.phishtank.com/developer_info.php
+Size: Number of Instances: 10000+
+Attack Types: Phishing URLs
+-> Openphish
+Website: https://openphish.com/
+Attack Types: Phishing URLs

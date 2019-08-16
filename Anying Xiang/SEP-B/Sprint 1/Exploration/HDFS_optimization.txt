@@ -1,0 +1,10 @@
+In paper 'Babar, M. , Arif, F. , Jan, M. A. , Tan, Z. , & Khan, F. . (2019). Urban data management system: towards big data analytics for internet of things based smart urban environment using customized hadoop. Future Generation Computer Systems.', the authors discuss a data management system with customised Hadoop. 
+
+The authors discuss how to customise Hadoop for efficient processing. 
+In terms of data loading, they load the data in a parallel way and reduce the data ingestion time.
+They modify configurations about replicas (3 to 2) and block size (from 128MB to 256MB) for lower network overhead. 
+They also use the Apache Sqoop tool which supports parallel data loading. 
+They also use Yarn.
+
+The authors calculate throughput to check processing speed and efficiency, and compare their system with classical MR. 
+They find that their system has higher efficiency.

@@ -1,0 +1,85 @@
+local machine:
+
+1. malware dataset with RandomForest, tree num = 10, cross validation folds num = 5
+correct: 167774
+total count: 208230
+accuracy rate: 0.8057148345579407
+tp: 21195
+fn: 31262
+tn: 146579
+fp: 9194
+POS = 52457
+NEG = 155773
+Accuracy = 0.8057148345579407
+FPR = 0.05902178169515898
+Precision = 0.6974563164302873
+TPR = 0.4040452179880664
+F-Measure = 0.5116722593728122
+TNR = 0.940978218304841
+FNR = 0.5959547820119335
+Detection Rate: 0.8057148345579407
+Train Time: 140830
+Test Time: 27
+
+2. malware dataset with NaiveBayes, cross validation folds num = 5
+correct: 144564
+total count: 208941
+accuracy rate: 0.6918890978793056
+tp: 15878
+fn: 36081
+tn: 128686
+fp: 28296
+POS = 51959
+NEG = 156982
+Accuracy = 0.6918890978793056
+FPR = 0.180249964964136
+Precision = 0.3594422058224295
+TPR = 0.3055870975191978
+F-Measure = 0.33033401641475874
+TNR = 0.819750035035864
+FNR = 0.6944129024808021
+Detection Rate: 0.6918890978793056
+Train Time: 143129
+Test Time: 13
+
+3. BoT-IoT Dataset (part) with RandomForest, tree num = 10, cross validation folds num = 2
+correct: 999902
+total count: 999969
+accuracy rate: 0.9999329979229357
+tp: 999862
+fn: 0
+tn: 40
+fp: 67
+POS = 999862
+NEG = 107
+Accuracy = 0.9999329979229357
+FPR = 0.6261682242990654
+Precision = 0.9999329952426622
+TPR = 1.0
+F-Measure = 0.999966496498884
+TNR = 0.3738317757009346
+FNR = 0.0
+Detection Rate: 0.9999329979229357
+Train Time: 183346
+Test Time: 19
+
+2. BoT-IoT Dataset (part) with NaiveBayes, cross validation folds num = 2
+correct: 327074
+total count: 328622
+accuracy rate: 0.9952894206717748
+tp: 327030
+fn: 5
+tn: 44
+fp: 1543
+POS = 327035
+NEG = 1587
+Accuracy = 0.9952894206717748
+FPR = 0.9722747321991179
+Precision = 0.9953039355029172
+TPR = 0.9999847111165472
+F-Measure = 0.99763883296116
+TNR = 0.027725267800882136
+FNR = 1.5288883452813096E-5
+Detection Rate: 0.9952894206717748
+Train Time: 267921
+Test Time: 13
