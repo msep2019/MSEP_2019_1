@@ -1,0 +1,108 @@
+
+During last weeks, I have been working on following 3 tasks: 
+1.	Discovering potential datasets for our research & downloading datasets & clean datasets. 
+i.	Using log Parser to convert data format from evtx to csv so that can be used for substantial ML technologies. 
+LogParser -i:evt -o:csv "SELECT * INTO e:\logs.csv FROM e:\logs\DESKTOP-AN3U28N-172.31.64.26.evtx"
+ii.	Or using PowerShell script:
+ 
+Note: this script takes too long as the original data is too large (total 200GB). So, I can calculate that it would take more than 200 hours to finish this task (excluding file download) for this dataset
+a.  Then combine all csv file into a single file by using following command:
+ 
+b.	Here is the combined csv file before cleaning data:
+ 
+c.	Then, prepare to clean datasets. Using following command to create a DataFrame in pandas by reading csv file: 
+ 
+Here is the output:
+ 
+Then, we can either drop columns in this DataFrame: 
+ 
+Output result:
+ 
+It can be seen that a column “version” has been successfully dropped. 
+Alternatively, loading only subset of columns by 
+ 
+The statistics of the loaded subset:
+ 
+
+d.	Detecting missing values on column ‘ProviderId’:
+ 
+ 
+We can see that Pandas filled in the blank space with NaN. And by using isnull() we make sure that both the missing value and “NaN” are recognized as missing values, and Booleans response are true.
+e.	Replacing missing values on column “ThreadId” with value 0:
+
+ 
+last, export DataFrame as a new csv file:
+ 
+Check the result before data clean:
+ 
+After:
+ 
+2.	Flink configuration on Openstack cluster, below is the setup process 
+Prerequisites for Apache Flink Cluster
+a.	Install Java1.8,x or higher
+b.	Passwordless ssh
+•	Laungh Openstack cluster with 1 master nodes and 4 worker nodes
+•	Download correct java version on CentOS and send tar file onto remote master node and all worker nodes on Openstack cluster
+•	Extract java installation archive file on each node 
+•	Download latest version of Apache Flink (by now is Flink 1.8) to all nodes of the cluster and extract the archive file on all hosts
+•	Using alternatives --install and --set command to update the java version on each host. Using alternatives - -config to view all programs that support java and use remove command to remove default (initial) jar file path. Then, specify JAVA_HOME, JRE_HOME and PATH to the corresponding directory. 
+Before 
+After 
+ 
+•	Modifying /etc/flink-1.8.1/conf/flink-conf.yaml and update jobmanager.rpc.address to the host name of the Flink master node  
+•	Modifying /masters and /slaves under same directory
+•	Run wordcount program that is available by using command
+ ./etc/flink-1.8.1/bin/flink run /etc/flink-1.8.1/examples/batch/WordCount.jar
+ the result as below: 
+
+
+
+
+ 
+ 
+3.	Reading papers discovery big data tools for improving response time of BDCA
+Reference:
+Babar, Muhammad & Arif, Fahim & Ahmad Jan, Mian & Tan, Zhiyuan & Khan, Fazlullah. (2019). Urban data management system: Towards Big Data analytics for Internet of Things based smart urban environment using customized Hadoop. Future Generation Computer Systems. 96. 10.1016/j.future.2019.02.035.
+I found that Sqoop is an efficient tool that can be used for improving data loading speed to Hadoop datastore HDFS. In this case, such tool can be used for our project that aiming to improve response time of BDCA systems. 
+Apache Flink 
+Flink is an open-source stream-processing (infinite datasets in mind) framework and distributed processing engine for stateful computations over unbounded and bounded data streams. It can run in all common cluster environments. 
+Advantages of Flink: extreme accuracy in data ingestion, ease of failure handling while maintaining state, and high scalability depends on needs. Low latency. Auto-adjusting. Widely accepted by big companies. 
+Disadvantages:  only popular for streaming. 
+References: 
+https://blog.newrelic.com/engineering/what-is-apache-flink/
+https://flink.apache.org/flink-architecture.html
+https://medium.com/@chandanbaranwal/spark-streaming-vs-flink-vs-storm-vs-kafka-streams-vs-samza-choose-your-stream-processing-91ea3f04675b
+Comparison of Storm, Samza and Flink: 
+They are all stream processing engines but types are different. 
+Apache Flink is Declarative processing engines: the developer chain functions together and the engine determine the correct DAG and then pumps the data through. Coding will look very functional. 
+Apache Sotrm and Smaza are Compositional: the developer defines the DAG and pumps the data through. Coding is at a lower level.
+References: 
+https://blog.scottlogic.com/2018/07/06/comparing-streaming-frameworks-pt1.html
+Apache Kafka
+A distributed steaming platform generally used for developing two types of applications: real-time streaming data pipelines that get data between systems; real-time streaming applications that transform or react to the streams of data. The core abstraction for a stream is called the topic.  
+	Kafka cluster is effectively constant. It integrates with Sequential I/O that you get a cache without writing any logic. This is much better than maintaining a cache in a JVM. JVM can lead to high garbage collection. In addition, Kafka is able to avoid data serialization and deserialization, which are major inefficiencies of data processing systems. 
+Reference: http://kafka.apache.org/intro
+https://www.freecodecamp.org/news/what-makes-apache-kafka-so-fast-a8d4f94ab145/
+Apache DataFu
+Apache DataFu is a collection of libraries for working with large-scale data in Hadoop. It has two libraries: Apache DataFu Pig (a collection of user-defined functions for Apache Pig) and Apache DataFu Hourglass (an incremental processing framework for Hadoop in Mapreduce). 
+DataFu provides functions for statistics tasks such as quantiles and sampling. Also, it provides Hadoop jobs for incremental data processing in Mapreduce, which can be used to improve response time of BDCA developed on Hadoop. 
+References: http://incubator.apache.org/projects/datafu.html
+https://datafu.apache.org/
+Apache Tez
+Apache Tez project assists in building a big data framework that allows for a complex directed-acyclic-graph of tasks for processing data. It provides an alternative execution engine than MapReduce focusing on performance. It has features such as dynamic physical data flow decisions to optimise job flow, edge semantics and container reuse, the consistent performance boost can be achieved. 
+References: https://pig.apache.org/docs/r0.17.0/perf.html
+http://tez.apache.org/
+Apache Sqoop
+Apache Sqoop is a system for bulk data transfer between HDFS and structured datastores. Users can serialize and deserialize data to and from the SequenceFile format. However, the input is a database table.
+https://blogs.apache.org/sqoop/entry/apache_sqoop_graduates_from_incubator
+https://sqoop.apache.org/docs/1.4.2/SqoopUserGuide.html
+Apache Twill
+Apache Twill is an abstraction over YARN that reduces the complexity of developing distributed applications, which allows developers t focus instead on their application logic. Twill can make YARN easy and also provides features required by distributed applications such as lifecycle management, service discovery, distributed process coordination and resiliency to failure. It has the ability to scale number of YARN containers to run the application. 
+References: https://twill.apache.org/
+https://www.slideshare.net/HenrySaputra/building-large-scale-applications-in-yarn-with-apache-twill
+
+
+To do task list:
+1.	Make sure Apache Flink are useful for KDD
+2.	Download and clean other datasets
+3.	Read paper to come up with a matrix of a number of attributes to test (not only prediction time but for example CPU consumption …)
