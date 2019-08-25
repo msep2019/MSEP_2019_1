@@ -1,0 +1,105 @@
+Personal Progress Documentation (a1758639 Anying Xiang)
+
+Before 12 Aug, 2019:
+1.	Explore big data platforms, big data tools, and security datasets;
+2.	Read papers on real time IDS and Storm;
+3.	Downloaded and Preprocessed three datasets, using ‘pandas’ in Python, including feature selection and handling missing values. ‘pandas’ is quite easy to use.
+4.	Configured Storm environment on my local machine, and run test topology (including spout and bolts) to make sure the environment is configured correctly. And then I did more simple experiments to check how the distribution works.
+5.	Explore Apache SAMOA, and whether it will be used. I ran official examples successfully. I am trying to implement BDCA with SAMOA, but I need more time to decide whether I will use it.
+Note: Before run Storm topology, you need to start Zookeeper, Nimbus and Supervisors beforehand:
+*Start Zookeeper:
+/home/jzd/Cloud/apache-zookeeper-3.5.5-bin/bin/zkServer.sh start
+/home/jzd/Cloud/apache-zookeeper-3.5.5-bin/bin/zkCli.sh -server 127.0.0.1:2181
+*Start Storm Master and Workers, or Connection Error:
+/home/jzd/Cloud/apache-storm-1.2.3/bin/storm nimbus
+/home/jzd/Cloud/apache-storm-1.2.3/bin/storm supervisor
+
+13 Aug, 2019:
+1.	In today’s meeting, we decided not to use streaming platform. Therefore, I will use Spark in this semester;
+2.	Explore big data tools for Spark;
+3.	Read papers and explore metrics as well as tools.
+
+14 Aug, 2019:
+1.	Implemented BDCA on Spark with two datasets (Android Adware and General Malware Dataset & The BoT-IoT Dataset) with Naïve Bayes and Random Forest.
+2.	When I started using the pre-processed dataset, I found that I forgot to deal with IP addresses previously. So I fixed this problem. Also, column manipulation is great and efficient!
+
+15 Aug, 2019:
+1.	Implemented BDCA on Spark with two datasets (Android Adware and General Malware Dataset & The BoT-IoT Dataset) with Naïve Bayes and Random Forest.
+
+16	Aug, 2019:
+1.	Finished first version of BDCA on Spark with two datasets (Android Adware and General Malware Dataset & The BoT-IoT Dataset) with Naïve Bayes and Random Forest;
+2.	The accuracy for Android Adware and General Malware Dataset with Naïve Bayes is around 70%, which needs to be improved;
+3.	Wrote Sprint 1 progress report.
+
+19 Aug, 2019:
+1.  The dataset of Android Adware and General Malware Dataset seems too small for our project. I will discuss with faheem in tomorrow's meeting, and check whether I need to pre-process other datasets.
+2.  In tomorrow's meeting, I will ask about the flavour of nodes in the cloud, whether it should be small with 2GB RAM or medium with 4 GB RAM.
+
+20 Aug, 2019:
+1.  In today's meeting, we got tasks for this week. For me:
+  a. pre-process CICIDS2017 dataset
+  b. pre-process CICAndMal2017 dataset
+  c. run BDCA on Openstack cluster with datasets (BoT-IoT, CICAndMal2017 and CICIDS2017) and collect metrics about: accuracy, training time, prediction time, CPU and memory
+  d. Explore / read which tools / methods / approaches can be used to optimise response time
+2.  The Android Malware Dataset (CICAndMal2017) is  originally 1.22 GB with 58 features. However, in its paper, the feature selection result only contains 9 features. So if I do the feature selection in pre-processing, the size of the dataset after pre-processing will be very small, because the number of feature columns decrease from 58 to 9. So I'm not sure whether I should do the feature selection in pre-processing.
+3.  I reviewed the tools that I explored in the first Sprint, and I will try with GridGain and Kyro serialisation first.
+4.  I have resized the nodes flavour from small to medium on OpenStack.
+
+21 Aug, 2019 & 22 Aug, 2019
+1. Pre-process CIDDS-001 and CIDDS-002 instead of CICIDS2017;
+  a) use 'free -m' to check the memory usage, if the memory usage increase dramatically, may need to change a way.
+  b) clean memory buff/cache: sudo sh -c "echo 1 / 2 / 3 > /proc/sys/vm/drop_caches";
+  c) NaN and '' should be dealt with differently, because fillna cannot fill in ''. To deal with '', first turning it into numpy.nan, and then fillna;
+  d) The ip address feature can include several special values (e.g.: EXT SERVER), which need to handled separately;
+  e) The 'Bytes' feature in CIDDS can be something '1.2 M', which is a difficult point when pre-processing.
+2. Pre-process CICAndMal2017.
+  a) merge more than 2000 small csv files into a whole file;
+  b) inplace attribute is important in pre-processing, including the operation of replace, drop, eval and so on. If not inplace but a copy, then will occupy too much memory.
+3. Conclusion about pre-processing:
+  a) column manipulation of dataframe is convenient;
+  b) be very careful about the memory usage, experienced no response for several times...try to reduce copies if unnecessary;
+  c) use float() to check whether there are Strings that should not be there;
+  d) NaN and '' are two things, and cannot be detected and handled by the same methods;
+
+23 Aug, 2019
+1. Discuss with Faheem, decision: do not have hdfs replication because lack of hard disk space on cloud
+2. Implement BDCA with CIDDS & CICAndMal2017, Naive Bayes & Random Forest. However, the accuracy for Naive Bayes with CIDDS is extremely low. Two ways: change dataset or change algorithm.
+
+24 Aug, 2019
+1. Decide to change algorithm, so implement BDCA with LinearSVC. However, LinearSVC only supports binary classification, so turn to LogisticRegression.
+2. BDCA functions (Dataset + Algorithm):
+  BotNB, BotRF, BotRL, CIDDSNB, CIDDSRF, CIDDSRL, AMNB, AMRF, AMRL, among those,
+  BotNB, CIDDSNB, AMNB, AMRF, AMRL will not be used according to the outcome from running on local machine
+
+25 Aug, 2019
+1. Run on local (part of dataset)
+Accuracy:
+  BotRF: 0.9999329979229357
+  BotRL: 0.9998929966828972
+    BotNB: 0.9952894206717748
+  CIDDSRF:0.9991274937189154
+    CIDDSNB: 0.5663631168928452
+  CIDDSRL: 0.896572783296007
+    AMRF: 0.426975006398123
+    AMRL: 0.4623549010554549
+
+
+2. About HDFS replication
+  a) cmd: hadoop fsck -locations => check HDFS Default replication factor (3)
+  b) modify hdfs-site.xml file to reset the dfs.replication to 1
+  c) unify the hdfs path in BDCA:
+    /input/Bot/training/*.csv
+    /input/Bot/testing/*.csv
+
+    /input/CIDDS/training/*.csv
+    /input/CIDDS/testing/*.csv
+
+    /input/AndroidMal/training/*.csv
+    (/input/AndroidMal/testing/*.csv)
+
+3. Prepare to run on OpenStack
+  a) Error: Container exited with a non-zero exit code 13.
+     Solution: do not setMaster("local"), which is used for local testing
+  b) If the worker nodes changed, stop service before modifying worker configuration file.
+  c) check application status: yarn top
+  d) cmd: $SPARK_HOME/bin/spark-submit --master yarn --deploy-mode cluster --driver-memory 1g --executor-memory 1g --num-executors 6 --executor-cores 1 /home/ubuntu/Cloud/OpenStack/nb_spark_output/sep_spark_v8.jar RF AM
