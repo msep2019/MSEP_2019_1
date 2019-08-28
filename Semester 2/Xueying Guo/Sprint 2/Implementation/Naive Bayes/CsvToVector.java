@@ -1,4 +1,5 @@
 // this is the original class for transfering csv file to sequence file
+// this class will lead to a java heap error, so will remove this one and change naivebayes.java accordingly
 
 
 
