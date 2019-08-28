@@ -1,0 +1,9 @@
+tp:0  fp:3271465  fn:0  tn:2900107
+accuracy = 0.46991382422501105
+Detection Rate = 0.0
+False positive rate = 0.530086175774989
+Precision = 0.0
+Recall = NaN
+F1 score = NaN
+Predict Time = 83297 milliseconds
+Training Time = 675062 milliseconds
