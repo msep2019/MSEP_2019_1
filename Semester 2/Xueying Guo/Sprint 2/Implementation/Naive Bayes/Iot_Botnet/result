@@ -1,0 +1,15 @@
+********************Metrics********************
+number of features: 26.0
+number of labels: 2
+total test data = 999969
+tp:999862  fp:83  fn:0  tn:24
+accuracy = 0.9999169974269202
+Detection Rate = 0.9999169954347489
+False positive rate = 0.7757009345794392
+Precision = 0.9999169954347489
+Recall = 1.0
+F1 score = 0.9999584959948634
+Predict Time = 33646 milliseconds
+Training Time = 134038 milliseconds
+**********************************************
+Job Finished!
