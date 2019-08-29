@@ -7,3 +7,5 @@ It can also set the delay and count.
 The outcome can be saved to files by '--output'.
 
 Conclusion: I think Dstat is easy to use and powerful.
+The cmd to be used: which includes the I/O, CPU, RAM, and net utilisation.
+dstat --top-io --top-cpu --top-mem --net --output /home/jzd/SEP-B/resource.csv
