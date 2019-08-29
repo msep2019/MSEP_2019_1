@@ -1,0 +1,9 @@
+Dstat
+In the paper of: Procaccianti, G. , Fernández, Héctor, & Lago, P. . (2016). Empirical evaluation of two best practices for energy-efficient software development. Journal of Systems and Software, 117, 185-198, the authors collect the resource by Dstat in the interval of 1 second.
+
+Dstat can collect specific resource, for example, 'dstat -c' shows statistics about CPU usage.
+-d is about disk, -n is about net, -m is about memory.
+It can also set the delay and count.
+The outcome can be saved to files by '--output'.
+
+Conclusion: I think Dstat is easy to use and powerful.
