@@ -103,3 +103,13 @@ Accuracy:
   b) If the worker nodes changed, stop service before modifying worker configuration file.
   c) check application status: yarn top
   d) cmd: $SPARK_HOME/bin/spark-submit --master yarn --deploy-mode cluster --driver-memory 1g --executor-memory 1g --num-executors 6 --executor-cores 1 /home/ubuntu/Cloud/OpenStack/nb_spark_output/sep_spark_v8.jar RF AM
+
+26 Aug, 2019 & 27 Aug, 2019
+1. Try the tool of Apache Ignite, (set up environment, integrate with Spark) However, it involves tables, and finally I failed to use it. Many big data tools focus on SQL operations. Therefore about big data tools, I think we may discuss with Faheem recently.
+
+28 Aug, 2019
+1. Use the approach of Kryo serialization and collect response time.
+
+29 Aug, 2019
+1. Use the approach of Model parallelism and collect response time.
+
