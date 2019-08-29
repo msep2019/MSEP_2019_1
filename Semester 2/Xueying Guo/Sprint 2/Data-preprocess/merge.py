@@ -35,19 +35,21 @@ print("Start time:", current)
 
 for file in files:
     if ((not os.path.isdir(file)) and (file.__contains__(".csv"))):
+        print("merging")
+        print(file)
         path_str = path + file
         csv_DF1 = pd.read_csv(path_str, encoding="utf-8", dtype=str)
-        for i in range(len(csv_DF1)):
-            if( (csv_DF1.iloc[i,feature_num]!='normal') and (csv_DF1.iloc[i,feature_num] != 'suspicious')  ):
-                csv_DF1.iloc[i,feature_num] = "abnormal"
+#        for i in range(len(csv_DF1)):
+#            if( (csv_DF1.iloc[i,feature_num]!='normal') and (csv_DF1.iloc[i,feature_num] != 'suspicious')  ):
+#                csv_DF1.iloc[i,feature_num] = "abnormal"
 
         csv_DF2 = pd.concat([final_DF, csv_DF1],axis=0, ignore_index=True)
         final_DF = csv_DF2
 
+print("finish merging")
+final_DF = final_DF.dropna()
 
-final_DF = final_DF[final_DF.Label != 'abnormal']
-
-
+print("load into csv file.")
 final_DF.to_csv(output,sep=',',header=False,index=False)
 
 now=time.time()
