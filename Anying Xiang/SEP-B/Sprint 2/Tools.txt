@@ -28,7 +28,8 @@ https://apacheignite.readme.io/docs/yarn-deployment
 [1] https://ignite.apache.org/use-cases/spark/shared-memory-layer.html
 [2] https://apacheignite-fs.readme.io/docs
 
-However, it is quite complicated to use Ignite in BDCA (explore, set up environment and try), but it keeps giving me errors (please check https://github.com/msep2019/MSEP_2019_1/blob/master/Anying%20Xiang/SEP-B/Sprint%202/Ignite.png). Originally we do not use tables, SQL and so on. So I have to turn to other approaches.
+However, it is quite complicated to use Ignite in BDCA (explore, set up environment and try). It keeps giving me errors (please check https://github.com/msep2019/MSEP_2019_1/blob/master/Anying%20Xiang/SEP-B/Sprint%202/Ignite.png). 
+Originally we do not use tables, SQL and so on. So I have to turn to other approaches.
 
 APPROACH-2: Kryo serialization:
 APPROACH-3: Model parallelism (https://developer.ibm.com/code/2018/04/11/model-parallelism-for-ml-tuning-with-apache-spark/)
@@ -42,10 +43,6 @@ Train Time: 472382
 Test Time: 92
 Whole Time: 768468
 Parallel:
-evaluator accuracy: 0.9999959998679956
-evaluator f1: 0.999995943926094
-evaluator weightedPrecision: 0.9999959998839978
-evaluator weightedRecall: 0.9999959998679957
 Train Time: 434631
 Test Time: 94
 Whole Time: 704305
