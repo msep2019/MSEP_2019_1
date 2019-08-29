@@ -1,0 +1,72 @@
+TOOL-1:
+Apache Ignite
+According to [1]:
+1. Apache Ignite: distributed memory-centric database and caching platform
+2. The advantages of Ignite:
+  in-memory performance at scale;
+  improve the performance of DataFrame and SQL;
+  share data among jobs.
+3. Ignite Shared RDDs: distributed Ignite table
+
+According to [2]:
+1. IgniteContext instance
+2. IgniteRDD: read and write to Ignite
+3. Ignite DataFrame
+
+Steps:
+add dependency to sbt (modify build.sbt)
+add external lib:
+ignite-core, ignite-spark, ignite-spring, ignite-indexing, h2-1.4.195.jar
+spring-beans, spring-core, spring-context, spring-expression, javax-api
+
+start ignite:
+bin/ignite.sh
+
+Deploy on Yarn:
+https://apacheignite.readme.io/docs/yarn-deployment
+
+[1] https://ignite.apache.org/use-cases/spark/shared-memory-layer.html
+[2] https://apacheignite-fs.readme.io/docs
+
+However, it is quite complicated to use Ignite in BDCA, I spent more than 6 hours on it (explore, set up environment and try), but it keeps giving me errors (please check https://github.com/msep2019/MSEP_2019_1/blob/master/Anying%20Xiang/SEP-B/Sprint%202/Ignite.png). So I have to turn to other tools.
+
+TOOL-2:
+Kryo serialization:
+local result: 
+BoT-IoT Dataset (part) with RandomForest, tree num = 10:
+Train Time: 441393
+Test Time: 165
+Whole Time: 742201
+Kryo:
+Train Time: 472382
+Test Time: 92
+Whole Time: 768468
+
+BoT-IoT Dataset (part) with LogisticRegression
+Train Time: 409080
+Test Time: 16
+Whole Time: 768988
+Kryo:
+Train Time: 403595
+Test Time: 95
+Whole Time: 746822
+
+CIDDS Dataset (part) with RandomForest, tree num = 10
+Train Time: 843077
+Test Time: 124
+Whole Time: 1622590
+Kryo:
+Train Time: 808402
+Test Time: 154
+Whole Time: 1550806
+
+CIDDS Dataset (part) with LogisticRegression (CIDDSLR)
+Train Time: 430296
+Test Time: 27
+Whole Time: 1107406
+Kryo:
+Train Time: 377630
+Test Time: 33
+Whole Time: 1058314
+
+Conclusion: the jar is ready, need further experiments on cloud
