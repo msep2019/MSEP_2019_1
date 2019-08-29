@@ -28,10 +28,10 @@ https://apacheignite.readme.io/docs/yarn-deployment
 [1] https://ignite.apache.org/use-cases/spark/shared-memory-layer.html
 [2] https://apacheignite-fs.readme.io/docs
 
-However, it is quite complicated to use Ignite in BDCA, I spent more than 6 hours on it (explore, set up environment and try), but it keeps giving me errors (please check https://github.com/msep2019/MSEP_2019_1/blob/master/Anying%20Xiang/SEP-B/Sprint%202/Ignite.png). So I have to turn to other tools.
+However, it is quite complicated to use Ignite in BDCA (explore, set up environment and try), but it keeps giving me errors (please check https://github.com/msep2019/MSEP_2019_1/blob/master/Anying%20Xiang/SEP-B/Sprint%202/Ignite.png). Originally we do not use tables, SQL and so on. So I have to turn to other approaches.
 
-TOOL-2:
-Kryo serialization:
+APPROACH-2: Kryo serialization:
+APPROACH-3: Model parallelism (https://developer.ibm.com/code/2018/04/11/model-parallelism-for-ml-tuning-with-apache-spark/)
 local result: 
 BoT-IoT Dataset (part) with RandomForest, tree num = 10:
 Train Time: 441393
@@ -41,6 +41,14 @@ Kryo:
 Train Time: 472382
 Test Time: 92
 Whole Time: 768468
+Parallel:
+evaluator accuracy: 0.9999959998679956
+evaluator f1: 0.999995943926094
+evaluator weightedPrecision: 0.9999959998839978
+evaluator weightedRecall: 0.9999959998679957
+Train Time: 434631
+Test Time: 94
+Whole Time: 704305
 
 BoT-IoT Dataset (part) with LogisticRegression
 Train Time: 409080
@@ -50,6 +58,10 @@ Kryo:
 Train Time: 403595
 Test Time: 95
 Whole Time: 746822
+Parallel:
+Train Time: 337568
+Test Time: 230
+Whole Time: 652133
 
 CIDDS Dataset (part) with RandomForest, tree num = 10
 Train Time: 843077
@@ -59,14 +71,24 @@ Kryo:
 Train Time: 808402
 Test Time: 154
 Whole Time: 1550806
+Parallel:
+Train Time: 800579
+Test Time: 71
+Whole Time: 1524557
 
 CIDDS Dataset (part) with LogisticRegression (CIDDSLR)
-Train Time: 430296
-Test Time: 27
-Whole Time: 1107406
+Train Time: 376066
+Test Time: 95
+Whole Time: 953933
 Kryo:
 Train Time: 377630
 Test Time: 33
 Whole Time: 1058314
+Parallel:
+Train Time: 366123
+Test Time: 197
+Whole Time: 935608
+Test Time: 33
+Whole Time: 1058314
 
-Conclusion: the jar is ready, need further experiments on cloud
+Conclusion: the jars are ready, need further experiments on cloud
