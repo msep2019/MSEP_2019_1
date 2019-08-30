@@ -1,3 +1,4 @@
+small data volume
 ********************Metrics********************
 Training Time = 206 milliseconds
 Predict Time = 4 milliseconds
@@ -9,5 +10,23 @@ False positive rate = 0.0
 Precision = 1.0
 Recall = 1.0
 F1 score = 1.0
+**********************************************
+Job Finished!
+
+Setting:
+number of Trees: 5
+seed: 350
+600+ mb training set + 400+ mb testing set
+********************Metrics********************
+total test data = 6171572
+tp:0  fp:656  fn:0  tn:6170916
+accuracy = 0.9998937061740509
+Detection Rate = 0.0
+False positive rate = 1.0629382594904507E-4
+Precision = 0.0
+Recall = NaN
+F1 score = NaN
+Training Time = 781986 milliseconds
+Predict Time = 68643 milliseconds
 **********************************************
 Job Finished!
