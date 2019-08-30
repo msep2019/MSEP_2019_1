@@ -1,30 +1,43 @@
 
-
+----------------------------
 Flume
-
-
-
-
-
+Flume is a distributed service for collecting, aggregating and move large amounts of streaming data like log files, event files, from different sources like HDFS. 
+Flume collects data from multiple servers. and we can store data into the centrialised stores by using Flume. since the data volume is large, Flume can help to get the msg like event logs from HDFS.
+Flue can collect and move the recursive data generated. 
 
 
 reference:
 https://flume.apache.org/
+https://data-flair.training/blogs/apache-flume-tutorial/
 ----------------------------
 
+----------------------------
 Sqoop 
-
-Sqoop is a 
-
+Sqoop extracts useful information from Hadoop and passes to the outside data stores. Sqoop can be used for transfering data from Hadoop(Hive) and traditional database (like MySQL, Oracle).
+Sqoop can load the data from HDFS to database and from databases to HDFS.
+Also, Sqoop can split datasets and create different Hadoop tasks for each block. 
 
 reference:
 http://sqoop.apache.org/
-
 ----------------------------
 
+----------------------------
 Distcp:
+Distcp is a tool for large inter/intra-cluster copying (from 1 cluster to another). It uses mapreduce to effective its distribution.
 
-
+reference:
+https://hadoop.apache.org/docs/current/hadoop-distcp/DistCp.html
 ----------------------------
 
+----------------------------
 Balancer:
+Balancer is a tool to balance the workload across datanodes (over-utilized and under-utilized).  
+When running the large data volume, the data in HDFS storage can become skewed, like some datanodes may have more data blocks while others are less.
+When the 'skewed' cases occur, the data blocks are extrmely not balance compared with other datanodes, the read and write activity will become over busy for one node and other nodes are underutilized.
+
+
+reference:
+https://www.cloudera.com/documentation/enterprise/5-7-x/topics/admin_hdfs_balancer.html
+http://www.informit.com/articles/article.aspx?p=2755708&seqNum=5
+----------------------------
+ 
