@@ -1,0 +1,13 @@
+********************Metrics********************
+Training Time = 120 milliseconds
+Predict Time = 11 milliseconds
+total test data = 55
+tp:54  fp:1  fn:0  tn:0
+accuracy = 0.9818181818181818
+Detection Rate = 0.9818181818181818
+False positive rate = 1.0
+Precision = 0.9818181818181818
+Recall = 1.0
+F1 score = 0.9908256880733944
+**********************************************
+Job Finished!
