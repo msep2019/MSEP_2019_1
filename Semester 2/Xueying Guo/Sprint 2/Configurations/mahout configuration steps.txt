@@ -1,0 +1,33 @@
+Reference: 
+https://mahout.apache.org/general/downloads
+http://hadooptutorial.weebly.com/install-apache-mahout.html
+https://mahout.apache.org/users/classification/twenty-newsgroups.html
+
+***************** Download and Environment Configuration *************************
+S1. Download mahout from http://archive.apache.org/dist/mahout (the version I used is 0.13.0)
+
+S2. Run below commands to unzip mahout package. 
+
+  sudo tar -zxf /home/hadoop/Downloads/apache-mahout-distribution-0.13.0.tar.gz -C /usr/local
+
+S3. (optional) Run below commands to rename mahout folder.
+  cd /usr/local
+  sudo mv ./apache-mahout-distribution-0.13.0 ./mahout
+
+S4. Config PATH and $MAHOUT_HOME by updating /etc/profile.
+  export MAHOUT_HOME=/usr/local/mahout
+  export PATH=$PATH:$MAHOUT_HOME/conf:$MAHOUT_HOME/bin
+* below command is optional, which is for standalone mode, but because I'm using distributed mode (full-distributed / pseudo-distributed), so I do not set this.
+  MAHOUT_LOCAL = True for standalone mode
+
+S5. run command to valid the changing of reboot virtual machine.
+  source /etc/profile
+
+
+***************** Run Example ************************* 
+S6. (skip) According to official guide, we need to run below command in $MAHOUT_HOME to build package. but when I execute this command, there is an error propt up because of no 'pom.xml' file for Maven project. 
+After searched many answers from google, I skip this step and following the following steps.
+  mvn -DskipTests clean install
+
+S7. Run below cammand to run example, choose option 1 when there is a list shown. once the script completed successfully, means the configuration is completed.
+  ./examples/bin/classify-20newsgroups.sh
