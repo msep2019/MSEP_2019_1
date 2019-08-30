@@ -1,0 +1,41 @@
+Virtual machine: ubuntu + VMWare Fushion
+
+reference:
+https://gparted.org/liveusb.php
+https://tuxboot.org/download/
+https://tuxboot.org/installation/
+https://tuxboot.org/screenshots/
+
+
+S1. Download Gparted and open.
+
+S2. find out the the unallocated filesystem (new space assigned to virtual machine) is right next to the filesystem that is required to enlarge. 
+* if the new filesystem is not next to the filesystem required to enlarge, it is not possible to add size.
+
+S3. some filesystem may be locked, there are 2 possibilities:
+  1) this is a swap filesystem, to solve this, can right click this system and choose 'swapoff'.
+  2) this is a mounted filesystem, to solve this, can right click this system and choose 'unmount'.
+then the filesystem can be unlocked.
+* for S3.2, if a mounted filesystem cannot be unmount because of 'busy', then it is need to use USB as a start up disk to launch GParted, so that all filesystems are shown as an 'unmounted' status.
+
+S4. To use a USB as a start up disk, need to execute below commands to download Tuxboot.
+  sudo apt-add-repository ppa:thomas.tsai/ubuntu-tuxboot
+  sudo apt-get update
+  sudo apt-get install tuxboot
+  tuxboot
+  
+S5. after launch tuxboot, plug in a USB to virtual machine and download the ios file into the USB. and reboot virtual machine.
+
+S6. Enter the BIOS boot menu and choose USB drive as the startup target.
+* S6 is the step adviced from Tuxboot official website, but when I enter BIOS boot manu, I found I do not have permission to change the startup device since I is a 'user mode'. so I failed to change this in BIOS manual though I tried many different ways.
+* at the end, I found I can choose the startup Disk in VMWare Fusion by steps:
+  VMWare Library -> setting -> Startup Disk -> CD/DVD
+
+S7. When launching by other disks, in the prompt up page, choose 'Try ubuntu without installing' and launch GParted here. finding all filesystems are unmounted (no key icons displyed).
+
+S8. right click the filesystem needed to enlarge and click 'apply'.
+
+S9. Apply this setting to the disks we need to use by setting.
+  Manu -> Edit -> Apply all Operations -> Apply
+
+S10. restart virtual machine by the original disk, then the filesystem is already extended.
