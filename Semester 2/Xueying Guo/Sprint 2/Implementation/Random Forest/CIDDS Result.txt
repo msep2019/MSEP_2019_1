@@ -30,3 +30,4 @@ Training Time = 781986 milliseconds
 Predict Time = 68643 milliseconds
 **********************************************
 Job Finished!
+cpu usage: 80%
