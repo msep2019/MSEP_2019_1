@@ -31,7 +31,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
-import org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat;
+import org.apache.haprindoop.mapreduce.lib.input.SequenceFileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;
 import org.apache.mahout.classifier.AbstractVectorClassifier;
@@ -150,9 +150,9 @@ public class naivebayes {
 					if (Arrays.binarySearch(getfeature, feature_in) < 0 ) { 		// current feature_in is a ignore feature, skip
 						continue;
 					}
-					System.out.println("i is " + i );
-					System.out.println("feature_in is " + feature_in);
-					System.out.println("value is " + line[feature_in]);
+//					System.out.println("i is " + i );
+//					System.out.println("feature_in is " + feature_in);
+//					System.out.println("value is " + line[feature_in]);
 					if (isNumeric(line[feature_in])){
 						vector.set(i, processNumeric(line[feature_in]));
 						
@@ -273,9 +273,9 @@ public class naivebayes {
 					if (Arrays.binarySearch(getfeature, feature_in) < 0 ) { 		// current feature_in is a ignore feature, skip
 						continue;
 					}
-					System.out.println(" test i is " + i);
-					System.out.println("feature_in is " + feature_in);
-					System.out.println("value is " + line[feature_in]);
+//					System.out.println(" test i is " + i);
+//					System.out.println("feature_in is " + feature_in);
+//					System.out.println("value is " + line[feature_in]);
 					if (isNumeric(line[feature_in])){
 						vector.set(i, processNumeric(line[feature_in]));
 						
