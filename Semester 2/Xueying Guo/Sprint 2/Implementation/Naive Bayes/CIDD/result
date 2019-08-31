@@ -1,3 +1,5 @@
+
+Run on openstack:
 ********************Metrics********************
 number of features: 11.0
 number of labels: 2
@@ -13,3 +15,22 @@ Predict Time = 132725 milliseconds
 Training Time = 202209 milliseconds
 **********************************************
 Job Finished!
+
+
+pseudo mode:
+
+feature choose: {0,1,2,3,6,7,8,9,10}
+********************Metrics********************
+number of features: 9.0
+number of labels: 2
+total test data = 6171572
+tp:0  fp:640453  fn:0  tn:5531119
+accuracy = 0.896225305319293
+Detection Rate = 0.0
+False positive rate = 0.10377469468070696
+Precision = 0.0
+Recall = NaN
+F1 score = NaN
+Predict Time = 57113 milliseconds
+Training Time = 421459 milliseconds
+**********************************************
