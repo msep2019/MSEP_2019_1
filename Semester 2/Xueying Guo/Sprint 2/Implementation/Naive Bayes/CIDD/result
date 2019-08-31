@@ -51,3 +51,20 @@ F1 score = NaN
 Predict Time = 57113 milliseconds
 Training Time = 421459 milliseconds
 **********************************************
+
+{0,1,2,4,6,7,8,9,10}
+********************Metrics********************
+number of features: 9.0
+number of labels: 2
+total test data = 6171572
+tp:0  fp:3271161  fn:0  tn:2900411
+accuracy = 0.46996308233947526
+Detection Rate = 0.0
+False positive rate = 0.5300369176605247
+Precision = 0.0
+Recall = NaN
+F1 score = NaN
+Predict Time = 76246 milliseconds
+Training Time = 440086 milliseconds
+**********************************************
+
