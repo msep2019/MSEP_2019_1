@@ -3,6 +3,52 @@ package naivebayes.hadoop_nb;
 // Naive bayes for CIDDS dataset
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;  
+import java.io.PrintWriter;
+import java.math.BigDecimal;
+import java.net.URI;
+import java.util.Arrays;
+import java.util.Date;
+import java.util.List;  
+import java.util.Locale;
+import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+import org.apache.hadoop.io.IOUtils;
+import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.SequenceFile;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.Mapper;
+import org.apache.hadoop.mapreduce.Reducer;
+import org.apache.hadoop.mapreduce.lib.input.SequenceFileInputFormat;
+import org.apache.hadoop.mapreduce.lib.input.TextInputFormat;
+import org.apache.hadoop.mapreduce.lib.output.SequenceFileOutputFormat;
+import org.apache.mahout.classifier.AbstractVectorClassifier;
+import org.apache.mahout.classifier.naivebayes.ComplementaryNaiveBayesClassifier;
+import org.apache.mahout.classifier.naivebayes.NaiveBayesModel;
+import org.apache.mahout.classifier.naivebayes.StandardNaiveBayesClassifier;
+import org.apache.mahout.classifier.naivebayes.training.TrainNaiveBayesJob;
+import org.apache.mahout.math.RandomAccessSparseVector;
+import org.apache.mahout.math.Vector;
+import org.apache.mahout.math.VectorWritable;
+import org.apache.mahout.math.Vector.Element;
+
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+import com.ibm.icu.util.Calendar;
+import com.ibm.icu.util.TimeZone;
+import com.opencsv.CSVReader;
 
 public class naivebayes {
 
@@ -32,8 +78,9 @@ public class naivebayes {
 		String tempDirectory = args[2];
 		String csvTrainPath = args[3];
 		String csvTestPath = args[4];
+		int[] getfeature = {0,1,2,3,6,7,8,9,10};	// use different features 
 		
-		CsvtoSequence(conf,fs,csvTrainPath,sequenceFile);				// transfer csv file to sequence file
+		CsvtoSequence(conf,fs,csvTrainPath,sequenceFile,getfeature);				// transfer csv file to sequence file
 		
 		// Train data
 		TrainNaiveBayesJob trainNaiveBayes = new TrainNaiveBayesJob();
@@ -57,7 +104,7 @@ public class naivebayes {
 		Date trainend = new Date();
 		System.out.println("End Training " + trainend);
 		
-		Predict(conf, fs, csvTestPath, naiveBayesModel );	// predict
+		Predict(conf, fs, csvTestPath, naiveBayesModel , getfeature);	// predict
 		
 		
 		System.out.println("Training Time = " + (trainend.getTime() - trainstart.getTime() ) + " milliseconds" );
@@ -68,13 +115,15 @@ public class naivebayes {
 	
 	
 	// To transfer csv file to sequence file for training set
-	public static void CsvtoSequence(Configuration conf, FileSystem fs,String csvPath,String sequenceFile) throws IOException, Exception
+	public static void CsvtoSequence(Configuration conf, FileSystem fs,String csvPath,String sequenceFile, int[] getfeature) throws IOException, Exception
 	{				
 		String line[];
 		int feature_in ;		//index of features
 		int label_in = 11;
 		int i = 0;					//index of vector
 		
+		int ignore = label_in - getfeature.length;	//how many ignored feature
+ 		
 		Path seqFilePath = new Path(sequenceFile);	
 		Path cp= new Path(csvPath);		
 		
@@ -93,19 +142,25 @@ public class naivebayes {
 			{
 				feature_in = 0 ;
 				
-				Vector vector = new RandomAccessSparseVector(line.length-1, line.length-1);	// number of features
+				Vector vector = new RandomAccessSparseVector(line.length-1-ignore, line.length-1-ignore);	// number of features
 				
-				for ( feature_in = 0; feature_in<label_in ; feature_in++)						// handling features
+				
+				for ( i =0 ,feature_in = 0; feature_in<label_in; feature_in++)						// handling features
 				{
-//					System.out.println("feature_in is " + feature_in);
-//					System.out.println("value is " + line[feature_in]);
+					if (Arrays.binarySearch(getfeature, feature_in) < 0 ) { 		// current feature_in is a ignore feature, skip
+						continue;
+					}
+					System.out.println("i is " + i );
+					System.out.println("feature_in is " + feature_in);
+					System.out.println("value is " + line[feature_in]);
 					if (isNumeric(line[feature_in])){
-						vector.set(feature_in, processNumeric(line[feature_in]));
+						vector.set(i, processNumeric(line[feature_in]));
 						
 					}
 					else{
-						vector.set(feature_in, processString(line[feature_in]));
+						vector.set(i, processString(line[feature_in]));
 					}
+					i++;
 				}
 			
 				String label = "";
@@ -178,7 +233,7 @@ public class naivebayes {
         return true;
 	}
 	
-	public static void Predict(Configuration conf, FileSystem fs, String csvTestPath, NaiveBayesModel naiveBayesModel) throws IOException
+	public static void Predict(Configuration conf, FileSystem fs, String csvTestPath, NaiveBayesModel naiveBayesModel, int[] getfeature) throws IOException
 	{
 		
 		StandardNaiveBayesClassifier classifier = new StandardNaiveBayesClassifier(naiveBayesModel);	
@@ -192,6 +247,8 @@ public class naivebayes {
 		int fn = 0;
 		int tn = 0;
 		int total_test = 0;
+		int ignore = label_in - getfeature.length;	//how many ignored feature
+		
 		
 		Path cp= new Path(csvTestPath);		
 		
@@ -206,21 +263,27 @@ public class naivebayes {
 		try
 		{
 			for(line = reader.readNext(); line != null ; line = reader.readNext())
-			//while ((line = reader.readNext()) != null)
 			{
 				feature_in = 0 ;
 				
-				Vector vector = new RandomAccessSparseVector(line.length-1, line.length-1);	// number of features
+				Vector vector = new RandomAccessSparseVector(line.length-1-ignore, line.length-1-ignore);	// number of features
 				
-				for ( feature_in = 0; feature_in<label_in ; feature_in++)						// handling features
+				for ( i=0 , feature_in = 0; feature_in<label_in ; feature_in++)						// handling features
 				{
+					if (Arrays.binarySearch(getfeature, feature_in) < 0 ) { 		// current feature_in is a ignore feature, skip
+						continue;
+					}
+					System.out.println(" test i is " + i);
+					System.out.println("feature_in is " + feature_in);
+					System.out.println("value is " + line[feature_in]);
 					if (isNumeric(line[feature_in])){
-						vector.set(feature_in, processNumeric(line[feature_in]));
+						vector.set(i, processNumeric(line[feature_in]));
 						
 					}
 					else{
-						vector.set(feature_in, processString(line[feature_in]));
+						vector.set(i, processString(line[feature_in]));
 					}
+					i++;
 				}
 			
 				String label = "";
@@ -321,4 +384,6 @@ public class naivebayes {
 		
 		
 	}
+	
+	
 }
