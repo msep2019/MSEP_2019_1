@@ -1,4 +1,4 @@
-package randomforest.rf;
+package randomforest.random;
 
 import java.io.IOException;
 import java.net.URI;
@@ -20,27 +20,35 @@ import org.apache.mahout.classifier.df.mapreduce.Classifier;
 import org.apache.mahout.classifier.df.mapreduce.partial.PartialBuilder;
 import org.uncommons.maths.Maths;
 
-public class Rf_Iot {
+public class Iot {
 	
 	 
 	  public static void main(String[] args) throws Exception {
 
 		Configuration conf = new Configuration();
-		String uri = "hdfs://localhost:9000";
+		String uri = "hdfs://localhost:9000";		// Run on pseudo mode
+//		String uri = "hdfs://master:9000";			// Run on cluster mode
 		FileSystem fs = FileSystem.get(new URI(uri), conf);
 	    conf.set("fs.defaultFS", uri);
 
-		String train_dataName = "/user/hadoop/rf/Iot/train/tr1.csv";
-		String test_dataName = "/user/hadoop/rf/Iot/test/te1.csv";
+		String train_dataName = "/user/hadoop/rf/Iot/train/train1.csv";
+		String test_dataName = "/user/hadoop/rf/Iot/test/test1.csv";
 		String train_datasetName = "/user/hadoop/rf/Iot/train/descriptor.info";
 		String modelName = "/user/hadoop/rf/Iot/output";
 		String prediction_file = "/user/hadoop/rf/Iot/prediction";
 	    String workpath = fs.getWorkingDirectory().toString();
 		
+/*	    
+	    String train_dataName = args[0];
+		String test_dataName = args[1];
+		String train_datasetName = args[2];
+		String modelName = args[3];
+		String prediction_file = args[4];
+		*/
 //		String descriptor = "N N N N N N N N N N N L";
-		String descriptor = "26 N L";
+		String descriptor = "5 N 1 I 1 N 1 I 18 N 1 L";
 		
-		 int feature_num = 26;
+		int feature_num = 26;
 		int nbTrees = 5;							 // Number of trees to grow
 	    int m = (int) Math.floor(Maths.log(2, feature_num+1) + 1);
 //	    boolean complemented = false;
@@ -115,7 +123,7 @@ public class Rf_Iot {
 	    
 	// Calculate Accuracy
 	    int feature_in ;		//index of features
-		int label_in = 11;
+		int label_in = 26;
 		int i = 0;					//index of vector
 		int tp = 0;
 		int fp = 0;
@@ -128,8 +136,8 @@ public class Rf_Iot {
 	    	Dataset dataset = Dataset.load(conf, train_datasetPath);
 	    	if (dataset.isNumerical(dataset.getLabelId())) {
 	    		for (int row =0; row<results.length;row++ ) {
-	 //   			System.out.println("true label is: "+results[row][0]);	    
-	 //   			System.out.println("predict label is: " + results[row][1]);	
+	    			System.out.println("true label is: "+results[row][0]);	    
+	    			System.out.println("predict label is: " + results[row][1]);	
 	    			if (results[row][0] == 0 && results[row][1] == 0 ){
 	    	        	tn ++;
 	    	        	total_test++;
@@ -242,6 +250,7 @@ public class Rf_Iot {
 
 		  return DataLoader.generateDataset(descriptor, regression, fs, path);
 	}
+
 
 
 }
