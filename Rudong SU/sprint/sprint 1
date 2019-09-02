@@ -100,9 +100,3 @@ Apache Twill
 Apache Twill is an abstraction over YARN that reduces the complexity of developing distributed applications, which allows developers t focus instead on their application logic. Twill can make YARN easy and also provides features required by distributed applications such as lifecycle management, service discovery, distributed process coordination and resiliency to failure. It has the ability to scale number of YARN containers to run the application. 
 References: https://twill.apache.org/
 https://www.slideshare.net/HenrySaputra/building-large-scale-applications-in-yarn-with-apache-twill
-
-
-To do task list:
-1.	Make sure Apache Flink are useful for KDD
-2.	Download and clean other datasets
-3.	Read paper to come up with a matrix of a number of attributes to test (not only prediction time but for example CPU consumption …)
