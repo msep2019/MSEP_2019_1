@@ -1,9 +1,11 @@
 1. CIDDS-001
 Process: duplicates removing
 
+Result: 
 https://drive.google.com/open?id=1Zh5y25ngDoJXlR4Ulw5SG-iHbww9Up4D
 
 2. CTU-13
-Process: fill empty field, feature selection, replacing values, removing noisy values
+Process: fill empty field, replacing values, removing duplicates, removing unncessacry attribute, removing noisy values, Changing data type
 
-https://drive.google.com/open?id=13T4kwS7OjIjHe_H-KNoWs1rchMC0hnyE
+Result:
+https://drive.google.com/open?id=1rGmPSQgx7qmOOZwwuB37qAojyZQqSIYF
