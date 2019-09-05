@@ -16,7 +16,7 @@ CIDDS
 hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.naivebayes /user/ubuntu/Hadoop/nb/CIDD/train/seq /user/ubuntu/Hadoop/nb/CIDD/output /user/ubuntu/Hadoop/nb/CIDD/temp /user/ubuntu/Hadoop/nb/CIDD/train/CIDD_train.csv /user/ubuntu/Hadoop/nb/CIDD/test/CIDD_test.csv
 
 Iot
-hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/tr1.csv /user/ubuntu/Hadoop/nb/Iot/test/te1.csv
+hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test.csv
 
 
 ::::::::::::::Random Forest::::::::::::::
@@ -25,7 +25,7 @@ hadoop jar <jar name> <class name> -Dmapred.max.split.size=<max size each partit
 
 -----------Psuedo mode-----------
 CIDDS dataset
-hadoop jar random-0.0.1-SNAPSHOT-shade_package.jar randomforest.random.Cidd /user/hadoop/rf/CIDD/train/tr1.csv /user/hadoop/rf/CIDD/test/te1.csv /user/hadoop/rf/CIDD/train/descriptor.info /user/hadoop/rf/CIDD/output /user/hadoop/rf/CIDD/prediction
+hadoop jar random-0.0.1-SNAPSHOT-shade_package.jar randomforest.random.Cidd /user/hadoop/rf/CIDD/train/tr1.csv /user/hadoop/rf/CIDD/test/te1.csv /user/hadoop/rf/CIDD/train/descriptor.info /user/hadoop/rf/CIDD/output /user/hadoop/rf/CIDD/prediction -Dmapred.max.split.size=62914560 
 
 Iot dataset
 hadoop jar random-0.0.1-SNAPSHOT-shade_package.jar randomforest.random.Iot /user/hadoop/rf/Iot/train/tr1.csv /user/hadoop/rf/Iot/test/te1.csv /user/hadoop/rf/Iot/train/descriptor.info /user/hadoop/rf/Iot/output /user/hadoop/rf/Iot/prediction
@@ -33,7 +33,7 @@ hadoop jar random-0.0.1-SNAPSHOT-shade_package.jar randomforest.random.Iot /user
 
 -------------Cluster--------------
 CIDDS dataset
-hadoop jar RF_Cluster.jar randomforest.random.Cidd -Dmapred.max.split.size=62914560 /user/ubuntu/Hadoop/nb/CIDD/train/tr1.csv /user/ubuntu/Hadoop/nb/CIDD/test/te1.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+hadoop jar RF_Cluster.jar randomforest.random.Cidd /user/ubuntu/Hadoop/nb/CIDD/train/tr1.csv /user/ubuntu/Hadoop/nb/CIDD/test/te1.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
 
 Iot dataset
 hadoop jar RF_Cluster.jar randomforest.random.Iot /user/ubuntu/Hadoop/nb/Iot/train/tr1.csv /user/ubuntu/Hadoop/nb/Iot/test/te1.csv /user/ubuntu/Hadoop/rf/Iot/train/descriptor.info /user/ubuntu/Hadoop/rf/Iot/output /user/ubuntu/Hadoop/rf/Iot/prediction
