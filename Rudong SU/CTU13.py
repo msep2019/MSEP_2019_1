@@ -25,10 +25,10 @@ data['Proto'].replace('pim', '8', inplace = True)
 data['Proto'].replace('esp', '8', inplace = True)
 
 
-remove . in SrcAddr
+#remove . in SrcAddr
 data['SrcAddr'] = data['SrcAddr'].str.replace('.', '')
 
-remove . in DstAddr
+#remove . in DstAddr
 data['DstAddr'] = data['DstAddr'].str.replace('.', '')
 
 drop State column
