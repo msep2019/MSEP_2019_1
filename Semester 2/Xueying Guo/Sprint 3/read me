@@ -1,0 +1,33 @@
+use dstat:
+dstat --time -c -m -d -n --io --top-bio --output nb_cidd_master.csv 
+
+Job Run Command
+
+::::::::::::::Naive Bayes::::::::::::::
+Format
+hadoop jar <name of jar> <class name> <sequence generated>  <output path> <temporary path> <training set>  <test set>
+
+-------------Cluster--------------
+CIDDS
+hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.naivebayes /user/ubuntu/Hadoop/nb/CIDD/train/seq /user/ubuntu/Hadoop/nb/CIDD/output /user/ubuntu/Hadoop/nb/CIDD/temp /user/ubuntu/Hadoop/nb/CIDD/train/CIDD_train.csv /user/ubuntu/Hadoop/nb/CIDD/test/CIDD_test.csv
+
+Iot
+hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_NB21.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_NB21.csv
+or
+hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_76.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_76.csv
+or
+hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test.csv
+
+::::::::::::::Random Forest::::::::::::::
+Format
+hadoop jar <jar name> <class name> <trainset> <testingset> <descriptorfile> <path of generated model> <prediction file>
+
+
+-------------Cluster--------------
+CIDDS dataset
+hadoop jar RF_Cluster.jar randomforest.random.Cidd /user/ubuntu/Hadoop/rf/CIDD/train/CIDD_train_RF.csv /user/ubuntu/Hadoop/rf/CIDD/test/CIDD_test_RF.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+
+Iot dataset
+hadoop jar RF_Cluster.jar randomforest.random.Iot /user/ubuntu/Hadoop/rf/Iot/train/Iot_train_RF53.csv /user/ubuntu/Hadoop/rf/Iot/test/Iot_test_RF53.csv /user/ubuntu/Hadoop/rf/Iot/train/descriptor.info /user/ubuntu/Hadoop/rf/Iot/output /user/ubuntu/Hadoop/rf/Iot/prediction
+
+
