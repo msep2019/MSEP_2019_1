@@ -1,0 +1,24 @@
+Hadoop:
+1. The slave file is here: $HADOOP_HOME/etc/hadoop/slaves
+2. Start Hdfs and Yarn:
+$HADOOP_HOME/sbin/start-dfs.sh
+$HADOOP_HOME/sbin/start-yarn.sh
+3. Hdfs:
+hadoop fs -mkdir // create directory
+hadoop fs -put // upload file
+hadoop fs -rm // delete file
+hadoop fs -ls // view folder
+4. Run:
+hadoop jar path/name.jar
+5. Stop Hdfs and Yarn:
+$HADOOP_HOME/sbin/stop-dfs.sh
+$HADOOP_HOME/sbin/stop-yarn.sh
+
+Spark:
+1. The slave file is here: $SPARK_HOME/conf/slaves
+2. Start Master and Workers:
+$SPARK_HOME/sbin/start-all.sh
+3. Run:
+$SPARK_HOME/bin/spark-submit --master yarn --deploy-mode cluster --driver-memory 2g --executor-memory 2g --num-executors 3 --executor-cores 1 --conf xxx=xxx path/name.jar
+4. Stop Spark:
+$SPARK_HOME/sbin/stop-all.sh
