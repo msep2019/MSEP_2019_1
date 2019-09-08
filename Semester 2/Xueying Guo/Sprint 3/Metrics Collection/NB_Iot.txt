@@ -1,0 +1,23 @@
+Training set: 3GB
+Testing set: 1GB
+
+19/09/07 07:27:05 Start job
+19/09/07 07:27:05  Got new compressor
+Start Training Sat Sep 07 07:36:30 UTC 2019
+End Training Sat Sep 07 07:38:26 UTC 2019
+Start Predict Sat Sep 07 07:38:26 UTC 2019
+End predict Sat Sep 07 07:41:34 UTC 2019
+********************Metrics********************
+number of features: 26.0
+number of labels: 2
+total test data = 6999783
+tp:6999543  fp:84  fn:6  tn:150
+accuracy = 0.999987142458559
+Detection Rate = 0.9999879993605374
+False positive rate = 0.358974358974359
+Precision = 0.9999879993605374
+Recall = 0.9999991428019148
+F1 score = 0.999993571050182
+Predict Time = 187733 milliseconds
+Training Time = 116073 milliseconds
+**********************************************
