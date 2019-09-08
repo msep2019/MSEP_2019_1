@@ -1,0 +1,19 @@
+Training set: 500+ mb
+Testing set: 300+ mb
+
+Start Training (Building the forest...)Sat Sep 07 07:03:52 UTC 2019
+End Training Sat Sep 07 07:04:30 UTC 2019
+Start Testing Sat Sep 07 07:04:30 UTC 2019
+Start Testing Sat Sep 07 07:05:09 UTC 2019
+********************Metrics********************
+total test data = 1999935
+tp:1999935  fp:0  fn:0  tn:0
+accuracy = 1.0
+Detection Rate = 1.0
+False positive rate = NaN
+Precision = 1.0
+Recall = 1.0
+F1 score = 1.0
+Training Time = 37163 milliseconds
+Predict Time = 38914 milliseconds
+**********************************************
