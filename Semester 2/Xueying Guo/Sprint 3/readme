@@ -25,12 +25,12 @@ hadoop jar <jar name> <class name> <trainset> <testingset> <descriptorfile> <pat
 
 -------------Cluster--------------
 CIDDS dataset (full data)
-hadoop jar RF_Cluster.jar randomforest.random.Cidd2 /user/ubuntu/Hadoop/nb/CIDD/train/CIDD_train.csv /user/ubuntu/Hadoop/nb/CIDD/test/CIDD_test.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+hadoop jar RF_Cluster.jar randomforest.random.Cidd3 /user/ubuntu/Hadoop/nb/CIDD/train/CIDD_train.csv /user/ubuntu/Hadoop/nb/CIDD/test/CIDD_test.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
 
 
 Iot dataset
-hadoop jar RF_Cluster.jar randomforest.random.Iot2 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_NB21.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_NB21.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+hadoop jar RF_Cluster.jar randomforest.random.Iot3 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_NB21.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_NB21.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
 or (full data 7:6)
-hadoop jar RF_Cluster.jar randomforest.random.Iot2 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_76.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test76.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+hadoop jar RF_Cluster.jar randomforest.random.Iot3 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_76.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test76.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
 or (full data 10:2)
-hadoop jar RF_Cluster.jar randomforest.random.Iot2 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+hadoop jar RF_Cluster.jar randomforest.random.Iot3 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
