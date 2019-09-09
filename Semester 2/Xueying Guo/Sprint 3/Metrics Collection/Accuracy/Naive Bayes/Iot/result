@@ -1,0 +1,14 @@
+7G training + 6G testing
+
+number of features: 26.0
+number of labels: 2
+total test data = 32369130
+tp:32362791  fp:5129  fn:444  tn:766
+accuracy = 0.9998278297872077
+Detection Rate = 0.9998415406365315
+False positive rate = 0.8700593723494486
+Precision = 0.9998415406365315
+Recall = 0.9999862807287343
+F1 score = 0.9999139054447584
+Predict Time = 801157 milliseconds
+Training Time = 289302 milliseconds
