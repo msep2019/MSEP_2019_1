@@ -14,7 +14,7 @@ hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.naivebayes /user/ubuntu/Hadoop/nb
 Iot
 hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_NB21.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_NB21.csv
 or
-hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_76.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_76.csv
+hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_76.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test76.csv
 or
 hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test.csv
 
