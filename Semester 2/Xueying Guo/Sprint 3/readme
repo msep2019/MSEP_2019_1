@@ -8,14 +8,14 @@ Format
 hadoop jar <name of jar> <class name> <sequence generated>  <output path> <temporary path> <training set>  <test set>
 
 -------------Cluster--------------
-CIDDS
+CIDDS (full data)
 hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.naivebayes /user/ubuntu/Hadoop/nb/CIDD/train/seq /user/ubuntu/Hadoop/nb/CIDD/output /user/ubuntu/Hadoop/nb/CIDD/temp /user/ubuntu/Hadoop/nb/CIDD/train/CIDD_train.csv /user/ubuntu/Hadoop/nb/CIDD/test/CIDD_test.csv
 
 Iot
 hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_NB21.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_NB21.csv
-or
-hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_76.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_76.csv
-or
+or (full data 7:6)
+hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_76.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test76.csv
+or (full data 10:2)
 hadoop jar NB_Cluster.jar naivebayes.hadoop_nb.nb_botnet /user/ubuntu/Hadoop/nb/Iot/train/seq /user/ubuntu/Hadoop/nb/Iot/output /user/ubuntu/Hadoop/nb/Iot/temp /user/ubuntu/Hadoop/nb/Iot/train/Iot_train.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test.csv
 
 ::::::::::::::Random Forest::::::::::::::
@@ -24,10 +24,13 @@ hadoop jar <jar name> <class name> <trainset> <testingset> <descriptorfile> <pat
 
 
 -------------Cluster--------------
-CIDDS dataset
-hadoop jar RF_Cluster.jar randomforest.random.Cidd /user/ubuntu/Hadoop/nb/CIDD/train/train1.csv /user/ubuntu/Hadoop/nb/CIDD/test/test1.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+CIDDS dataset (full data)
+hadoop jar RF_Cluster.jar randomforest.random.Cidd3 /user/ubuntu/Hadoop/nb/CIDD/train/CIDD_train.csv /user/ubuntu/Hadoop/nb/CIDD/test/CIDD_test.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+
 
 Iot dataset
-hadoop jar RF_Cluster.jar randomforest.random.Iot /user/ubuntu/Hadoop/rf/Iot/train/Iot_train_RF53.csv /user/ubuntu/Hadoop/rf/Iot/test/Iot_test_RF53.csv /user/ubuntu/Hadoop/rf/Iot/train/descriptor.info /user/ubuntu/Hadoop/rf/Iot/output /user/ubuntu/Hadoop/rf/Iot/prediction
-
-
+hadoop jar RF_Cluster.jar randomforest.random.Iot3 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_NB21.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test_NB21.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+or (full data 7:6)
+hadoop jar RF_Cluster.jar randomforest.random.Iot3 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train_76.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test76.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction
+or (full data 10:2)
+hadoop jar RF_Cluster.jar randomforest.random.Iot3 /user/ubuntu/Hadoop/nb/Iot/train/Iot_train.csv /user/ubuntu/Hadoop/nb/Iot/test/Iot_test.csv /user/ubuntu/Hadoop/rf/CIDD/train/descriptor.info /user/ubuntu/Hadoop/rf/CIDD/output /user/ubuntu/Hadoop/rf/CIDD/prediction

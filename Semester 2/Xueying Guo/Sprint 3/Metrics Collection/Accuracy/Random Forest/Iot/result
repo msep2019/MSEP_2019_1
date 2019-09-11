@@ -1,0 +1,13 @@
+Iot full dataset
+7G training + 6G testing
+
+total test data = 32369130
+tp:32363162  fp:4878  fn:73  tn:1017
+accuracy = 0.9998470456264966
+Detection Rate = 0.9998492957868317
+False positive rate = 0.8274809160305343
+Precision = 0.9998492957868317
+Recall = 0.9999977443540486
+F1 score = 0.9999235145607746
+Training Time = 68650 milliseconds
+Predict Time = 236986 milliseconds

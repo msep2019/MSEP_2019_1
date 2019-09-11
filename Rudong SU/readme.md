@@ -1,4 +1,4 @@
-individual sprint:
+Check  individual sprint for all experiments results:
 
 Sprint 1: https://drive.google.com/open?id=1tV1h1SnHpZQO3ch7zzGGPHO8lPGHLDf7
 

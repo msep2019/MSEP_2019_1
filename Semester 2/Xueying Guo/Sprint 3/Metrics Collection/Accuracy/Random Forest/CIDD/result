@@ -1,0 +1,12 @@
+CIDD full dataset
+
+total test data = 14137519
+tp:260418  fp:332  fn:35852  tn:13840917
+accuracy = 0.9974405693106407
+Detection Rate = 0.9987267497603068
+False positive rate = 2.3986274649058044E-5
+Precision = 0.9987267497603068
+Recall = 0.8789887602524724
+F1 score = 0.9350400344691393
+Training Time = 65333 milliseconds
+Predict Time = 59147 milliseconds
