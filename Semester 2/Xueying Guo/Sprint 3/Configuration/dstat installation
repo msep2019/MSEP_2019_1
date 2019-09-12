@@ -1,0 +1,13 @@
+S1. sudo apt-get install dstat
+
+* however, I got the 'E: Unable to locate package <package>' error and finally found that because the DNS setting on my cluster is missing. 
+
+
+S2. update the resolv.conf file to config DNS
+  sudo vi /etc/resolv.conf
+add nameserver 8.8.8.8
+
+S3. run below command
+sudo apt-get update
+
+S4. sudo apt-get install dstat
