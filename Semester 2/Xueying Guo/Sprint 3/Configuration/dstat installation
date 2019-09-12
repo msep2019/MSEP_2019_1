@@ -11,3 +11,7 @@ S3. run below command
 sudo apt-get update
 
 S4. sudo apt-get install dstat
+
+
+dstat can run by command
+dstat --time -c -m -d -n --io --top-bio --output nb_cidd_master.csv 
