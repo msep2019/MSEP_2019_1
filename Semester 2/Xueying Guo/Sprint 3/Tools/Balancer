@@ -3,3 +3,4 @@ balancer can be ran by this command:
 $HADOOP_HOME/sbin/start-balancer.sh
 
 
+reference: https://www.cloudera.com/documentation/enterprise/5-7-x/topics/admin_hdfs_balancer.html
