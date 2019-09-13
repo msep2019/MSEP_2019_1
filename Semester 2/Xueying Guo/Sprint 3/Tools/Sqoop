@@ -1,0 +1,7 @@
+Sqoop 
+Sqoop extracts useful information from Hadoop and passes to the outside data stores. Sqoop can be used for transfering data from Hadoop(Hive) and traditional database (like MySQL, Oracle).
+Sqoop can load the data from HDFS to database and from databases to HDFS.
+Also, Sqoop can split datasets and create different Hadoop tasks for each block. 
+
+reference:
+http://sqoop.apache.org/
