@@ -7,5 +7,5 @@ testing set: 836mb
 training set: 7G
 testing set: 6G
 
-all metrics are collected basing on above datasets
+all accuracy and resources metrics are collected basing on above datasets
 except for the accuracy metrics collected under 'Accuracy' > 'partial data' folder
