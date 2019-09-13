@@ -1,0 +1,5 @@
+Some solutions may improve the response time.
+
+1. upload compressed files into the HDFS instead of the whole file. Setting the map reduce compress parameter as true.
+-> mapred.compress.map.output 
+
