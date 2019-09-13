@@ -1,0 +1,4 @@
+Since the data node can not be fully used, I did some research about how to increase the number of mappers.
+
+this can also be set by parameter:
+mapred.map.tasks

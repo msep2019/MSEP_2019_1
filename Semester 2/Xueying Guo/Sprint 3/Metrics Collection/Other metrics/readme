@@ -1,1 +1,10 @@
+This is folder for collecting resources metrics.
+
+Statistic collected from 1 master node (master) + 8 worker nodes (1,2,3,6,7,8,9,10)
+
+file names format:
+<short name of algorithm>_<dataset name>_<node_name>.xls
+e.g. nb_Iot_1.xls
+
+Each file includes Cpu, memory，disk，net，i/o process, and block i/o process metrics and graph
 

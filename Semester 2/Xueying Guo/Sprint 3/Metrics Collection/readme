@@ -1,0 +1,11 @@
+ CIDD info:
+training set: 2G 
+testing set: 836mb
+ 
+ 
+ Iot info:
+training set: 7G
+testing set: 6G
+
+all accuracy and resources metrics are collected basing on above datasets
+except for the accuracy metrics collected under 'Accuracy' > 'partial data' folder
