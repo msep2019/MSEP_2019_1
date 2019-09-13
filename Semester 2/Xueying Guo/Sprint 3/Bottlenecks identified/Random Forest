@@ -1,0 +1,12 @@
+The procedure of random forest is as below:
+
+Generating descriptor file by descriptor -> specify number of trees / seed -> Do training -> save model -> do testing -> calculate accuracy
+
+
+
+Observation:
+when doing the testing (map reduce), not all datanodes are fully used. I found this is because the number of split mappers is just 1, I believe this can be changed to make all data nodes to be fully used.
+so when doing the testing by map reduce method, only 1 worker node is used.
+
+for testing by sequential method, only master node is used and all worker nodes are free.
+
