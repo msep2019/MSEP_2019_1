@@ -1,0 +1,11 @@
+// this is a procedure analysis when implementing the Naive Bayes algorithm
+
+The procedures for Naive Bayes are as below
+
+For training:
+upload csv files to HDFS -> decompress training files -> generating sequence file -> start training (map reduce) -> save model
+For testing:
+upload test files to HDFS -> transfer csv file to sequence file -> start predict by saved model -> output -> calculate accuracy
+
+Ovservation:
+a long time before submitting a map reduce job for training.
