@@ -1,0 +1,5 @@
+
+balancer can be ran by this command:
+$HADOOP_HOME/sbin/start-balancer.sh
+
+
