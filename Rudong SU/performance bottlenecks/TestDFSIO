@@ -1,0 +1,167 @@
+Find jar: find / -name "hadoop-mapreduce-client-jobclient-*-tests.jar"
+
+
+write:
+hadoop jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.1-tests.jar TestDFSIO -write -nrFiles 10 -size 50MB -resFile /tmp/DFSIO-write.out
+res:
+19/09/13 02:37:04 INFO fs.TestDFSIO: ----- TestDFSIO ----- : write
+19/09/13 02:37:04 INFO fs.TestDFSIO:            Date & time: Fri Sep 13 02:37:04 EDT 2019
+19/09/13 02:37:04 INFO fs.TestDFSIO:        Number of files: 10
+19/09/13 02:37:04 INFO fs.TestDFSIO: Total MBytes processed: 500.0
+19/09/13 02:37:04 INFO fs.TestDFSIO:      Throughput mb/sec: 28.753809879809076
+19/09/13 02:37:04 INFO fs.TestDFSIO: Average IO rate mb/sec: 29.895221710205078
+19/09/13 02:37:04 INFO fs.TestDFSIO:  IO rate std deviation: 5.580686881168994
+19/09/13 02:37:04 INFO fs.TestDFSIO:     Test exec time sec: 22.268
+
+data created:
+[root@flink1-mse-master-0 bin]# hadoop fs -ls /benchmarks/TestDFSIO/
+19/09/13 02:39:30 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 3 items
+drwxr-xr-x   - hadoop supergroup          0 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control
+drwxr-xr-x   - hadoop supergroup          0 2019-09-13 02:36 /benchmarks/TestDFSIO/io_data
+drwxr-xr-x   - hadoop supergroup          0 2019-09-13 02:37 /benchmarks/TestDFSIO/io_write
+
+[root@flink1-mse-master-0 bin]# hadoop fs -ls /benchmarks/TestDFSIO/io_control
+19/09/13 02:40:26 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 10 items
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_0
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_1
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_2
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_3
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_4
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_5
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_6
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_7
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_8
+-rw-r--r--   3 hadoop supergroup        112 2019-09-13 02:36 /benchmarks/TestDFSIO/io_control/in_file_test_io_9
+
+[root@flink1-mse-master-0 bin]# hadoop fs -ls /benchmarks/TestDFSIO/io_data
+19/09/13 02:40:49 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 10 items
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:37 /benchmarks/TestDFSIO/io_data/test_io_0
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:36 /benchmarks/TestDFSIO/io_data/test_io_1
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:37 /benchmarks/TestDFSIO/io_data/test_io_2
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:36 /benchmarks/TestDFSIO/io_data/test_io_3
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:36 /benchmarks/TestDFSIO/io_data/test_io_4
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:37 /benchmarks/TestDFSIO/io_data/test_io_5
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:37 /benchmarks/TestDFSIO/io_data/test_io_6
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:36 /benchmarks/TestDFSIO/io_data/test_io_7
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:36 /benchmarks/TestDFSIO/io_data/test_io_8
+-rw-r--r--   3 hadoop supergroup   52428800 2019-09-13 02:36 /benchmarks/TestDFSIO/io_data/test_io_9
+
+[root@flink1-mse-master-0 bin]# hadoop fs -ls /benchmarks/TestDFSIO/io_write
+19/09/13 02:41:24 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+-rw-r--r--   3 hadoop supergroup          0 2019-09-13 02:37 /benchmarks/TestDFSIO/io_write/_SUCCESS
+-rw-r--r--   3 hadoop supergroup         77 2019-09-13 02:37 /benchmarks/TestDFSIO/io_write/part-00000
+
+
+***********************************
+read:
+[root@flink1-mse-master-0 bin]# hadoop jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.1-tests.jar TestDFSIO -read -nrFiles 10 -size 50MB -resFile /tmp/DFSIO-read.out
+res:
+19/09/13 02:43:04 INFO fs.TestDFSIO: ----- TestDFSIO ----- : read
+19/09/13 02:43:04 INFO fs.TestDFSIO:            Date & time: Fri Sep 13 02:43:04 EDT 2019
+19/09/13 02:43:04 INFO fs.TestDFSIO:        Number of files: 10
+19/09/13 02:43:04 INFO fs.TestDFSIO: Total MBytes processed: 500.0
+19/09/13 02:43:04 INFO fs.TestDFSIO:      Throughput mb/sec: 119.07597046915933
+19/09/13 02:43:04 INFO fs.TestDFSIO: Average IO rate mb/sec: 134.7869110107422
+19/09/13 02:43:04 INFO fs.TestDFSIO:  IO rate std deviation: 51.42235069920731
+19/09/13 02:43:04 INFO fs.TestDFSIO:     Test exec time sec: 19.141
+19/09/13 02:43:04 INFO fs.TestDFSIO: 
+
+[root@flink1-mse-master-0 bin]# hadoop fs -ls /benchmarks/TestDFSIO
+19/09/13 02:44:07 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 4 items
+drwxr-xr-x   - hadoop supergroup          0 2019-09-13 02:42 /benchmarks/TestDFSIO/io_control
+drwxr-xr-x   - hadoop supergroup          0 2019-09-13 02:36 /benchmarks/TestDFSIO/io_data
+drwxr-xr-x   - hadoop supergroup          0 2019-09-13 02:43 /benchmarks/TestDFSIO/io_read
+drwxr-xr-x   - hadoop supergroup          0 2019-09-13 02:37 /benchmarks/TestDFSIO/io_write
+
+
+
+
+
+
+Test 2:
+
+hadoop jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.1-tests.jar TestDFSIO -write -nrFiles 10 -size 100MB -resFile /tmp/DFSIO-write.out
+
+res
+19/09/13 02:46:17 INFO fs.TestDFSIO: ----- TestDFSIO ----- : write
+19/09/13 02:46:17 INFO fs.TestDFSIO:            Date & time: Fri Sep 13 02:46:17 EDT 2019
+19/09/13 02:46:17 INFO fs.TestDFSIO:        Number of files: 10
+19/09/13 02:46:17 INFO fs.TestDFSIO: Total MBytes processed: 1000.0
+19/09/13 02:46:17 INFO fs.TestDFSIO:      Throughput mb/sec: 21.81262951248773
+19/09/13 02:46:17 INFO fs.TestDFSIO: Average IO rate mb/sec: 24.60731315612793
+19/09/13 02:46:17 INFO fs.TestDFSIO:  IO rate std deviation: 9.331038206002498
+19/09/13 02:46:17 INFO fs.TestDFSIO:     Test exec time sec: 25.439
+
+
+res:
+19/09/13 02:49:43 INFO fs.TestDFSIO: ----- TestDFSIO ----- : read
+19/09/13 02:49:43 INFO fs.TestDFSIO:            Date & time: Fri Sep 13 02:49:43 EDT 2019
+19/09/13 02:49:43 INFO fs.TestDFSIO:        Number of files: 10
+19/09/13 02:49:43 INFO fs.TestDFSIO: Total MBytes processed: 1000.0
+19/09/13 02:49:43 INFO fs.TestDFSIO:      Throughput mb/sec: 148.41199168892845
+19/09/13 02:49:43 INFO fs.TestDFSIO: Average IO rate mb/sec: 168.11587524414062
+19/09/13 02:49:43 INFO fs.TestDFSIO:  IO rate std deviation: 63.06774747956792
+19/09/13 02:49:43 INFO fs.TestDFSIO:     Test exec time sec: 20.181
+
+
+
+
+test 3:
+hadoop jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.1-tests.jar TestDFSIO -write -nrFiles 10 -size 25MB -resFile /tmp/DFSIO-write.out
+
+19/09/13 02:59:18 INFO fs.TestDFSIO: ----- TestDFSIO ----- : write
+19/09/13 02:59:18 INFO fs.TestDFSIO:            Date & time: Fri Sep 13 02:59:18 EDT 2019
+19/09/13 02:59:18 INFO fs.TestDFSIO:        Number of files: 10
+19/09/13 02:59:18 INFO fs.TestDFSIO: Total MBytes processed: 250.0
+19/09/13 02:59:18 INFO fs.TestDFSIO:      Throughput mb/sec: 21.224212581713218
+19/09/13 02:59:18 INFO fs.TestDFSIO: Average IO rate mb/sec: 22.167369842529297
+19/09/13 02:59:18 INFO fs.TestDFSIO:  IO rate std deviation: 4.395288410535568
+19/09/13 02:59:18 INFO fs.TestDFSIO:     Test exec time sec: 20.254
+
+19/09/13 03:00:20 INFO fs.TestDFSIO: ----- TestDFSIO ----- : read
+19/09/13 03:00:20 INFO fs.TestDFSIO:            Date & time: Fri Sep 13 03:00:20 EDT 2019
+19/09/13 03:00:20 INFO fs.TestDFSIO:        Number of files: 10
+19/09/13 03:00:20 INFO fs.TestDFSIO: Total MBytes processed: 250.0
+19/09/13 03:00:20 INFO fs.TestDFSIO:      Throughput mb/sec: 122.4889759921607
+19/09/13 03:00:20 INFO fs.TestDFSIO: Average IO rate mb/sec: 138.89430236816406
+19/09/13 03:00:20 INFO fs.TestDFSIO:  IO rate std deviation: 51.17496141582341
+19/09/13 03:00:20 INFO fs.TestDFSIO:     Test exec time sec: 19.159
+
+
+test 4:
+hadoop jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.1-tests.jar TestDFSIO -write -nrFiles 10 -size 200MB -resFile /tmp/DFSIO-write.out
+
+19/09/13 03:02:52 INFO fs.TestDFSIO: ----- TestDFSIO ----- : write
+19/09/13 03:02:52 INFO fs.TestDFSIO:            Date & time: Fri Sep 13 03:02:52 EDT 2019
+19/09/13 03:02:52 INFO fs.TestDFSIO:        Number of files: 10
+19/09/13 03:02:52 INFO fs.TestDFSIO: Total MBytes processed: 2000.0
+19/09/13 03:02:52 INFO fs.TestDFSIO:      Throughput mb/sec: 15.547747131440655
+19/09/13 03:02:52 INFO fs.TestDFSIO: Average IO rate mb/sec: 16.15636444091797
+19/09/13 03:02:52 INFO fs.TestDFSIO:  IO rate std deviation: 3.941213943585962
+19/09/13 03:02:52 INFO fs.TestDFSIO:     Test exec time sec: 33.324
+
+19/09/13 03:03:44 INFO fs.TestDFSIO: ----- TestDFSIO ----- : read
+19/09/13 03:03:44 INFO fs.TestDFSIO:            Date & time: Fri Sep 13 03:03:44 EDT 2019
+19/09/13 03:03:44 INFO fs.TestDFSIO:        Number of files: 10
+19/09/13 03:03:44 INFO fs.TestDFSIO: Total MBytes processed: 2000.0
+19/09/13 03:03:44 INFO fs.TestDFSIO:      Throughput mb/sec: 148.22500555843772
+19/09/13 03:03:44 INFO fs.TestDFSIO: Average IO rate mb/sec: 162.34963989257812
+19/09/13 03:03:44 INFO fs.TestDFSIO:  IO rate std deviation: 49.16669561807266
+19/09/13 03:03:44 INFO fs.TestDFSIO:     Test exec time sec: 20.266
+
+
+and clean file:
+hadoop jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.1-tests.jar TestDFSIO -clean
+19/09/13 03:05:55 INFO fs.TestDFSIO: TestDFSIO.1.8
+19/09/13 03:05:55 INFO fs.TestDFSIO: nrFiles = 1
+19/09/13 03:05:55 INFO fs.TestDFSIO: nrBytes (MB) = 1.0
+19/09/13 03:05:55 INFO fs.TestDFSIO: bufferSize = 1000000
+19/09/13 03:05:55 INFO fs.TestDFSIO: baseDir = /benchmarks/TestDFSIO
+
+
+

@@ -1,4 +1,16 @@
 Since the data node can not be fully used, I did some research about how to increase the number of mappers.
 
-this can also be set by parameter:
+
+There are some factors may impact the number of mappers:
+totalSize: the total size of the map-reduce job
+blockSize: block size of HDFS, default value is 64m
+splitSize: size of each split files (virtual)
+so, the number of mppers = totalSize / splitSize
+
+In order to increase the number of mappers, can try to decrease the block size or decrease the split size by setting 
+mapred.min.split.size
+
+
+Also, number of mappers can be set by parameter:
 mapred.map.tasks
+but this is just a expecting value, just a hint for Hadoop map reduce, not the determine factor

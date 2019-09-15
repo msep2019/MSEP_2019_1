@@ -1,0 +1,52 @@
+This is steps for remove worker nodes
+
+S1. Stop HDFS and yarn by command:
+  $HADOOP_HOME/sbin/stop-all.sh
+
+S2. Create 'include' and 'exclude' file, 'include' file to restore the worker nodes that are need to be used and 'exclude' file restore the removed worker nodes.
+  touch $HADOOP_HOME/etc/hadoop/exclude
+  touch $HADOOP_HOME/etc/hadoop/include
+
+
+S3. Update configurations in below files:
+For:
+  $HADOOP_HOME/etc/hadoop/hdfs-site.xml 
+  $HADOOP_HOME/etc/hadoop/mapred-site.xml
+  
+ <property>
+    <name>dfs.hosts</name>
+    <value>/usr/local/hadoop-2.9.2/etc/hadoop/include</value>
+  </property>
+  
+ <property>
+    <name>dfs.hosts.exclude</name>
+    <value>/usr/local/hadoop-2.9.2/etc/hadoop/exclude</value>
+  </property>
+
+For:
+  $HADOOP_HOME/etc/hadoop/yarn-site.xml
+  
+  <property>
+    <name>yarn.resourcemanager.nodes.include-path</name>
+    <value>/usr/local/hadoop-2.6.0/etc/hadoop/include</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.nodes.exclude-path</name>
+    <value>/usr/local/hadoop-2.6.0/etc/hadoop/exclude</value>
+  </property>
+  
+S4. Start dfs and yarn by command:
+  $HADOOP_HOME/sbin/start-dfs.sh
+  $HADOOP_HOME/sbin/start-yarn.sh
+  
+S5. Run below command on master node
+  hdfs dfsadmin -refreshNodes
+  yarn rmadmin -refreshNodes
+  $HADOOP_HOME/bin/hadoop dfsadmin -refreshNodes
+
+* excluded nodes can be seens as decommissioned by checking report:  hadoop dfsadmin -report
+
+S6. Run below commands on the nodes need to be removed:
+  ./sbin/hadoop-daemon.sh stop datanode
+  ./sbin/yarn-daemon.sh stop nodemanager
+

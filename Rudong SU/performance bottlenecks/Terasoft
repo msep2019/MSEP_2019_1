@@ -1,0 +1,50 @@
+Test1 5m:
+[root@flink1-mse-master-0 bin]# yarn jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar teragen 5m /user/hadoop/teragen-data
+
+
+[root@flink1-mse-master-0 bin]# yarn jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar terasort 5m /user/hadoop/teragen-data /user/hadoop/terasoft-data
+19/09/13 03:13:37 INFO terasort.TeraSort: starting
+
+[root@flink1-mse-master-0 bin]# hadoop jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar terasort /user/hadoop/teragen-data1 /user/hadoop/terasoft-data
+19/09/13 03:21:44 INFO terasort.TeraSort: starting
+19/09/13 03:21:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/09/13 03:21:45 INFO input.FileInputFormat: Total input paths to process : 2
+Spent 115ms computing base-splits.
+Spent 2ms computing TeraScheduler splits.
+Computing input splits took 117ms
+Sampling 4 splits of 4
+Making 1 from 100000 sampled records
+Computing parititions took 353ms
+Spent 472ms computing partitions.
+
+
+[root@flink1-mse-master-0 bin]# hadoop jar /opt/hadoop-2.7.1/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.1.jar teravalidate /user/hadoop/terasoft-data /user/hadoop/teravalidate-data
+
+
+
+Test1 5m:
+gen: 16.8s
+sort: 33.8s
+vali:10.2
+
+Test2 25m:
+teragen: 37s 
+terasort: 1m56s
+vali:33.9s
+
+Test 3 50m:
+gen: 58s
+terasoft: 3m08s
+vali: 53s
+
+Test 4 100m:
+
+
+
+
+Delete:
+[root@flink1-mse-master-0 bin]# hadoop fs -rm -r -skipTrash tera*
+Deleted teragen-data
+Deleted terasoft-data
+Deleted teravalidate-data
+
