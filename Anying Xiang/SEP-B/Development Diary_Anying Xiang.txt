@@ -211,4 +211,21 @@ Accuracy:
 2. Use the approach of Kryo serialization and collect metrics of accuracy, response time and resource utilisation on Openstack (Random Forest + Bot Dataset).
 3. Analyse the observations.
 
-06 Sep, 2019
+06 Sep, 2019 & 07 Sep, 2019 & 08 Sep, 2019
+1. Collect response time with different Spark configurations.
+
+09 Sep, 2019 & 10 Sep, 2019
+1. Read papers on Spark configurations and prepare for the experiment.
+
+11 Sep, 2019
+1. Read papers on selecting parameters.
+
+12 Sep, 2019
+1.  Read papers on rules.
+
+13 Sep, 2019
+1. Spark configuration search space
+2. Start to write script to automatically run experiments and collect metrics
+
+
+
