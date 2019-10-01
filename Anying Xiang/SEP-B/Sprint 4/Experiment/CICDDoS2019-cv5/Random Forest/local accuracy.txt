@@ -5,3 +5,11 @@ evaluator weightedRecall: 1.0
 Train Time: 291263
 Test Time: 24
 Whole Time: 412276
+
+evaluator accuracy: 0.8669265092251859
+evaluator f1: 0.8527322111708656
+evaluator weightedPrecision: 0.8667797654919456
+evaluator weightedRecall: 0.8669265092251859
+Train Time: 1055053
+Test Time: 25
+Whole Time: 1775562
