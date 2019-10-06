@@ -1,6 +1,29 @@
 This is a folder to restore scripts for collecting and calculating statistic from clusters.
 
-*****Usage******
+***** meaning for each script ******
+
+----- Run in master node ----
+sc1. run.sh ~~ for running BDCA system with default properties and all customized properties automatically.
+sc2. run_without_properties.sh  ~~ for running BDCA system with default properties only.
+sc3. run_with_properties.sh ~~ for running BDCA system with customized properties.
+
+sc4. cluster.sh ~~ for collecting utilizations during the BDCA system is running, run before 'run.sh'
+sc5. kill_cluster.sh ~~ for stopping collecting utilizations after 'run.sh' is finished.
+
+----- Run in worker nodes ----
+sc4. cluster.sh ~~ for collecting utilizations during the BDCA system is running, run before 'run.sh'
+sc5. kill_cluster.sh ~~ for stopping collecting utilizations after 'run.sh' is finished.
+
+
+----- Run in local ----
+sc6. get_utilization.sh  ~~ for collecting all statistic collected from clusters seperately and calculate average for each node during the training period.
+sc7. get_utilization_all.sh  ~~ for calculating average statistic for all worker nodes during the training period.
+sc8. cleanup.sh  ~~ for cleaning up all temperary files before next batch running.
+
+***** USAGE ******
+
+sc1. nohup ./run.sh &
+sc2. 
 
 
 
