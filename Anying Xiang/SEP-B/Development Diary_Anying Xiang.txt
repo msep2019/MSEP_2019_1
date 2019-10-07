@@ -227,5 +227,42 @@ Accuracy:
 1. Spark configuration search space
 2. Start to write script to automatically run experiments and collect metrics
 
+14 Sep, 2019 to 15 Sep, 2019
+1. Script to automatically run experiments and collect metrics.
+2. Experiments with CICIDS2017 & Random Forest are in progress
 
+16 Sep, 2019 to 17 Sep, 2019
+1. Experiments with CICIDS2017 & Random Forest
 
+18 Sep, 2019 to 19 Sep, 2019
+1. Experiments with KDD & Random Forest
+
+20 Sep, 2019 to 22 Sep, 2019
+1. Experiments with DARPA & Random Forest
+2. Analyse the experiments results
+
+23 Sep, 2019 to 24 Sep, 2019
+1. Experiments with UNSW-NB15 & Random Forest 
+2. Analyse the experiments results
+
+25 Sep, 2019 to 26 Sep, 2019
+1. Redo experiments with CICIDS2017 & Random Forest with 5-fold-cross validation
+2. Redo experiments with KDD & Random Forest with 5-fold-cross validation
+3. Analyse experiments results and generate rules
+
+27 Sep, 2019 to 29 Sep, 2019
+1. Do experiments with CICDDoS2019 & Random Forest with 5-fold-cross validation
+2. Analyse experiments results, read paper about fuzzy rules and generate rules  
+3. Do experiments with BoT-IoT & Random Forest with 5-fold-cross validation
+
+30 Sep, 2019 to 1 Oct, 2019
+1. Do experiments with CIDDS & Random Forest with 5-fold-cross validation  
+2. Update rules
+
+2 Oct, 2019 to 3 Oct, 2019
+1. Update rules  
+2. Evaluate with BoT-IoT and CIDDS datasets & Random Forest with 5-fold-cross validation  
+
+4 Oct, 2019 to 6 Oct, 2019
+1. Do experiments with CICIDS2017 & Decision Tree with 5-fold-cross validation  
+2. Do experiments with KDD & Decision Tree with 5-fold-cross validation 
