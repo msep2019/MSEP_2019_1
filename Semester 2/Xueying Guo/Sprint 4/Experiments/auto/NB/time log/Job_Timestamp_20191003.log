@@ -1,0 +1,502 @@
+Algorithm is NB
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress to true
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] Date is 03-10
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] job start time is 10:20:51
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] got new compressor is 10:20:53
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] got new decompressor is 10:29:49
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] training start time is 10:29:49
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] training end time is 10:33:00
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] test start time is 10:33:00
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] test end time is 10:34:52
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] job end time is 10:34:52
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] training time is 191352
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress:true] testing time is 112210
+Algorithm is NB
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress.type to BLOCK
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] Date is 03-10
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] job start time is 10:34:55
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] got new compressor is 10:34:56
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] got new decompressor is 10:44:15
+10:47:14
+10:47:14
+10:47:14
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training start time is 10:44:15
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training end time is 10:47:15
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] test start time is 10:47:15
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] test end time is 10:49:04
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] job end time is 10:49:04
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training time is 179228
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] testing time is 109155
+Algorithm is NB
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.GzipCodec
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] Date is 03-10
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job start time is 10:49:06
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] got new compressor is 10:49:07
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] got new decompressor is 10:58:20
+11:01:30
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training start time is 10:58:20
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training end time is 11:01:30
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test start time is 11:01:30
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test end time is 11:03:23
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job end time is 11:03:23
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training time is 190484
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] testing time is 112576
+Algorithm is NB
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.BZip2Codec
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] Date is 03-10
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job start time is 11:03:25
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] got new compressor is 11:03:26
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] got new decompressor is 11:12:28
+11:15:24
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training start time is 11:12:28
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training end time is 11:15:24
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test start time is 11:15:24
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test end time is 11:17:15
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job end time is 11:17:15
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training time is 175989
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] testing time is 110531
+Algorithm is NB
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.Lz4Codec
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] Date is 03-10
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job start time is 11:17:18
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] got new compressor is 11:17:18
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] got new decompressor is 11:26:25
+11:29:24
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training start time is 11:26:25
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training end time is 11:29:24
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test start time is 11:29:24
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test end time is 11:31:15
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job end time is 11:31:15
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training time is 179172
+[NB] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] testing time is 110898
+Algorithm is NB
+dataset is CIDD
+change mapreduce.map.output.compress to true
+[NB] [CIDD] [mapreduce.map.output.compress:true] Date is 03-10
+[NB] [CIDD] [mapreduce.map.output.compress:true] job start time is 11:31:17
+[NB] [CIDD] [mapreduce.map.output.compress:true] got new compressor is 11:31:18
+[NB] [CIDD] [mapreduce.map.output.compress:true] got new decompressor is 11:40:37
+[NB] [CIDD] [mapreduce.map.output.compress:true] training start time is 11:40:37
+[NB] [CIDD] [mapreduce.map.output.compress:true] training end time is 11:43:51
+[NB] [CIDD] [mapreduce.map.output.compress:true] test start time is 11:43:51
+[NB] [CIDD] [mapreduce.map.output.compress:true] test end time is 11:45:42
+[NB] [CIDD] [mapreduce.map.output.compress:true] job end time is 11:45:42
+[NB] [CIDD] [mapreduce.map.output.compress:true] training time is 193796
+[NB] [CIDD] [mapreduce.map.output.compress:true] testing time is 110281
+Algorithm is NB
+dataset is CIDD
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.GzipCodec
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] Date is 03-10
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job start time is 11:45:44
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] got new compressor is 11:45:45
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] got new decompressor is 11:55:09
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training start time is 11:55:08
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training end time is 11:58:06
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test start time is 11:58:06
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test end time is 11:59:57
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job end time is 11:59:57
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training time is 177407
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] testing time is 111491
+Algorithm is NB
+dataset is CIDD
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.BZip2Codec
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] Date is 03-10
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job start time is 12:00:00
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] got new compressor is 12:00:01
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] got new decompressor is 12:09:08
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training start time is 12:09:08
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training end time is 12:12:10
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test start time is 12:12:10
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test end time is 12:13:59
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job end time is 12:13:59
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training time is 181387
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] testing time is 109618
+Algorithm is NB
+dataset is CIDD
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.Lz4Codec
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] Date is 03-10
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job start time is 12:14:02
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] got new compressor is 12:14:03
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] got new decompressor is 12:23:23
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training start time is 12:23:23
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training end time is 12:26:20
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test start time is 12:26:20
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test end time is 12:28:11
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job end time is 12:28:11
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training time is 177106
+[NB] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] testing time is 110845
+Algorithm is NB
+dataset is CIDD
+change mapreduce.tasktracker.map.tasks.maximum to 1
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] Date is 03-10
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] job start time is 12:28:14
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] got new compressor is 12:28:15
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] got new decompressor is 12:37:24
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] training start time is 12:37:24
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] training end time is 12:40:20
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] test start time is 12:40:20
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] test end time is 12:42:11
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] job end time is 12:42:11
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] training time is 175935
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] testing time is 111032
+Algorithm is NB
+dataset is CIDD
+change mapreduce.tasktracker.map.tasks.maximum to 2
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] Date is 03-10
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] job start time is 12:42:14
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] got new compressor is 12:42:14
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] got new decompressor is 12:51:30
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] training start time is 12:51:30
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] training end time is 12:54:29
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] test start time is 12:54:29
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] test end time is 12:56:17
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] job end time is 12:56:17
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] training time is 178836
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] testing time is 108709
+Algorithm is NB
+dataset is CIDD
+change mapreduce.tasktracker.map.tasks.maximum to 4
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] Date is 03-10
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] job start time is 12:56:20
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] got new compressor is 12:56:21
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] got new decompressor is 13:05:46
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] training start time is 13:05:46
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] training end time is 13:08:43
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] test start time is 13:08:43
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] test end time is 13:10:32
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] job end time is 13:10:32
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] training time is 177038
+[NB] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] testing time is 109241
+Algorithm is NB
+dataset is CIDD
+change mapreduce.tasktracker.reduce.tasks.maximum to 1
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] Date is 03-10
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] job start time is 13:10:35
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] got new compressor is 13:10:36
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] got new decompressor is 13:19:51
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] training start time is 13:19:51
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] training end time is 13:22:50
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] test start time is 13:22:50
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] test end time is 13:24:41
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] job end time is 13:24:41
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] training time is 179489
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] testing time is 110883
+Algorithm is NB
+dataset is CIDD
+change mapreduce.tasktracker.reduce.tasks.maximum to 2
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] Date is 03-10
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] job start time is 13:24:44
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] got new compressor is 13:24:45
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] got new decompressor is 13:34:08
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] training start time is 13:34:08
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] training end time is 13:37:04
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] test start time is 13:37:04
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] test end time is 13:38:52
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] job end time is 13:38:52
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] training time is 176388
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] testing time is 107968
+Algorithm is NB
+dataset is CIDD
+change mapreduce.tasktracker.reduce.tasks.maximum to 4
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] Date is 03-10
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] job start time is 13:38:55
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] got new compressor is 13:38:56
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] got new decompressor is 13:48:06
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] training start time is 13:48:05
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] training end time is 13:51:07
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] test start time is 13:51:07
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] test end time is 13:52:59
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] job end time is 13:52:59
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] training time is 181515
+[NB] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] testing time is 111501
+Algorithm is NB
+dataset is CIDD
+change mapreduce.map.speculative to false
+[NB] [CIDD] [mapreduce.map.speculative:false] Date is 03-10
+[NB] [CIDD] [mapreduce.map.speculative:false] job start time is 13:53:01
+[NB] [CIDD] [mapreduce.map.speculative:false] got new compressor is 13:53:02
+[NB] [CIDD] [mapreduce.map.speculative:false] got new decompressor is 14:02:30
+[NB] [CIDD] [mapreduce.map.speculative:false] training start time is 14:02:30
+[NB] [CIDD] [mapreduce.map.speculative:false] training end time is 14:05:28
+[NB] [CIDD] [mapreduce.map.speculative:false] test start time is 14:05:28
+[NB] [CIDD] [mapreduce.map.speculative:false] test end time is 14:07:18
+[NB] [CIDD] [mapreduce.map.speculative:false] job end time is 14:07:18
+[NB] [CIDD] [mapreduce.map.speculative:false] training time is 178371
+[NB] [CIDD] [mapreduce.map.speculative:false] testing time is 109776
+Algorithm is NB
+dataset is CIDD
+change mapreduce.reduce.speculative to false
+[NB] [CIDD] [mapreduce.reduce.speculative:false] Date is 03-10
+[NB] [CIDD] [mapreduce.reduce.speculative:false] job start time is 14:07:21
+[NB] [CIDD] [mapreduce.reduce.speculative:false] got new compressor is 14:07:22
+[NB] [CIDD] [mapreduce.reduce.speculative:false] got new decompressor is 14:16:35
+[NB] [CIDD] [mapreduce.reduce.speculative:false] training start time is 14:16:34
+[NB] [CIDD] [mapreduce.reduce.speculative:false] training end time is 14:19:32
+[NB] [CIDD] [mapreduce.reduce.speculative:false] test start time is 14:19:32
+[NB] [CIDD] [mapreduce.reduce.speculative:false] test end time is 14:21:22
+[NB] [CIDD] [mapreduce.reduce.speculative:false] job end time is 14:21:22
+[NB] [CIDD] [mapreduce.reduce.speculative:false] training time is 177223
+[NB] [CIDD] [mapreduce.reduce.speculative:false] testing time is 110490
+Algorithm is NB
+dataset is CIDD
+change mapreduce.task.io.sort.mb to 1150
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] Date is 03-10
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] job start time is 14:21:25
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] got new compressor is 14:21:26
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] got new decompressor is 14:30:55
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] training start time is 14:30:54
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] training end time is 
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] test start time is 
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] test end time is 
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] job end time is 
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] training time is 
+[NB] [CIDD] [mapreduce.task.io.sort.mb:1150] testing time is 
+Algorithm is NB
+dataset is CIDD
+change mapreduce.task.io.sort.factor to 100
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] Date is 03-10
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] job start time is 14:33:30
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] got new compressor is 14:33:31
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] got new decompressor is 14:42:45
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] training start time is 14:42:45
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] training end time is 14:45:44
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] test start time is 14:45:44
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] test end time is 14:47:35
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] job end time is 14:47:35
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] training time is 179726
+[NB] [CIDD] [mapreduce.task.io.sort.factor:100] testing time is 110527
+Algorithm is NB
+dataset is CIDD
+change mapreduce.map.sort.spill.percent to 0.3
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] Date is 03-10
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] job start time is 14:47:37
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] got new compressor is 14:47:38
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] got new decompressor is 14:56:59
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] training start time is 14:56:58
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] training end time is 14:59:55
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] test start time is 14:59:55
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] test end time is 15:01:45
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] job end time is 15:01:45
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] training time is 176817
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.3] testing time is 109672
+Algorithm is NB
+dataset is CIDD
+change mapreduce.map.sort.spill.percent to 0.5
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] Date is 03-10
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] job start time is 15:01:48
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] got new compressor is 15:01:49
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] got new decompressor is 15:10:57
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] training start time is 15:10:57
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] training end time is 15:14:02
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] test start time is 15:14:02
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] test end time is 15:15:51
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] job end time is 15:15:51
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] training time is 184649
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.5] testing time is 109690
+Algorithm is NB
+dataset is CIDD
+change mapreduce.map.sort.spill.percent to 0.9
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] Date is 03-10
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] job start time is 15:15:54
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] got new compressor is 15:15:55
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] got new decompressor is 15:25:09
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] training start time is 15:25:08
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] training end time is 15:28:08
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] test start time is 15:28:08
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] test end time is 15:29:57
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] job end time is 15:29:57
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] training time is 179511
+[NB] [CIDD] [mapreduce.map.sort.spill.percent:0.9] testing time is 108867
+Algorithm is NB
+dataset is CIDD
+change mapreduce.reduce.shuffle.input.buffer.percent to 0.8
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] Date is 03-10
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] job start time is 15:30:00
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] got new compressor is 15:30:00
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] got new decompressor is 15:39:09
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training start time is 15:39:08
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training end time is 15:42:03
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] test start time is 15:42:03
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] test end time is 15:43:54
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] job end time is 15:43:54
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training time is 174962
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] testing time is 110241
+Algorithm is NB
+dataset is CIDD
+change mapreduce.reduce.shuffle.input.buffer.percent to 0.9
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] Date is 03-10
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] job start time is 15:43:56
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] got new compressor is 15:43:57
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] got new decompressor is 15:53:13
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training start time is 15:53:13
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training end time is 15:56:18
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] test start time is 15:56:18
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] test end time is 15:58:13
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] job end time is 15:58:13
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training time is 184730
+[NB] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] testing time is 114922
+Algorithm is NB
+dataset is CIDD
+change mapreduce.reduce.shuffle.merge.percent to 0.8
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] Date is 03-10
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] job start time is 15:58:16
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] got new compressor is 15:58:17
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] got new decompressor is 16:07:29
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] training start time is 16:07:29
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] training end time is 16:10:31
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] test start time is 16:10:31
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] test end time is 16:12:22
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] job end time is 16:12:22
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] training time is 181674
+[NB] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] testing time is 111272
+Algorithm is NB
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress to true
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] Date is 03-10
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] job start time is 
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] got new compressor is 16:12:26
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] got new decompressor is 16:41:36
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] training start time is 16:41:36
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] training end time is 16:46:28
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] test start time is 16:46:28
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] test end time is 16:59:53
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] job end time is 16:59:53
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] training time is 292133
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress:true] testing time is 805612
+Algorithm is NB
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress.type to BLOCK
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] Date is 03-10
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] job start time is 
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] got new compressor is 16:59:57
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] got new decompressor is 17:29:32
+17:34:28
+17:34:28
+17:34:28
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training start time is 17:29:31
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training end time is 17:34:28
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] test start time is 17:34:28
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] test end time is 17:47:57
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] job end time is 17:47:57
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training time is 296955
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] testing time is 808291
+Algorithm is NB
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.GzipCodec
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] Date is 03-10
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job start time is 
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] got new compressor is 17:48:00
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] got new decompressor is 18:16:52
+18:21:47
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training start time is 18:16:52
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training end time is 18:21:47
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test start time is 18:21:47
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test end time is 18:35:14
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job end time is 18:35:14
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training time is 294975
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] testing time is 806938
+Algorithm is NB
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.BZip2Codec
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] Date is 03-10
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job start time is 
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] got new compressor is 18:35:18
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] got new decompressor is 19:04:44
+19:09:21
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training start time is 19:04:43
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training end time is 19:09:22
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test start time is 19:09:22
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test end time is 19:23:01
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job end time is 19:23:01
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training time is 278077
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] testing time is 819588
+Algorithm is NB
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.Lz4Codec
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] Date is 03-10
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job start time is 
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] got new compressor is 19:23:05
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] got new decompressor is 19:52:41
+19:57:38
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training start time is 19:52:41
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training end time is 19:57:38
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test start time is 19:57:38
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test end time is 20:11:02
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job end time is 20:11:02
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training time is 297696
+[NB] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] testing time is 803297
+Algorithm is NB
+dataset is IOT
+change mapreduce.map.output.compress to true
+[NB] [IOT] [mapreduce.map.output.compress:true] Date is 03-10
+[NB] [IOT] [mapreduce.map.output.compress:true] job start time is 
+[NB] [IOT] [mapreduce.map.output.compress:true] got new compressor is 20:11:05
+[NB] [IOT] [mapreduce.map.output.compress:true] got new decompressor is 20:40:43
+[NB] [IOT] [mapreduce.map.output.compress:true] training start time is 20:40:43
+[NB] [IOT] [mapreduce.map.output.compress:true] training end time is 20:45:42
+[NB] [IOT] [mapreduce.map.output.compress:true] test start time is 20:45:42
+[NB] [IOT] [mapreduce.map.output.compress:true] test end time is 20:59:04
+[NB] [IOT] [mapreduce.map.output.compress:true] job end time is 20:59:04
+[NB] [IOT] [mapreduce.map.output.compress:true] training time is 298202
+[NB] [IOT] [mapreduce.map.output.compress:true] testing time is 802911
+Algorithm is NB
+dataset is IOT
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.GzipCodec
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] Date is 03-10
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job start time is 
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] got new compressor is 20:59:08
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] got new decompressor is 21:28:09
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training start time is 21:28:09
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training end time is 21:33:08
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test start time is 21:33:08
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test end time is 21:46:34
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job end time is 21:46:34
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training time is 298737
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] testing time is 806420
+Algorithm is NB
+dataset is IOT
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.BZip2Codec
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] Date is 03-10
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job start time is 
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] got new compressor is 21:46:38
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] got new decompressor is 22:15:50
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training start time is 22:15:50
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training end time is 22:20:42
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test start time is 22:20:42
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test end time is 22:34:03
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job end time is 22:34:03
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training time is 291964
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] testing time is 801466
+Algorithm is NB
+dataset is IOT
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.Lz4Codec
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] Date is 03-10
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job start time is 
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] got new compressor is 22:34:07
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] got new decompressor is 23:03:09
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training start time is 23:03:09
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training end time is 23:07:52
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test start time is 23:07:52
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test end time is 23:21:21
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job end time is 23:21:21
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training time is 282265
+[NB] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] testing time is 809532
+Algorithm is NB
+dataset is IOT
+change mapreduce.tasktracker.map.tasks.maximum to 1
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] Date is 03-10
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] job start time is 
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] got new compressor is 23:21:25
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] got new decompressor is 23:50:48
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] training start time is 23:50:48
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] training end time is 23:55:48
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] test start time is 23:55:48
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] test end time is 00:09:11
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] job end time is 00:09:11
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] training time is 299666
+[NB] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] testing time is 803642

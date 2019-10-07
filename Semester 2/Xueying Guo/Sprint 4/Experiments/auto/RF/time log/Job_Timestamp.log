@@ -1,0 +1,622 @@
+Algorithm is RF
+dataset is CIDD
+<Default>[RF] [CIDD] Date is 05-10
+<Default>[RF] [CIDD] job start time is 06:33:58
+<Default>[RF] [CIDD] training start time is 06:35:36
+<Default>[RF] [CIDD] training end time is 06:36:42
+<Default>[RF] [CIDD] test start time is 06:36:42
+<Default>[RF] [CIDD] test end time is 
+<Default>[RF] [CIDD] job end time is 06:38:09
+<Default>[RF] [CIDD] training time is 66324
+<Default>[RF] [CIDD] testing time is 60785
+Algorithm is RF
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress to true
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] Date is 05-10
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] job start time is 06:38:18
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] training start time is 06:39:52
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] training end time is 06:40:59
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] test start time is 06:40:59
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] test end time is 
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] job end time is 06:43:31
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] training time is 66763
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress:true] testing time is 114581
+Algorithm is RF
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress.type to BLOCK
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] Date is 05-10
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] job start time is 06:43:40
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training start time is 06:45:16
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training end time is 06:46:18
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] test start time is 06:46:19
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] test end time is 
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] job end time is 06:47:14
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training time is 62573
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.type:BLOCK] testing time is 51133
+Algorithm is RF
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.GzipCodec
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] Date is 05-10
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job start time is 06:47:23
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training start time is 06:48:58
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training end time is 06:49:59
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test start time is 06:49:59
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test end time is 
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job end time is 06:52:32
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training time is 61522
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] testing time is 115831
+Algorithm is RF
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.BZip2Codec
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] Date is 05-10
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job start time is 06:52:41
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training start time is 06:54:13
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training end time is 06:55:12
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test start time is 06:55:12
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test end time is 
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job end time is 06:58:35
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training time is 59454
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] testing time is 127731
+Algorithm is RF
+dataset is CIDD
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.Lz4Codec
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] Date is 05-10
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job start time is 06:58:44
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training start time is 07:00:19
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training end time is 07:01:21
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test start time is 07:01:21
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test end time is 
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job end time is 07:03:26
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training time is 61455
+[RF] [CIDD] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] testing time is 75276
+Algorithm is RF
+dataset is CIDD
+change mapreduce.map.output.compress to true
+[RF] [CIDD] [mapreduce.map.output.compress:true] Date is 05-10
+[RF] [CIDD] [mapreduce.map.output.compress:true] job start time is 07:03:35
+[RF] [CIDD] [mapreduce.map.output.compress:true] training start time is 07:05:09
+[RF] [CIDD] [mapreduce.map.output.compress:true] training end time is 07:06:09
+[RF] [CIDD] [mapreduce.map.output.compress:true] test start time is 07:06:09
+[RF] [CIDD] [mapreduce.map.output.compress:true] test end time is 
+[RF] [CIDD] [mapreduce.map.output.compress:true] job end time is 07:07:32
+[RF] [CIDD] [mapreduce.map.output.compress:true] training time is 60438
+[RF] [CIDD] [mapreduce.map.output.compress:true] testing time is 57192
+Algorithm is RF
+dataset is CIDD
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.GzipCodec
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] Date is 05-10
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job start time is 07:07:41
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training start time is 07:09:14
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training end time is 07:10:13
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test start time is 07:10:13
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test end time is 07:11:09
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job end time is 07:11:35
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training time is 59428
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] testing time is 55550
+Algorithm is RF
+dataset is CIDD
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.BZip2Codec
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] Date is 05-10
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job start time is 07:11:44
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training start time is 07:13:19
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training end time is 07:14:16
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test start time is 07:14:16
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test end time is 07:15:17
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job end time is 07:15:43
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training time is 57470
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] testing time is 60515
+Algorithm is RF
+dataset is CIDD
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.Lz4Codec
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] Date is 05-10
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job start time is 07:15:52
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training start time is 07:17:27
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training end time is 07:18:25
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test start time is 07:18:25
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test end time is 07:19:23
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job end time is 07:19:49
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training time is 58385
+[RF] [CIDD] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] testing time is 58248
+Algorithm is RF
+dataset is CIDD
+change mapreduce.tasktracker.map.tasks.maximum to 1
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] Date is 05-10
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] job start time is 07:19:58
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] training start time is 07:21:33
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] training end time is 07:22:31
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] test start time is 07:22:31
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] test end time is 07:23:29
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] job end time is 07:23:54
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] training time is 58257
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:1] testing time is 58108
+Algorithm is RF
+dataset is CIDD
+change mapreduce.tasktracker.map.tasks.maximum to 2
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] Date is 05-10
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] job start time is 07:24:03
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] training start time is 07:25:35
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] training end time is 07:26:30
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] test start time is 07:26:30
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] test end time is 07:27:27
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] job end time is 07:27:53
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] training time is 55327
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:2] testing time is 57116
+Algorithm is RF
+dataset is CIDD
+change mapreduce.tasktracker.map.tasks.maximum to 4
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] Date is 05-10
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] job start time is 07:28:02
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] training start time is 07:29:33
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] training end time is 07:30:31
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] test start time is 07:30:31
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] test end time is 07:31:28
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] job end time is 07:31:54
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] training time is 57566
+[RF] [CIDD] [mapreduce.tasktracker.map.tasks.maximum:4] testing time is 57327
+Algorithm is RF
+dataset is CIDD
+change mapreduce.tasktracker.reduce.tasks.maximum to 1
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] Date is 05-10
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] job start time is 07:32:03
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] training start time is 07:33:38
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] training end time is 07:34:38
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] test start time is 07:34:38
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] test end time is 07:35:34
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] job end time is 07:36:01
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] training time is 60586
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:1] testing time is 55242
+Algorithm is RF
+dataset is CIDD
+change mapreduce.tasktracker.reduce.tasks.maximum to 2
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] Date is 05-10
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] job start time is 07:36:10
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] training start time is 07:37:45
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] training end time is 07:38:42
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] test start time is 07:38:42
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] test end time is 07:39:39
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] job end time is 07:40:04
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] training time is 57403
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:2] testing time is 57118
+Algorithm is RF
+dataset is CIDD
+change mapreduce.tasktracker.reduce.tasks.maximum to 4
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] Date is 05-10
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] job start time is 07:40:13
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] training start time is 07:41:45
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] training end time is 07:42:42
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] test start time is 07:42:42
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] test end time is 07:43:40
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] job end time is 07:44:07
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] training time is 56455
+[RF] [CIDD] [mapreduce.tasktracker.reduce.tasks.maximum:4] testing time is 58220
+Algorithm is RF
+dataset is CIDD
+change mapreduce.map.speculative to false
+[RF] [CIDD] [mapreduce.map.speculative:false] Date is 05-10
+[RF] [CIDD] [mapreduce.map.speculative:false] job start time is 07:44:16
+[RF] [CIDD] [mapreduce.map.speculative:false] training start time is 07:45:48
+[RF] [CIDD] [mapreduce.map.speculative:false] training end time is 07:46:45
+[RF] [CIDD] [mapreduce.map.speculative:false] test start time is 07:46:45
+[RF] [CIDD] [mapreduce.map.speculative:false] test end time is 07:47:44
+[RF] [CIDD] [mapreduce.map.speculative:false] job end time is 07:48:09
+[RF] [CIDD] [mapreduce.map.speculative:false] training time is 56294
+[RF] [CIDD] [mapreduce.map.speculative:false] testing time is 59223
+Algorithm is RF
+dataset is CIDD
+change mapreduce.reduce.speculative to false
+[RF] [CIDD] [mapreduce.reduce.speculative:false] Date is 05-10
+[RF] [CIDD] [mapreduce.reduce.speculative:false] job start time is 07:48:18
+[RF] [CIDD] [mapreduce.reduce.speculative:false] training start time is 07:49:52
+[RF] [CIDD] [mapreduce.reduce.speculative:false] training end time is 07:50:48
+[RF] [CIDD] [mapreduce.reduce.speculative:false] test start time is 07:50:48
+[RF] [CIDD] [mapreduce.reduce.speculative:false] test end time is 07:51:46
+[RF] [CIDD] [mapreduce.reduce.speculative:false] job end time is 07:52:11
+[RF] [CIDD] [mapreduce.reduce.speculative:false] training time is 56225
+[RF] [CIDD] [mapreduce.reduce.speculative:false] testing time is 58053
+Algorithm is RF
+dataset is CIDD
+change mapreduce.task.io.sort.mb to 1150
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] Date is 05-10
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] job start time is 07:52:20
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] training start time is 07:53:52
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] training end time is 07:54:52
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] test start time is 07:54:52
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] test end time is 07:55:50
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] job end time is 07:56:16
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] training time is 59352
+[RF] [CIDD] [mapreduce.task.io.sort.mb:1150] testing time is 58172
+Algorithm is RF
+dataset is CIDD
+change mapreduce.task.io.sort.factor to 100
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] Date is 05-10
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] job start time is 07:56:26
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] training start time is 07:58:01
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] training end time is 07:59:00
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] test start time is 07:59:00
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] test end time is 07:59:58
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] job end time is 08:00:24
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] training time is 58316
+[RF] [CIDD] [mapreduce.task.io.sort.factor:100] testing time is 58292
+Algorithm is RF
+dataset is CIDD
+change mapreduce.map.sort.spill.percent to 0.3
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] Date is 05-10
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] job start time is 08:00:33
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] training start time is 08:02:07
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] training end time is 08:03:03
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] test start time is 08:03:03
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] test end time is 08:04:00
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] job end time is 08:04:26
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] training time is 56576
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.3] testing time is 57098
+Algorithm is RF
+dataset is CIDD
+change mapreduce.map.sort.spill.percent to 0.5
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] Date is 05-10
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] job start time is 08:04:35
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] training start time is 08:06:13
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] training end time is 08:07:09
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] test start time is 08:07:09
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] test end time is 08:08:07
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] job end time is 08:08:33
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] training time is 56482
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.5] testing time is 58289
+Algorithm is RF
+dataset is CIDD
+change mapreduce.map.sort.spill.percent to 0.9
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] Date is 05-10
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] job start time is 08:08:42
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] training start time is 08:10:17
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] training end time is 08:11:22
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] test start time is 08:11:23
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] test end time is 08:12:20
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] job end time is 08:12:44
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] training time is 65433
+[RF] [CIDD] [mapreduce.map.sort.spill.percent:0.9] testing time is 57082
+Algorithm is RF
+dataset is CIDD
+change mapreduce.reduce.shuffle.input.buffer.percent to 0.8
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] Date is 05-10
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] job start time is 08:12:53
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training start time is 08:14:28
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training end time is 08:15:31
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] test start time is 08:15:31
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] test end time is 08:16:28
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] job end time is 08:16:54
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training time is 63485
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] testing time is 57140
+Algorithm is RF
+dataset is CIDD
+change mapreduce.reduce.shuffle.input.buffer.percent to 0.9
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] Date is 05-10
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] job start time is 08:17:03
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training start time is 08:18:38
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training end time is 08:19:38
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] test start time is 08:19:38
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] test end time is 08:20:36
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] job end time is 08:21:02
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training time is 60384
+[RF] [CIDD] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] testing time is 58186
+Algorithm is RF
+dataset is CIDD
+change mapreduce.reduce.shuffle.merge.percent to 0.8
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] Date is 05-10
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] job start time is 08:21:11
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] training start time is 08:22:45
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] training end time is 08:23:41
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] test start time is 08:23:41
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] test end time is 08:24:36
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] job end time is 08:25:02
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] training time is 56397
+[RF] [CIDD] [mapreduce.reduce.shuffle.merge.percent:0.8] testing time is 55103
+Algorithm is RF
+dataset is IOT
+<Default>[RF] [IOT] Date is 05-10
+<Default>[RF] [IOT] job start time is 08:25:12
+<Default>[RF] [IOT] training start time is 08:30:44
+<Default>[RF] [IOT] training end time is 08:31:52
+<Default>[RF] [IOT] test start time is 08:31:52
+<Default>[RF] [IOT] test end time is 08:35:55
+<Default>[RF] [IOT] job end time is 08:36:57
+<Default>[RF] [IOT] training time is 68844
+<Default>[RF] [IOT] testing time is 242135
+Algorithm is RF
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress to true
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] Date is 05-10
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] job start time is 08:37:06
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] training start time is 08:42:14
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] training end time is 08:43:22
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] test start time is 08:43:22
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] test end time is 08:49:36
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] job end time is 08:51:00
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] training time is 67736
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress:true] testing time is 374603
+Algorithm is RF
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress.type to BLOCK
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] Date is 05-10
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] job start time is 08:51:10
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training start time is 08:56:18
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training end time is 08:57:27
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] test start time is 08:57:27
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] test end time is 09:01:13
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] job end time is 09:01:22
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] training time is 68616
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.type:BLOCK] testing time is 226240
+Algorithm is RF
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.GzipCodec
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] Date is 05-10
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job start time is 09:01:32
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training start time is 09:06:32
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training end time is 09:07:40
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test start time is 09:07:40
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test end time is 09:13:58
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job end time is 09:15:23
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training time is 68730
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.GzipCodec] testing time is 377673
+Algorithm is RF
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.BZip2Codec
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] Date is 05-10
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job start time is 09:15:33
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training start time is 09:20:25
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training end time is 09:21:33
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test start time is 09:21:33
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test end time is 09:28:12
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job end time is 09:31:02
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training time is 68722
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] testing time is 398640
+Algorithm is RF
+dataset is IOT
+change mapreduce.output.fileoutputformat.compress.codec to org.apache.hadoop.io.compress.Lz4Codec
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] Date is 05-10
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job start time is 09:31:11
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training start time is 09:36:14
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training end time is 09:37:26
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test start time is 09:37:26
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test end time is 09:42:20
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job end time is 09:44:14
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training time is 71811
+[RF] [IOT] [mapreduce.output.fileoutputformat.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] testing time is 293226
+Algorithm is RF
+dataset is IOT
+change mapreduce.map.output.compress to true
+[RF] [IOT] [mapreduce.map.output.compress:true] Date is 05-10
+[RF] [IOT] [mapreduce.map.output.compress:true] job start time is 09:44:23
+[RF] [IOT] [mapreduce.map.output.compress:true] training start time is 09:49:23
+[RF] [IOT] [mapreduce.map.output.compress:true] training end time is 09:50:32
+[RF] [IOT] [mapreduce.map.output.compress:true] test start time is 09:50:32
+[RF] [IOT] [mapreduce.map.output.compress:true] test end time is 09:54:37
+[RF] [IOT] [mapreduce.map.output.compress:true] job end time is 09:55:41
+[RF] [IOT] [mapreduce.map.output.compress:true] training time is 69738
+[RF] [IOT] [mapreduce.map.output.compress:true] testing time is 244263
+Algorithm is RF
+dataset is IOT
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.GzipCodec
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] Date is 05-10
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job start time is 09:55:50
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training start time is 10:00:51
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training end time is 10:01:59
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test start time is 10:01:59
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] test end time is 10:06:03
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] job end time is 10:07:05
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] training time is 67938
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.GzipCodec] testing time is 244242
+Algorithm is RF
+dataset is IOT
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.BZip2Codec
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] Date is 05-10
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job start time is 10:07:14
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training start time is 10:12:19
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training end time is 10:13:27
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test start time is 10:13:27
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] test end time is 10:17:27
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] job end time is 10:18:29
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] training time is 67586
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.BZip2Codec] testing time is 240012
+Algorithm is RF
+dataset is IOT
+change mapreduce.map.output.compress.codec to org.apache.hadoop.io.compress.Lz4Codec
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] Date is 05-10
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job start time is 10:18:38
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training start time is 10:23:43
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training end time is 10:24:53
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test start time is 10:24:53
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] test end time is 10:28:58
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] job end time is 10:30:02
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] training time is 69847
+[RF] [IOT] [mapreduce.map.output.compress.codec:org.apache.hadoop.io.compress.Lz4Codec] testing time is 245547
+Algorithm is RF
+dataset is IOT
+change mapreduce.tasktracker.map.tasks.maximum to 1
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] Date is 05-10
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] job start time is 10:30:11
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] training start time is 10:35:08
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] training end time is 10:36:15
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] test start time is 10:36:15
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] test end time is 10:40:17
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] job end time is 10:41:17
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] training time is 67558
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:1] testing time is 241327
+Algorithm is RF
+dataset is IOT
+change mapreduce.tasktracker.map.tasks.maximum to 2
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] Date is 05-10
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] job start time is 10:41:27
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] training start time is 10:46:32
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] training end time is 10:47:42
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] test start time is 10:47:42
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] test end time is 10:51:15
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] job end time is 10:52:15
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] training time is 69750
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:2] testing time is 212926
+Algorithm is RF
+dataset is IOT
+change mapreduce.tasktracker.map.tasks.maximum to 4
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] Date is 05-10
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] job start time is 10:52:24
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] training start time is 10:57:25
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] training end time is 10:58:35
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] test start time is 10:58:35
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] test end time is 11:03:00
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] job end time is 11:04:07
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] training time is 70086
+[RF] [IOT] [mapreduce.tasktracker.map.tasks.maximum:4] testing time is 265160
+Algorithm is RF
+dataset is IOT
+change mapreduce.tasktracker.reduce.tasks.maximum to 1
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] Date is 05-10
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] job start time is 11:04:16
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] training start time is 11:09:14
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] training end time is 11:10:21
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] test start time is 11:10:21
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] test end time is 11:14:32
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] job end time is 11:15:33
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] training time is 66708
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:1] testing time is 251215
+Algorithm is RF
+dataset is IOT
+change mapreduce.tasktracker.reduce.tasks.maximum to 2
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] Date is 05-10
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] job start time is 11:15:42
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] training start time is 11:20:48
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] training end time is 11:21:58
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] test start time is 11:21:58
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] test end time is 11:25:54
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] job end time is 11:27:01
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] training time is 69945
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:2] testing time is 236127
+Algorithm is RF
+dataset is IOT
+change mapreduce.tasktracker.reduce.tasks.maximum to 4
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] Date is 05-10
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] job start time is 11:27:11
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] training start time is 11:32:14
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] training end time is 11:33:27
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] test start time is 11:33:27
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] test end time is 11:37:06
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] job end time is 11:38:08
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] training time is 73758
+[RF] [IOT] [mapreduce.tasktracker.reduce.tasks.maximum:4] testing time is 218942
+Algorithm is RF
+dataset is IOT
+change mapreduce.map.speculative to false
+[RF] [IOT] [mapreduce.map.speculative:false] Date is 05-10
+[RF] [IOT] [mapreduce.map.speculative:false] job start time is 11:38:17
+[RF] [IOT] [mapreduce.map.speculative:false] training start time is 11:43:19
+[RF] [IOT] [mapreduce.map.speculative:false] training end time is 11:44:29
+[RF] [IOT] [mapreduce.map.speculative:false] test start time is 11:44:29
+[RF] [IOT] [mapreduce.map.speculative:false] test end time is 11:48:34
+[RF] [IOT] [mapreduce.map.speculative:false] job end time is 11:49:37
+[RF] [IOT] [mapreduce.map.speculative:false] training time is 69653
+[RF] [IOT] [mapreduce.map.speculative:false] testing time is 244944
+Algorithm is RF
+dataset is IOT
+change mapreduce.reduce.speculative to false
+[RF] [IOT] [mapreduce.reduce.speculative:false] Date is 05-10
+[RF] [IOT] [mapreduce.reduce.speculative:false] job start time is 11:49:46
+[RF] [IOT] [mapreduce.reduce.speculative:false] training start time is 11:54:47
+[RF] [IOT] [mapreduce.reduce.speculative:false] training end time is 11:55:55
+[RF] [IOT] [mapreduce.reduce.speculative:false] test start time is 11:55:55
+[RF] [IOT] [mapreduce.reduce.speculative:false] test end time is 12:00:01
+[RF] [IOT] [mapreduce.reduce.speculative:false] job end time is 12:01:01
+[RF] [IOT] [mapreduce.reduce.speculative:false] training time is 68627
+[RF] [IOT] [mapreduce.reduce.speculative:false] testing time is 245970
+Algorithm is RF
+dataset is IOT
+change mapreduce.task.io.sort.mb to 1150
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] Date is 05-10
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] job start time is 12:01:11
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] training start time is 12:06:03
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] training end time is 12:07:12
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] test start time is 12:07:12
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] test end time is 12:10:52
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] job end time is 12:11:53
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] training time is 68684
+[RF] [IOT] [mapreduce.task.io.sort.mb:1150] testing time is 220320
+Algorithm is RF
+dataset is IOT
+change mapreduce.task.io.sort.factor to 100
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] Date is 05-10
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] job start time is 12:12:02
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] training start time is 12:17:04
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] training end time is 12:18:12
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] test start time is 12:18:12
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] test end time is 12:22:16
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] job end time is 12:23:14
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] training time is 68011
+[RF] [IOT] [mapreduce.task.io.sort.factor:100] testing time is 243871
+Algorithm is RF
+dataset is IOT
+change mapreduce.map.sort.spill.percent to 0.3
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] Date is 05-10
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] job start time is 12:23:24
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] training start time is 12:28:32
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] training end time is 12:29:38
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] test start time is 12:29:38
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] test end time is 12:33:52
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] job end time is 12:34:52
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] training time is 65663
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.3] testing time is 254491
+Algorithm is RF
+dataset is IOT
+change mapreduce.map.sort.spill.percent to 0.5
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] Date is 05-10
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] job start time is 12:35:01
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] training start time is 12:40:05
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] training end time is 12:41:13
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] test start time is 12:41:13
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] test end time is 12:44:44
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] job end time is 12:45:46
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] training time is 67875
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.5] testing time is 210969
+Algorithm is RF
+dataset is IOT
+change mapreduce.map.sort.spill.percent to 0.9
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] Date is 05-10
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] job start time is 12:45:56
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] training start time is 12:50:57
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] training end time is 12:52:07
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] test start time is 12:52:07
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] test end time is 12:55:44
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] job end time is 12:56:46
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] training time is 69838
+[RF] [IOT] [mapreduce.map.sort.spill.percent:0.9] testing time is 217076
+Algorithm is RF
+dataset is IOT
+change mapreduce.reduce.shuffle.input.buffer.percent to 0.8
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] Date is 05-10
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] job start time is 12:56:55
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training start time is 13:01:56
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training end time is 13:03:05
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] test start time is 13:03:05
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] test end time is 13:07:06
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] job end time is 13:08:08
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] training time is 68736
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.8] testing time is 241123
+Algorithm is RF
+dataset is IOT
+change mapreduce.reduce.shuffle.input.buffer.percent to 0.9
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] Date is 05-10
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] job start time is 13:08:17
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training start time is 13:13:24
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training end time is 13:14:32
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] test start time is 13:14:32
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] test end time is 13:18:39
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] job end time is 13:19:40
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] training time is 67648
+[RF] [IOT] [mapreduce.reduce.shuffle.input.buffer.percent:0.9] testing time is 247093
+Algorithm is RF
+dataset is IOT
+change mapreduce.reduce.shuffle.merge.percent to 0.8
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] Date is 05-10
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] job start time is 13:19:49
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] training start time is 13:24:49
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] training end time is 13:25:59
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] test start time is 13:25:59
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] test end time is 13:29:29
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] job end time is 13:30:30
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] training time is 69739
+[RF] [IOT] [mapreduce.reduce.shuffle.merge.percent:0.8] testing time is 209836
