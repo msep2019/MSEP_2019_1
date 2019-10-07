@@ -1,7 +1,0 @@
-#this is a param file for package information
-
-NB_CIDD:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.naivebayes
-NB_IOT:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.nb_botnet
-RF_CIDD:/home/ubuntu/hadoop/RF/RF_Cluster_withpath.jar:randomforest.random.Cidd3
-RF_IOT:/home/ubuntu/hadoop/RF/RF_Cluster_withpath.jar:randomforest.random.Iot3
-
