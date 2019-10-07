@@ -36,6 +36,7 @@ sc7. ./get_utilization_all.sh
 sc8. ./cleanup.sh
 
 ***** Batch ******
+
 S1. Run script to collect statistics from master and all worker nodes. [run in master node and worker nodes]
 -> nohup ./cluster.sh 1 &
 
