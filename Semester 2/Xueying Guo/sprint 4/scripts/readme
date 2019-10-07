@@ -1,4 +1,4 @@
-./run_without_properties.sh <algorithm> <dataset> <name_of_configuration> <value_of_setting>This is a folder to restore scripts for collecting and calculating statistic from clusters.
+This is a folder to restore scripts for collecting and calculating statistic from clusters.
 
 ***** meaning for each script ******
 
