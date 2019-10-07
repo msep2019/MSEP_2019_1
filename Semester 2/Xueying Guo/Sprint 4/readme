@@ -1,4 +1,4 @@
-Sprint 4 progress a
+Sprint 4 progress
 
 use dstat:
 dstat --time -c -m -d -n --io --top-bio --output nb_cidd_master.csv 
