@@ -35,3 +35,6 @@ https://drive.google.com/open?id=1T1edleDjb0O0B-fLxgvqMjbZER4LAVz3
 # Baseline experiments & bottlenecks
 Result:
 https://drive.google.com/open?id=1yGIDJyzc05DLH-bNs8juOGDm_J70wruL
+
+# Hadoop rule-based parameters tuning
+https://drive.google.com/open?id=1yNnIbYKM3depf7Cex7gVlwwZdnXo-bPv
