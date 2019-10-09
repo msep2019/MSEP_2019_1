@@ -1,0 +1,67 @@
+NB-CIDDS
+********************Metrics********************
+number of features: 9.0
+number of labels: 2
+total test data = 2534031
+tp:264431  fp:244176  fn:167630  tn:1857794
+accuracy = 0.8374897544663029
+Detection Rate = 0.5199122308580102
+False positive rate = 0.11616531158865255
+Precision = 0.5199122308580102
+Recall = 0.6120223764699891
+F1 score = 0.5622196141465426
+Predict Time = 20506 milliseconds
+Training Time = 68912 milliseconds
+**********************************************
+
+
+NB-IOT
+********************Metrics********************
+number of features: 25.0
+number of labels: 2
+total test data = 899970
+tp:899923  fp:17  fn:0  tn:30
+accuracy = 0.9999811104814605
+Detection Rate = 0.9999811098517679
+False positive rate = 0.3617021276595745
+Precision = 0.9999811098517679
+Recall = 1.0
+F1 score = 0.9999905548366737
+Predict Time = 22577 milliseconds
+Training Time = 70161 milliseconds
+**********************************************
+
+
+NB-KDD
+********************Metrics********************
+number of features: 39.0
+number of labels: 2
+total test data = 311029
+tp:241442  fp:15612  fn:8994  tn:44981
+accuracy = 0.9208884059042726
+Detection Rate = 0.9392656795848343
+False positive rate = 0.25765352433449407
+Precision = 0.9392656795848343
+Recall = 0.9640866329122011
+F1 score = 0.9515143155530157
+Predict Time = 9863 milliseconds
+Training Time = 40817 milliseconds
+**********************************************
+
+
+NB-DARPA
+********************Metrics********************
+number of features: 6.0
+number of labels: 2
+total test data = 1522310
+tp:658602  fp:467498  fn:204911  tn:191299
+accuracy = 0.558296930322996
+Detection Rate = 0.584852144569754
+False positive rate = 0.7096237535993637
+Precision = 0.584852144569754
+Recall = 0.7627007352523935
+F1 score = 0.6620403063309297
+Predict Time = 8393 milliseconds
+Training Time = 56805 milliseconds
+**********************************************
+
