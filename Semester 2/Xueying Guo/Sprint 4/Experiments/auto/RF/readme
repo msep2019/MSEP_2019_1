@@ -1,1 +1,6 @@
 This is a repository to restore raw data for random forest
+
+statistics collected from experiment for solving issues
+
+#115 26 experiments with CIDDS and Random Forest, tuning 15 Hadoop configurations.
+#116 26 experiments with IOT and Random Forest, tuning 15 Hadoop configurations.
