@@ -1,0 +1,7 @@
+five steps to generate fuzzy rules:
+
+1. dividing the input and output spaces into fuzzy regions (2N+1)
+2. generate fuzzy rules from the given data pairs ('and' or 'or')
+3. assign a certain degree of each rule to to resolving possible conficts
+4. creating a combined fuzzy rule based on step 3
+5. a mapping from input to output
