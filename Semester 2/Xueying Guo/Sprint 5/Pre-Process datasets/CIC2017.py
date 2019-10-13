@@ -30,25 +30,29 @@ DF1=DF1[0:get]
 DataDF=pd.concat([DF1, DF2],axis=0, ignore_index=True)
 DataDF=pd.concat([DataDF, DF3],axis=0, ignore_index=True)
 
+DataDF=DataDF.drop([0,6,55,61,78],axis=1)
+
+DataDF = DataDF.dropna()
+
 print(DataDF.shape)
 print(DataDF.head(3))
 
-DataDF=DataDF.drop([0,6,55,61,78],axis=1)
+DataDF[1]=DataDF[1].apply(lambda x: (float(x.split('.')[0]) * 256 * 256 * 256 + float(x.split('.')[1]) * 256 * 256 + float(x.split('.')[2]) * 256 + float(x.split('.')[3]) ) if x.count('.')==3 else np.nan )
+DataDF[3]=DataDF[3].apply(lambda x: (float(x.split('.')[0]) * 256 * 256 * 256 + float(x.split('.')[1]) * 256 * 256 + float(x.split('.')[2]) * 256 + float(x.split('.')[3]) ) if x.count('.')==3 else np.nan )
 
+DataDF = DataDF.dropna()
+#DataDF[3]=DataDF[3].map(lambda x: float(x.split('.')[0]) * 256 * 256 * 256 + float(x.split('.')[1]) * 256 * 256 + float(x.split('.')[2]) * 256 + float(x.split('.')[3]) )
 
-#DataDF[1]=DataDF[1].map(lambda x: float(x.split('.')[0]) * 256 * 256 * 256 + float(x.split('.')[1]) * 256 * 256 + float(x.split('.')[2]) * 256 + float(x.split('.')[3]) )
 
 # no need to change: 2, 4, 5, 7, 8, 9， 35-40， 49-54， 56, 62-77, 79-82
 
 #print(DataDF.groupby([78],as_index=False)[78].agg({'cnt':'count'}))
 
-#DataDF[3]=DataDF[3].map(lambda x: float(x.split('.')[0]) * 256 * 256 * 256 + float(x.split('.')[1]) * 256 * 256 + float(x.split('.')[2]) * 256 + float(x.split('.')[3]) )
-
 
 print(DataDF.shape)
 print(DataDF.head(3))
-
 DF=shuffle(DataDF)
+
 row=DF.shape[0]
 
 trainrow=round(row * 0.7)
