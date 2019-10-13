@@ -1,1 +1,19 @@
 pre-process more datasets to generate rules
+
+
+CICandMalware2017:
+training: (868504, 79)
+testing:  (372216, 79)
+
+UNSW-NB15:
+training: (760995, 48)
+testing:  (326141, 48)
+
+CTU13:
+training: (3242931, 14)
+testing:  (1389827, 14)
+
+CICIDS2017:
+training: (1377181, 83)
+testing:  (590221, 83)
+
