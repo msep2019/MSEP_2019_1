@@ -17,3 +17,7 @@ CICIDS2017:
 training: (1377181, 83)
 testing:  (590221, 83)
 
+
+DDOS2019:
+training: (1479255, 85)
+testing:  (633966, 85)
