@@ -142,3 +142,20 @@ Predict Time = 10620 milliseconds
 Training Time = 30188 milliseconds
 **********************************************
 
+DDOS2019
+ALL FEATURES
+********************Metrics********************
+number of features: 72.0
+number of labels: 2
+total test data = 633966
+tp:632425  fp:1541  fn:0  tn:0
+accuracy = 0.9975692702763239
+Detection Rate = 0.9975692702763239
+False positive rate = 1.0
+Precision = 0.9975692702763239
+Recall = 1.0
+F1 score = 0.9987831562290004
+Predict Time = 42911 milliseconds
+Training Time = 57555 milliseconds
+**********************************************
+
