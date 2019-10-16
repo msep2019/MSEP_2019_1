@@ -1,4 +1,6 @@
 RF-KDD
+seed=350 tree=5
+All features
 ********************Metrics********************
 total test data = 311029
 tp:227640  fp:715  fn:22796  tn:59878
@@ -13,15 +15,17 @@ Predict Time = 3526 milliseconds
 **********************************************
 
 RF-DARPA
+seed=400 tree=5
+All features
 ********************Metrics********************
 total test data = 1522310
-tp:662816  fp:510  fn:200697  tn:658287
-accuracy = 0.867827840584375
-Detection Rate = 0.9992311472790152
-False positive rate = 7.741383157482502E-4
-Precision = 0.9992311472790152
-Recall = 0.7675808007522759
-F1 score = 0.8682198974482576
-Training Time = 411564 milliseconds
-Predict Time = 4808 milliseconds
+tp:662710  fp:307  fn:200803  tn:658490
+accuracy = 0.8678915595378077
+Detection Rate = 0.9995369651155249
+False positive rate = 4.6600090771512317E-4
+Precision = 0.9995369651155249
+Recall = 0.767458046375677
+F1 score = 0.8682567653436224
+Training Time = 440521 milliseconds
+Predict Time = 8768 milliseconds
 **********************************************
