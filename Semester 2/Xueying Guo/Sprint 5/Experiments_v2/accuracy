@@ -125,4 +125,20 @@ Training Time = 51426 milliseconds
 **********************************************
 
 
+NBSW15
+{0,1,2,3,4,6,7,8,9,10,11,12,14,15,16,17,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34}
+********************Metrics********************
+number of features: 31.0
+number of labels: 2
+total test data = 326141
+tp:5131  fp:100741  fn:1397  tn:218872
+accuracy = 0.6868287029229689
+Detection Rate = 0.04846418316457609
+False positive rate = 0.3151968161495308
+Precision = 0.04846418316457609
+Recall = 0.7859987745098039
+F1 score = 0.09129893238434163
+Predict Time = 10620 milliseconds
+Training Time = 30188 milliseconds
+**********************************************
 
