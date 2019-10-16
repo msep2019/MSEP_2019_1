@@ -29,3 +29,20 @@ F1 score = 0.8682567653436224
 Training Time = 440521 milliseconds
 Predict Time = 8768 milliseconds
 **********************************************
+
+
+RF-UNSWNB15
+seed=350 tree=5
+All features
+********************Metrics********************
+total test data = 326141
+tp:6367  fp:292  fn:161  tn:319321
+accuracy = 0.9986110301985951
+Detection Rate = 0.956149572007809
+False positive rate = 9.136048909149503E-4
+Precision = 0.956149572007809
+Recall = 0.9753370098039216
+F1 score = 0.9656479866535225
+Training Time = 74755 milliseconds
+Predict Time = 5493 milliseconds
+**********************************************
