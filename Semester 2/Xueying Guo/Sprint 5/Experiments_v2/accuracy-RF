@@ -1,0 +1,27 @@
+RF-KDD
+********************Metrics********************
+total test data = 311029
+tp:227640  fp:715  fn:22796  tn:59878
+accuracy = 0.9244089779409637
+Detection Rate = 0.9968689102493924
+False positive rate = 0.011800042909246944
+Precision = 0.9968689102493924
+Recall = 0.9089747480394192
+F1 score = 0.9508950669498799
+Training Time = 83791 milliseconds
+Predict Time = 3526 milliseconds
+**********************************************
+
+RF-DARPA
+********************Metrics********************
+total test data = 1522310
+tp:662816  fp:510  fn:200697  tn:658287
+accuracy = 0.867827840584375
+Detection Rate = 0.9992311472790152
+False positive rate = 7.741383157482502E-4
+Precision = 0.9992311472790152
+Recall = 0.7675808007522759
+F1 score = 0.8682198974482576
+Training Time = 411564 milliseconds
+Predict Time = 4808 milliseconds
+**********************************************
