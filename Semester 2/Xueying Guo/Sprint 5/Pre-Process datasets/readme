@@ -2,8 +2,8 @@ pre-process more datasets to generate rules
 
 
 CICandMalware2017:
-training: (868504, 79)
-testing:  (372216, 79)
+training: (702518, 80)
+testing:  (301079, 80)
 
 UNSW-NB15:
 training: (760995, 48)
@@ -16,7 +16,6 @@ testing:  (1389827, 14)
 CICIDS2017:
 training: (1377181, 83)
 testing:  (590221, 83)
-
 
 DDOS2019:
 training: (1479255, 85)
