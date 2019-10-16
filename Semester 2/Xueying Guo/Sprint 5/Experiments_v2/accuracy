@@ -1,4 +1,6 @@
+Generating Rules
 NB-CIDDS
+{0,1,2,3,6,7,8,9,10}
 ********************Metrics********************
 number of features: 9.0
 number of labels: 2
@@ -16,6 +18,7 @@ Training Time = 68912 milliseconds
 
 
 NB-IOT
+ALL FEATURES
 ********************Metrics********************
 number of features: 25.0
 number of labels: 2
@@ -33,6 +36,7 @@ Training Time = 70161 milliseconds
 
 
 NB-KDD
+ALL FEATURES
 ********************Metrics********************
 number of features: 39.0
 number of labels: 2
@@ -50,6 +54,7 @@ Training Time = 40817 milliseconds
 
 
 NB-DARPA
+ALL FEATURES
 ********************Metrics********************
 number of features: 6.0
 number of labels: 2
@@ -64,4 +69,60 @@ F1 score = 0.6620403063309297
 Predict Time = 8393 milliseconds
 Training Time = 56805 milliseconds
 **********************************************
+
+CTU-13
+ALL FEATURES
+********************Metrics********************
+number of features: 13.0
+number of labels: 2
+total test data = 1389827
+tp:1003745  fp:9190  fn:374300  tn:2592
+accuracy = 0.7240735717466994
+Detection Rate = 0.9909273546673775
+False positive rate = 0.7800033950093362
+Precision = 0.9909273546673775
+Recall = 0.7283833256533713
+F1 score = 0.8396096997883712
+Predict Time = 16305 milliseconds
+Training Time = 116619 milliseconds
+**********************************************
+
+
+
+Testing:
+CIC2017
+{0,1,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,42,43,46,47,48,78}
+********************Metrics********************
+number of features: 35.0
+number of labels: 2
+total test data = 301079
+tp:42640  fp:55598  fn:76526  tn:126315
+accuracy = 0.5611650098479136
+Detection Rate = 0.43404792442842893
+False positive rate = 0.30562961415621753
+Precision = 0.43404792442842893
+Recall = 0.3578201836094188
+F1 score = 0.3922650917186436
+Predict Time = 13144 milliseconds
+Training Time = 33670 milliseconds
+**********************************************
+
+CICIDS2017
+{0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,40,41,42,43,44,45,56,57,58,81}
+********************Metrics********************
+number of features: 43.0
+number of labels: 2
+total test data = 590221
+tp:89887  fp:83697  fn:1207  tn:415430
+accuracy = 0.8561487985009005
+Detection Rate = 0.517829984330353
+False positive rate = 0.16768678111983523
+Precision = 0.517829984330353
+Recall = 0.9867499506004787
+F1 score = 0.6792177664936262
+Predict Time = 23613 milliseconds
+Training Time = 51426 milliseconds
+**********************************************
+
+
 
