@@ -81,3 +81,20 @@ Predict Time = 10601 milliseconds
 **********************************************
 
 
+RF-CTU13
+seed=350 tree=5
+String descriptor = "7 N 2 I 4 N L";
+********************Metrics********************
+total test data = 1389827
+tp:1377318  fp:388  fn:727  tn:11394
+accuracy = 0.9991977418772264
+Detection Rate = 0.999718372424886
+False positive rate = 0.032931590561874044
+Precision = 0.999718372424886
+Recall = 0.9994724410305904
+F1 score = 0.9995953916010555
+Training Time = 429324 milliseconds
+Predict Time = 7468 milliseconds
+**********************************************
+
+
