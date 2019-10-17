@@ -2,27 +2,48 @@ New and more datasets to generate rules.
 
 datasets to generated rules:
 IOT 
-train: 2099931 * 24 
-test:
+feature number: 24
+train: 2099931
+test:  899970
 
 CIDDS
-train: 5912740 * 9
-test:
+feature number: 9
+train: 5912740 
+test:  2534031
 
 KDD
-train: 494021 * 39
-test:
+feature number: 39
+train: 494021
+test:  311029
 
 DARPA
-train: 2723496 * 6
-test: 
+feature number: 6
+train: 2723496
+test:  1522310
 
 CTU-13
-train: 3242931 * 13
-test:
+feature number: 13
+train: 3242931
+test:  1389827
 
 For testing rules:
 CICandMalware2017 (CIC2017)
+feature number: 35
+train:
+test:  301079
+
 CICIDS2017
+feature number: 43
+train:
+test:  590221
+
 UNSW-NB15
+feature number: 31
+train:
+test:  326141
+
 DDOS2019
+feature number: 72
+train:
+test:  633966
+
