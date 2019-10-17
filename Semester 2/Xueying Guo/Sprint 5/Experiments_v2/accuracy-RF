@@ -99,5 +99,18 @@ Training Time = 103631 milliseconds
 Predict Time = 10601 milliseconds
 **********************************************
 
-
-
+RF-DDOS2019
+seed=350 tree=5
+String descriptor = "82 N 1 I 1 N L";
+********************Metrics********************
+total test data = 633966
+tp:632403  fp:2  fn:22  tn:1539
+accuracy = 0.9999621430802282
+Detection Rate = 0.9999968374696595
+False positive rate = 0.0012978585334198572
+Precision = 0.9999968374696595
+Recall = 0.9999652132663952
+F1 score = 0.9999810251180002
+Training Time = 91246 milliseconds
+Predict Time = 9426 milliseconds
+**********************************************
