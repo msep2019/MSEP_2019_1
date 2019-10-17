@@ -1,11 +1,25 @@
 New and more datasets to generate rules.
 
 datasets to generated rules:
-IOT
+IOT 
+train: 2099931 * 24 
+test:
+
 CIDDS
+train: 5912740 * 9
+test:
+
 KDD
+train: 494021 * 39
+test:
+
 DARPA
+train: 2723496 * 6
+test: 
+
 CTU-13
+train: 3242931 * 13
+test:
 
 For testing rules:
 CICandMalware2017 (CIC2017)
