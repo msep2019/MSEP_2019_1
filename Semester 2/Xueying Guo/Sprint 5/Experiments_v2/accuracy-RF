@@ -46,3 +46,38 @@ F1 score = 0.9656479866535225
 Training Time = 74755 milliseconds
 Predict Time = 5493 milliseconds
 **********************************************
+
+
+RF-cic2017
+seed=350 tree=5
+String descriptor = "47 N 7 I 4 N 5 I 16 N L";
+********************Metrics********************
+total test data = 301079
+tp:25475  fp:11113  fn:93691  tn:170800
+accuracy = 0.6519053138877172
+Detection Rate = 0.6962665354761124
+False positive rate = 0.06108964175182642
+Precision = 0.6962665354761124
+Recall = 0.2137774197338167
+F1 score = 0.3271184046637647
+Training Time = 123795 milliseconds
+Predict Time = 9505 milliseconds
+**********************************************
+
+RF-CICIDS2017
+seed=350 tree=5
+All features
+********************Metrics********************
+total test data = 590221
+tp:90635  fp:245  fn:459  tn:498882
+accuracy = 0.9988072264456873
+Detection Rate = 0.9973041373239436
+False positive rate = 4.908570363855292E-4
+Precision = 0.9973041373239436
+Recall = 0.9949612488199003
+F1 score = 0.9961313154626484
+Training Time = 103631 milliseconds
+Predict Time = 10601 milliseconds
+**********************************************
+
+
