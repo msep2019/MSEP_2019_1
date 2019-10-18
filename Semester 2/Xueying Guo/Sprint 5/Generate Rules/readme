@@ -2,3 +2,4 @@ We are going to assign weights to get utility function.
 will use regression to assign weight.
 by giving a set of experiment data, to get the utility.
 
+I will try to use ‘Ridge Regression’ for utlity function
