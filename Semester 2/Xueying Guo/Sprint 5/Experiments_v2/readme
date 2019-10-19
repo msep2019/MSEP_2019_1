@@ -47,3 +47,7 @@ feature number: 72
 train:
 test:  633966
 
+NSLKDD
+feature number: 20
+train:  
+test:  22544
