@@ -142,6 +142,23 @@ Predict Time = 10620 milliseconds
 Training Time = 30188 milliseconds
 **********************************************
 
+NSLKDD
+{1,2,3,4,22,23,24,25,26,27,28,29,30,31,32,33,34,35,39,40}
+********************Metrics********************
+number of features: 20.0
+number of labels: 2
+total test data = 22544
+tp:989  fp:79  fn:11844  tn:9632
+accuracy = 0.47112313697657915
+Detection Rate = 0.9260299625468165
+False positive rate = 0.00813510452064669
+Precision = 0.9260299625468165
+Recall = 0.07706693680355334
+F1 score = 0.1422919214445004
+Predict Time = 2155 milliseconds
+Training Time = 11512 milliseconds
+**********************************************
+
 DDOS2019
 ALL FEATURES
 ********************Metrics********************
