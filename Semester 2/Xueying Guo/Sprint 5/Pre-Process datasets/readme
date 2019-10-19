@@ -22,5 +22,5 @@ training: (1479255, 85)
 testing:  (633966, 85)
 
 NSLKDD:
-training:
+training: (125973, 42)
 testing:  (22544, 42)
