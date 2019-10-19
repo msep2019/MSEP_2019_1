@@ -114,3 +114,19 @@ F1 score = 0.9999810251180002
 Training Time = 91246 milliseconds
 Predict Time = 9426 milliseconds
 **********************************************
+
+RF-NSLKDD
+seed=350 tree=5
+All features
+********************Metrics********************
+total test data = 22544
+tp:8431  fp:446  fn:4402  tn:9265
+accuracy = 0.7849538679914834
+Detection Rate = 0.9497578010589163
+False positive rate = 0.04592729893934713
+Precision = 0.9497578010589163
+Recall = 0.6569781033273592
+F1 score = 0.7766927683095347
+Training Time = 20909 milliseconds
+Predict Time = 2764 milliseconds
+**********************************************
