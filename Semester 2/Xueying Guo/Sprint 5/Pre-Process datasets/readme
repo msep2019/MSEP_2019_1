@@ -20,3 +20,7 @@ testing:  (590221, 83)
 DDOS2019:
 training: (1479255, 85)
 testing:  (633966, 85)
+
+NSLKDD:
+training:
+testing:  (22544, 42)
