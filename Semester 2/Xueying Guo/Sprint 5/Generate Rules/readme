@@ -3,3 +3,11 @@ will use regression to assign weight.
 by giving a set of experiment data, to get the utility.
 
 I will try to use ‘Ridge Regression’ for utlity function
+
+
+weights generated:
+𝜔_𝑐𝑝𝑢	0.42
+𝜔_𝑚𝑒𝑚𝑜𝑟𝑦	0.17
+𝜔_𝑑𝑖𝑠𝑘𝑤𝑟𝑖𝑡	0.13
+𝜔_𝑛𝑒𝑡𝑟𝑒𝑐𝑣	0.15
+𝜔_𝑛𝑒𝑡𝑠𝑒𝑛𝑑	0.01
