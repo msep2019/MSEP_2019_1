@@ -29,25 +29,25 @@ test:  1389827
 For testing rules:
 CICandMalware2017 (CIC2017)
 feature number: 35
-train:
+train: 702518
 test:  301079
 
 CICIDS2017
 feature number: 43
-train:
+train: 1377181
 test:  590221
 
 UNSW-NB15
 feature number: 31
-train:
+train: 760995
 test:  326141
 
 DDOS2019
 feature number: 72
-train:
+train: 1479255
 test:  633966
 
 NSLKDD
 feature number: 20
-train:  
+train: 125973
 test:  22544
