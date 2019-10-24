@@ -1,0 +1,15 @@
+mapreduce.output.fileoutputformat.compress
+mapreduce.output.fileoutputformat.compress.type
+mapreduce.output.fileoutputformat.compress.codec
+mapreduce.map.output.compress
+mapreduce.map.output.compress.codec
+mapreduce.tasktracker.map.tasks.maximum
+mapreduce.tasktracker.reduce.tasks.maximum
+mapred.child.java.opts
+mapreduce.map.speculative
+mapreduce.reduce.speculative
+mapreduce.task.io.sort.mb
+mapreduce.task.io.sort.factor
+mapreduce.map.sort.spill.percent
+mapreduce.reduce.shuffle.input.buffer.percent
+mapreduce.reduce.shuffle.merge.percent

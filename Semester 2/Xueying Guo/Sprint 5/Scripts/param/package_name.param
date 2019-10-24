@@ -1,0 +1,15 @@
+#this is a param file for package information
+
+NB_CIDD:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.naivebayes
+NB_IOT:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.Iot
+NB_KDD:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.kdd
+NB_DARPA:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.darpa
+NB_CTU13:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.ctu13
+NB_NSLKDD:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.nslkdd
+NB_CICIDS2017:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.cicids2017
+NB_DDOS2019:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.ddos2019
+NB_CIC2017:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.cic2017
+NB_UNSWNB15:/home/ubuntu/hadoop/NB/NB_Cluster_withpath.jar:naivebayes.hadoop_nb.unsw15
+RF_CIDD:/home/ubuntu/hadoop/RF/RF_Cluster_withpath.jar:randomforest.random.Cidd3
+RF_IOT:/home/ubuntu/hadoop/RF/RF_Cluster_withpath.jar:randomforest.random.Iot3
+

@@ -1,0 +1,30 @@
+#this is a param file for Rules
+
+<number of Parameter> <number of values> <No. of Features> <No. of Instances>
+
+P1V1:SL
+P2V1:SM|SS
+P3V1:SM|SS
+P3V2:
+P3V3:
+P4V1:
+P5V1:
+P5V2:
+P5V3:MS|LS
+P6V1:
+P6V2:
+P6V3:
+P7V1:
+P7V2:SM|SS
+P7V3:
+P8V1:SS|SM
+P9V1:
+P10V1:SL
+P11V1:
+P12V1:SL
+P13V1:SS|SM|SL
+P13V2:
+P13V3:MS|LS
+P14V1:SS|SM
+P14V2:
+P15V1:ML|MM|LM|LL
