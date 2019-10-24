@@ -1,1 +1,69 @@
 Scripts for trying different parameters
+
+***** meaning for each script ******
+
+----- Run in master node ----
+sc1. run.sh ~~ for running BDCA system with default properties and all customized properties automatically.
+sc2. run_without_properties.sh  ~~ for running BDCA system with default properties only.
+sc3. run_with_properties.sh ~~ for running BDCA system with customized properties.
+
+sc4. cluster.sh ~~ for collecting utilizations during the BDCA system is running, run before 'run.sh'
+sc5. kill_cluster.sh ~~ for stopping collecting utilizations after 'run.sh' is finished.
+
+----- Run in worker nodes ----
+sc4. cluster.sh ~~ for collecting utilizations during the BDCA system is running, run before 'run.sh'
+sc5. kill_cluster.sh ~~ for stopping collecting utilizations after 'run.sh' is finished.
+
+
+----- Run in local ----
+sc6. get_utilization.sh  ~~ for collecting all statistic collected from clusters seperately and calculate average for each node during the training period.
+sc7. get_utilization_all.sh  ~~ for calculating average statistic for all worker nodes during the training period.
+sc8. cleanup.sh  ~~ for cleaning up all temperary files before next batch running.
+
+***** USAGE ******
+
+sc1. ./run.sh 
+sc2. ./run_without_properties.sh <algorithm> <dataset> 
+ e.g. nohup ./run_without_properties.sh RF CIDD &
+sc3. ./run_with_properties.sh <algorithm> <dataset> <name_of_configuration> <value_of_setting>
+ e.g. nohup ./run_with_properties.sh RF CIDD mapreduce.output.fileoutputformat.compress true &
+sc4. ./cluster.sh <number of cluster>
+ e.g. nohup ./cluster.sh 1 &
+sc5. ./kill_cluster.sh <number of cluster>
+ e.g. nohup ./kill_cluster.sh 1 &
+sc6. ./get_utilization.sh 
+sc7. ./get_utilization_all.sh 
+sc8. ./cleanup.sh
+
+***** Batch ******
+
+S1. Run script to collect statistics from master and all worker nodes. [run in master node and worker nodes]
+-> nohup ./cluster.sh 1 &
+
+S2. Check parameter files to ensure the required Hadoop properties, datasets and machine learning algorithms can be run by the BDCA system.
+-> actual_change.param
+-> all_conf.param
+-> algorithm.param
+-> package_name.param
+
+S3. Run BDCA system by script. [run in master node only]
+->  nohup ./run.sh &
+
+S4. Check logs and make sure S3 is completed.
+
+S5. Run script to stop collecting statistics from master and all worker nodes. [run in master node and worker nodes]
+-> nohup ./kill_cluster.sh 1 &
+
+S6. Check parameter files to ensure all statistics got by required datasets and ML algorithms can be calculated.
+-> cal_algorithm.param
+
+S7. Run script to collecting statistics from cluster and calculating utilization. [run in local]
+-> nohup ./get_utilization.sh &
+
+S8. Run script to calculating average utilization for all worker nodes. [run in local]
+-> nohup ./get_utilization_all.sh &
+
+S9. Run script to clean up temperary files produced during the batch running.
+-> nohup ./cleanup.sh &
+
+S10. check result files.
