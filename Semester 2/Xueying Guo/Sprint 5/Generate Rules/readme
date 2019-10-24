@@ -5,7 +5,7 @@ by giving a set of experiment data, to get the utility.
 I will try to use ‘Ridge Regression’ for utlity function
 
 
-weights generated:
+weights generated for version-2:
 
 𝜔_𝑐𝑝𝑢	0.27
 𝜔_𝑚𝑒𝑚𝑜𝑟𝑦	0.24
