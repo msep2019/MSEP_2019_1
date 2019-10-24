@@ -71,3 +71,6 @@ S9. Run script to clean up temperary files produced during the batch running.
 -> nohup ./cleanup.sh &
 
 S10. check result files.
+
+
+close issue #134
