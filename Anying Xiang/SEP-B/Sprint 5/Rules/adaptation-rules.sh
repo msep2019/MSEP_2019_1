@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-# ./adaptation-rules.sh /home/jzd/SEP-B/ori-dataset/using/pre-UNSW_2018_IoT_Botnet_Dataset-training.csv /home/jzd/SEP-B/ori-dataset/using/pre-UNSW_2018_IoT_Botnet_Dataset-testing.csv
-
 current=`date "+%Y-%m-%d %H:%M:%S"`
 time=`date -d "$current" +%s` 
 startTimeStamp=$((time*1000+`date "+%N"`/1000000))
