@@ -16,3 +16,27 @@ weights generated for version-2:
 results: close #126
 Fuzzy Rules: close #127
  
+Rules:
+If (No. of Features == S) && (No. of instances == L ) => tune P1 to 'true'
+If (No. of Features == S) && (No. of instances == S ) => tune P2 to ‘BLOCK’
+If (No. of Features == S) && (No. of instances == M ) => tune P2 to 'BLOCK'"
+If (No. of Features == S) && (No. of instances == S ) => tune P3 to ‘org.apache.hadoop.io.compress.GzipCodec’
+If (No. of Features == S) && (No. of instances == M ) => tune P3 to ‘org.apache.hadoop.io.compress.GzipCodec’
+If (No. of Features == M) && (No. of instances == S ) => tune P5 to ‘org.apache.hadoop.io.compress.Lz4Codec’
+If (No. of Features == L) && (No. of instances == S ) => tune P5 to ‘org.apache.hadoop.io.compress.Lz4Codec"
+If (No. of Features == S) && (No. of instances == S ) => tune P7 to ‘2’
+If (No. of Features == S) && (No. of instances == M ) => tune P7 to ‘2’
+If (No. of Features == S) && (No. of instances == S ) => tune P8 to -Xmx1639m
+If (No. of Features == S) && (No. of instances == M ) => tune P8 to -Xmx1639m
+If (No. of Features == S) && (No. of instances == L ) => tune P12 to 100
+If (No. of Features == S) && (No. of instances == S ) => tune P13 to 0.3
+If (No. of Features == S) && (No. of instances == M ) => tune P13 to 0.3
+If (No. of Features == S) && (No. of instances == L ) => tune P13 to 0.3
+If (No. of Features == M) && (No. of instances == S ) => tune P13 to 0.9
+If (No. of Features == L) && (No. of instances == S ) => tune P13 to 0.9
+If (No. of Features == S) && (No. of instances == S ) => tune P14 to 0.8
+If (No. of Features == S) && (No. of instances == M ) => tune P14 to 0.8
+If (No. of Features == M) && (No. of instances == M ) => tune P15 to 0.8
+If (No. of Features == M) && (No. of instances == L ) => tune P15 to 0.8
+If (No. of Features == L) && (No. of instances == M ) => tune P15 to 0.8
+If (No. of Features == L) && (No. of instances == L ) => tune P15 to 0.8
