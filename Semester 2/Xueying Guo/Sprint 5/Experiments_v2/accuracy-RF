@@ -1,5 +1,38 @@
 Generating Rules:
 
+RF-CIDDS
+seed=350 tree=5
+All features
+********************Metrics********************
+total test data = 2534031
+tp:431745  fp:78  fn:316  tn:2101892
+accuracy = 0.9998445165035471
+Detection Rate = 0.9998193704364983
+False positive rate = 3.710804626136434E-5
+Precision = 0.9998193704364983
+Recall = 0.9992686217918303
+F1 score = 0.999543920248552
+Training Time = 71623 milliseconds
+Predict Time = 22069 milliseconds
+**********************************************
+
+
+RF-IoT
+seed=350 tree=5
+String descriptor = "5 N 1 I 1 N 1 I 17 N 1 L";
+********************Metrics********************
+total test data = 899970
+tp:899923  fp:1  fn:0  tn:46
+accuracy = 0.9999988888518506
+Detection Rate = 0.9999988887950538
+False positive rate = 0.02127659574468085
+Precision = 0.9999988887950538
+Recall = 1.0
+F1 score = 0.9999994443972182
+Training Time = 232907 milliseconds
+Predict Time = 27084 milliseconds
+**********************************************
+
 RF-CTU13
 seed=350 tree=5
 String descriptor = "7 N 2 I 4 N L";
