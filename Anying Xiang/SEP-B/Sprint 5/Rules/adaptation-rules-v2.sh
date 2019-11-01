@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# ./adaptation-rules-v2.sh /input/NSLKDD/training/pre-KDDTrain+2.csv /input/NSLKDD/testing/pre-KDDTest+2.csv sep_spark_dt_nslkdd_cv5_v1.jar
+
 current=`date "+%Y-%m-%d %H:%M:%S"`
 time=`date -d "$current" +%s` 
 startTimeStamp=$((time*1000+`date "+%N"`/1000000))
@@ -7,19 +9,19 @@ echo 'Start adaptation time: '$startTimeStamp
 
 echo "Train file: $1"
 echo "Test file: $2"
-echo "Machine Learning algorithm: $3"
+echo "Jar file: $3"
 
 trainfile=$1
 testfile=$2
-ml=$3
+jarfile=$3
 
-columnNo=`head -1 $testfile | sed 's/[^,]//g' | wc -c`
+columnNo=`hadoop fs -cat $testfile | head -1 | sed 's/[^,]//g' | wc -c`
 featureNo=$((columnNo - 1))
 
 echo "featureNo: $featureNo"
 
-trainInstanceNo=`wc -l < $trainfile`
-testInstanceNo=`wc -l < $testfile`
+trainInstanceNo=`hadoop fs -cat $trainfile | wc -l`
+testInstanceNo=`hadoop fs -cat $testfile | wc -l`
 
 instanceNo=$((trainInstanceNo + testInstanceNo))
 
@@ -107,30 +109,13 @@ echo "instanceMemFuncLargePercentage: $instanceMemFuncLargePercentage"
 
 
 minimum=(0 0 0 0)
-comp=`awk -v featureMemFuncSmallorMediumPercentage="${featureMemFuncSmallorMediumPercentage}" -v instanceMemFuncSmallorMediumPercentage="${instanceMemFuncSmallorMediumPercentage}" 'BEGIN{print(featureMemFuncSmallorMediumPercentage>instanceMemFuncSmallorMediumPercentage)?"1":"0"}'`
-if [ 1 -eq ${comp} ];then
-	minimum[0]=${instanceMemFuncSmallorMediumPercentage}
-else
-	minimum[0]=${featureMemFuncSmallorMediumPercentage}
-fi
-comp=`awk -v featureMemFuncSmallorMediumPercentage="${featureMemFuncSmallorMediumPercentage}" -v instanceMemFuncLargePercentage="${instanceMemFuncLargePercentage}" 'BEGIN{print(featureMemFuncSmallorMediumPercentage>instanceMemFuncLargePercentage)?"1":"0"}'`
-if [ 1 -eq ${comp} ];then
-	minimum[1]=${instanceMemFuncLargePercentage}
-else
-	minimum[1]=${featureMemFuncSmallorMediumPercentage}
-fi
-comp=`awk -v featureMemFuncLargePercentage="${featureMemFuncLargePercentage}" -v instanceMemFuncSmallorMediumPercentage="${instanceMemFuncSmallorMediumPercentage}" 'BEGIN{print(featureMemFuncLargePercentage>instanceMemFuncSmallorMediumPercentage)?"1":"0"}'`
-if [ 1 -eq ${comp} ];then
-	minimum[2]=${instanceMemFuncSmallorMediumPercentage}
-else
-	minimum[2]=${featureMemFuncLargePercentage}
-fi
-comp=`awk -v featureMemFuncLargePercentage="${featureMemFuncLargePercentage}" -v instanceMemFuncLargePercentage="${instanceMemFuncLargePercentage}" 'BEGIN{print(featureMemFuncLargePercentage>instanceMemFuncLargePercentage)?"1":"0"}'`
-if [ 1 -eq ${comp} ];then
-	minimum[3]=${instanceMemFuncLargePercentage}
-else
-	minimum[3]=${featureMemFuncLargePercentage}
-fi
+minimum[0]=`awk -v featureMemFuncSmallorMediumPercentage="${featureMemFuncSmallorMediumPercentage}" -v instanceMemFuncSmallorMediumPercentage="${instanceMemFuncSmallorMediumPercentage}" 'BEGIN{printf "%.4f\n",featureMemFuncSmallorMediumPercentage*instanceMemFuncSmallorMediumPercentage}'`
+
+minimum[1]=`awk -v featureMemFuncSmallorMediumPercentage="${featureMemFuncSmallorMediumPercentage}" -v instanceMemFuncLargePercentage="${instanceMemFuncLargePercentage}" 'BEGIN{printf "%.4f\n",featureMemFuncSmallorMediumPercentage*instanceMemFuncLargePercentage}'`
+
+minimum[2]=`awk -v featureMemFuncLargePercentage="${featureMemFuncLargePercentage}" -v instanceMemFuncSmallorMediumPercentage="${instanceMemFuncSmallorMediumPercentage}" 'BEGIN{printf "%.4f\n",featureMemFuncLargePercentage*instanceMemFuncSmallorMediumPercentage}'`
+
+minimum[3]=`awk -v featureMemFuncLargePercentage="${featureMemFuncLargePercentage}" -v instanceMemFuncLargePercentage="${instanceMemFuncLargePercentage}" 'BEGIN{printf "%.4f\n",featureMemFuncLargePercentage*instanceMemFuncLargePercentage}'`
 
 echo ${minimum[*]}
 
@@ -154,9 +139,6 @@ do
 	Acnt=()
 	Bcnt=()
 	Ccnt=()
-	Aavg=0
-	Bavg=0
-	Cavg=0
 	for ((j=0; j<=3; j++))
 	do
 		# echo "${i}*5+${j}: "${rules[${i}*5+${j}]}
@@ -171,58 +153,56 @@ do
 			
 		fi
 	done
-	x=0
-	for ((j=0; j<${#Acnt[@]}; j++))
-	do
-		temp=`awk -v a="${Acnt[${j}]}" 'BEGIN{printf "%.4f\n",a*a}'`
-		x=`awk -v x="${x}" -v temp="${temp}" 'BEGIN{printf "%.4f\n",x+temp}'`
-	done
-	Aavg=`awk -v x="$x" 'BEGIN{printf "%.4f\n",sqrt(x)}'`
-	x=0
-	for ((j=0; j<${#Bcnt[@]}; j++))
-	do
-		temp=`awk -v a="${Bcnt[${j}]}" 'BEGIN{printf "%.4f\n",a*a}'`
-		x=`awk -v x="${x}" -v temp="${temp}" 'BEGIN{printf "%.4f\n",x+temp}'`
-	done
-	Bavg=`awk -v x="$x" 'BEGIN{printf "%.4f\n",sqrt(x)}'`
-	x=0
-	for ((j=0; j<${#Ccnt[@]}; j++))
-	do
-		temp=`awk -v a="${Ccnt[${j}]}" 'BEGIN{printf "%.4f\n",a*a}'`
-		x=`awk -v x="${x}" -v temp="${temp}" 'BEGIN{printf "%.4f\n",x+temp}'`
-	done
-	Cavg=`awk -v x="$x" 'BEGIN{printf "%.4f\n",sqrt(x)}'`
-
-	# echo "ROUND "${i}": "${Aavg}" "${Bavg}" "${Cavg}
+	
 
 	paramName=${params[${i}]}
+	
+	echo "Acnt: "${Acnt[*]} 
+	echo "Bcnt: "${Bcnt[*]} 
+	echo "Ccnt: "${Ccnt[*]} 
+	x=0
+	numerator=0
+	for ((j=0; j<${#Acnt[@]}; j++))
+	do
+		temp=`awk -v a="${Acnt[${j}]}" -v b=0 'BEGIN{printf "%.4f\n",a*b}'`
+		x=`awk -v x="${x}" -v temp="${temp}" 'BEGIN{printf "%.4f\n",x+temp}'`
+		
+		numerator=`awk -v numerator="${numerator}" -v a="${Acnt[${j}]}" 'BEGIN{printf "%.4f\n",numerator+a}'`
+	done
+	for ((j=0; j<${#Bcnt[@]}; j++))
+	do
+		temp=`awk -v a="${Bcnt[${j}]}" -v b=0.5 'BEGIN{printf "%.4f\n",a*b}'`
+		x=`awk -v x="${x}" -v temp="${temp}" 'BEGIN{printf "%.4f\n",x+temp}'`
+		
+		numerator=`awk -v numerator="${numerator}" -v a="${Bcnt[${j}]}" 'BEGIN{printf "%.4f\n",numerator+a}'`
+	done
+	for ((j=0; j<${#Ccnt[@]}; j++))
+	do
+		temp=`awk -v a="${Ccnt[${j}]}" -v b=-0.5 'BEGIN{printf "%.4f\n",a*b}'`
+		x=`awk -v x="${x}" -v temp="${temp}" 'BEGIN{printf "%.4f\n",x+temp}'`
+		
+		numerator=`awk -v numerator="${numerator}" -v a="${Ccnt[${j}]}" 'BEGIN{printf "%.4f\n",numerator+a}'`
+	done
+	echo $x
+	echo ${numerator}
+	centroid=`awk -v x="$x" -v numerator="${numerator}" 'BEGIN{printf "%.4f\n",x/numerator}'`
+
 	selected=${paramVA[${i}]}
 	selectedNo="A"
-	selectedAvg=${Aavg}
-
-	comp1=`awk -v selectedAvg="${selectedAvg}" -v Bavg="${Bavg}" 'BEGIN{print(selectedAvg<Bavg)?"1":"0"}'`
+	comp1=`awk -v centroid="${centroid}" -v val=0.25 'BEGIN{print(centroid>val)?"1":"0"}'`
 	if [ 1 -eq ${comp1} ];then
 		selected=${paramVB[${i}]}
 		selectedNo="B"
-		selectedAvg=${Bavg}
 	fi
-	comp2=`awk -v selectedAvg="${selectedAvg}" -v Cavg="${Cavg}" 'BEGIN{print(selectedAvg<Cavg)?"1":"0"}'`
-	if [ 1 -eq ${comp2} ];then
+	comp1=`awk -v centroid="${centroid}" -v val=-0.25 'BEGIN{print(centroid<val)?"1":"0"}'`
+	if [ 1 -eq ${comp1} ];then
 		selected=${paramVC[${i}]}
 		selectedNo="C"
-		selectedAvg=${Cavg}
 	fi
 	
-	CPVs[${i}]=${selectedNo}
-	
-	
-	echo ${paramName}${paramVA[${i}]}" "${Aavg}
-	echo ${paramName}${paramVB[${i}]}" "${Bavg}
-	if [ "" != "${paramVC[${i}]}" ]; then
-		echo ${paramName}${paramVC[${i}]}" "${Cavg}
-	fi
 
-	centroid=`awk -v c=-100 -v b=100 -v a=0 -v Aavg="${Aavg}" -v Bavg="${Bavg}" -v Cavg="${Cavg}" 'BEGIN{printf "%.4f\n",(c*Cavg+b*Bavg+a*Aavg)/(Cavg+Bavg+Aavg)}'`
+	# tune the (i-1)th parameter
+	CPVs[${i}]=${selectedNo}
 
 	echo "fuzzy centroid: "${paramName}${selected}" at "${centroid}
 	echo ""
@@ -237,3 +217,28 @@ echo 'End adaptation time: '$endTimeStamp
 
 duration=$((endTimeStamp - startTimeStamp))
 echo 'Duration: '$duration' ms'
+
+params=("--executor-cores" "--conf spark.io.compression.codec=" "--conf spark.serializer=" "--conf spark.io.compression.lz4.blockSize=" "--conf spark.shuffle.spill.compress=" "--conf spark.reducer.maxSizeInFlight=" "--conf spark.shuffle.file.buffer=" "--conf spark.shuffle.compress=" "--conf spark.broadcast.blockSize=" "--conf spark.locality.wait=" "--conf spark.memory.fraction=" "--conf spark.memory.storageFraction=")
+paramVA=(" 1" "lz4" "org.apache.spark.serializer.JavaSerializer" "32k" "true" "48m" "32k" "true" "4m" "3s" "0.6" "0.5")
+paramVB=(" 2" "lzf" "org.apache.spark.serializer.KryoSerializer" "16k" "false" "24m" "16k" "false" "2m" "1s" "0.4" "0.3")
+paramVC=("" "snappy" "" "64k" "" "72m" "48k" "" "8m" "5s" "0.8" "0.7")
+
+
+CPVcmd=""
+for ((j=0; j<=11; j++))
+do
+	if [ "${CPVs[${j}]}" == "A" ];then
+		echo "${j}: A"
+		CPVcmd=${CPVcmd}${params[${j}]}${paramVA[${j}]}" "
+	elif [ "${CPVs[${j}]}" == "B" ];then
+		echo "${j}: B"
+		CPVcmd=${CPVcmd}${params[${j}]}${paramVB[${j}]}" "
+	else
+		echo "${j}: C"
+		CPVcmd=${CPVcmd}${params[${j}]}${paramVC[${j}]}" "
+	fi
+done
+
+BDCAcmd="/home/ubuntu/Cloud/OpenStack/spark-2.4.0-bin-without-hadoop/bin/spark-submit --master yarn --deploy-mode cluster --num-executors 3 "${CPVcmd}"/home/ubuntu/Cloud/OpenStack/nb_spark_output/"${jarfile}
+${BDCAcmd}
+
