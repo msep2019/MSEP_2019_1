@@ -255,12 +255,12 @@ if [ $adapt -eq 1 ];then
 
 		selected=${paramVA[${i}]}
 		selectedNo="A"
-		comp1=`awk -v centroid="${centroid}" -v val=0.5 'BEGIN{print(centroid>val)?"1":"0"}'`
+		comp1=`awk -v centroid="${centroid}" -v val=50 'BEGIN{print(centroid>val)?"1":"0"}'`
 		if [ 1 -eq ${comp1} ];then
 			selected=${paramVB[${i}]}
 			selectedNo="B"
 		fi
-		comp1=`awk -v centroid="${centroid}" -v val=-0.5 'BEGIN{print(centroid<val)?"1":"0"}'`
+		comp1=`awk -v centroid="${centroid}" -v val=-50 'BEGIN{print(centroid<val)?"1":"0"}'`
 		if [ 1 -eq ${comp1} ];then
 			selected=${paramVC[${i}]}
 			selectedNo="C"
