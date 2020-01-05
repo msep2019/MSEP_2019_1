@@ -1,8 +1,0 @@
-Understanding about Naive Bayes Classification
-
-1. Naive Bayes assumes that different features are independent from each other, so that the probability can be calculated more easily by multiplicative multiplication.
-2. Bayes formula is the foundation (prior probability, conditional probability and posterior probability are involved).
-3. When it comes to the classification, the following value is decisive:
-    val = P(X = x | Y = yk) * P(Y = yk)
-    The 'val' decides pro = P(Y = yk | X = x), where k means different classes. 
-    Different probabilities ('pro') among various classes will be compared to determine the particular classification (larger 'pro').

@@ -1,7 +1,0 @@
-evaluator accuracy: 0.9954690816014452
-evaluator f1: 0.9952633058012139
-evaluator weightedPrecision: 0.9954347183133214
-evaluator weightedRecall: 0.9954690816014452
-Train Time: 1390747
-Test Time: 103
-Whole Time: 1960735

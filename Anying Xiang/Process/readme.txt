@@ -1,1 +1,0 @@
-The Process folder contains a part of files produced during the project process.
